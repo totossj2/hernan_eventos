@@ -3,13 +3,21 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10" />
+    <section className="relative h-[50vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
+      <div className="absolute  inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10" />
+
       <Image
-        src="/placeholder.svg?height=800&width=1200"
+        src="/hero_desktop.jpeg"
         alt="Evento elegante con carpas y decoración profesional"
         fill
-        className="object-cover"
+        className="object-cover object-center hidden md:block"
+        priority
+      />
+      <Image
+        src="/hero_mobile.jpeg"
+        alt="Evento elegante con carpas y decoración profesional"
+        fill
+        className="object-cover  block md:hidden"
         priority
       />
       <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">

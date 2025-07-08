@@ -57,7 +57,7 @@ export function HeatingSection() {
 
           <div className="relative">
             <Image
-              src="/placeholder.svg?height=300&width=500"
+              src="/calefaccion.jpeg"
               alt="Equipos de calefacción para eventos"
               width={500}
               height={300}
