@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Phone, Wind } from "lucide-react";
+import { Shield, Phone, Wind, ShieldCheck, Maximize2 } from "lucide-react";
 import Image from "next/image";
 import { HEATING_OPTIONS } from "@/lib/constants";
 
@@ -16,65 +16,66 @@ export function HeatingSection() {
             Calefacción segura y potente para eventos de invierno
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Equipos a gas, seguros y adaptables a cualquier espacio
+            Equipos a gas, seguros y adaptables a cualquier espacio. Sin frío,
+            sin riesgos, sin estrés.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-          <div className="space-y-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-[#f4c046] rounded-full flex items-center justify-center flex-shrink-0">
-                <Shield className="h-6 w-6 text-[#003056]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  Máxima Seguridad
-                </h3>
-                <p className="text-blue-100">
-                  Equipos a gas con encendido piezoeléctrico y sin partes
-                  calientes al alcance de los invitados. Perfectos para eventos
-                  sociales donde la seguridad es prioritaria.
-                </p>
-              </div>
+        <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-4xl mx-auto mb-10">
+          <div className="flex items-start gap-4 bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 transition-transform  ">
+            <div className="bg-[#f4c046] p-3 rounded-full">
+              <ShieldCheck className="h-6 w-6 text-[#003056]" />
             </div>
-
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-[#f4c046] rounded-full flex items-center justify-center flex-shrink-0">
-                <Wind className="h-6 w-6 text-[#003056]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  Adaptables a Cualquier Espacio
-                </h3>
-                <p className="text-blue-100">
-                  Modelos disponibles para exteriores tipo hongo y pirámide.
-                  Diferentes potencias para espacios desde 15 hasta 300
-                  invitados.
-                </p>
-              </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">
+                Máxima Seguridad
+              </h3>
+              <p className="text-blue-100 mt-2">
+                Equipos a gas con encendido piezoeléctrico y sin partes
+                calientes al alcance de los invitados. Perfectos para eventos
+                sociales.
+              </p>
             </div>
           </div>
 
-          <div className="relative">
-            <Image
-              src="/calefaccion.jpeg"
-              alt="Equipos de calefacción para eventos"
-              width={500}
-              height={300}
-              className="rounded-2xl shadow-2xl object-cover w-full h-full"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+          <div className="flex items-start gap-4 bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 transition-transform  ">
+            <div className="bg-[#f4c046] p-3 rounded-full">
+              <Maximize2 className="h-6 w-6 text-[#003056]" />
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-white">
+                Adaptables a cualquier espacio
+              </h3>
+              <p className="text-blue-100 mt-2">
+                Modelos tipo hongo o pirámide para exteriores. Diferentes
+                potencias para espacios chicos o grandes.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 ">
           {HEATING_OPTIONS.map((option) => (
             <HeatingCard key={option.capacity} {...option} />
           ))}
         </div>
 
+        <div className="text-center mb-4 mt-6">
+          <p className="text-center text-red-500 font-semibold ">
+            ¡Alta demanda invernal! Reservá con anticipación para asegurar tu
+            equipo.
+          </p>
+          <p className="text-center text-sm text-gray-300 mt-2">
+            Cobertura en GBA y CABA • Equipos revisados antes de cada entrega •
+            Atención inmediata
+          </p>
+        </div>
+
         <div className="text-center">
-          <a href="#contact">
+          <a
+            href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20la%20calefacción"
+            target="_blank"
+          >
             <Button
               size="lg"
               className="bg-[#f4c046] hover:bg-[#e6b03f] text-[#003056] font-semibold text-lg px-8 py-4"
@@ -95,18 +96,11 @@ export function HeatingSection() {
 interface HeatingCardProps {
   title: string;
   capacity: string;
-  guests: string;
   area: string;
   description: string;
 }
 
-function HeatingCard({
-  title,
-  capacity,
-  guests,
-  area,
-  description,
-}: HeatingCardProps) {
+function HeatingCard({ title, capacity, area, description }: HeatingCardProps) {
   return (
     <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
       <CardHeader className="text-center">
@@ -116,7 +110,6 @@ function HeatingCard({
         <CardTitle className="text-xl">{title}</CardTitle>
       </CardHeader>
       <CardContent className="text-center">
-        <p className="text-blue-100 mb-2">Hasta {guests} invitados</p>
         <p className="text-sm text-blue-200">Cobertura: {area}</p>
         <p className="text-sm text-blue-200 mt-2">{description}</p>
       </CardContent>

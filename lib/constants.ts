@@ -9,9 +9,10 @@ export const CONTACT = {
 
 export const NAVIGATION = [
   { name: "Calefacción", href: "#calefaccion" },
-  { name: "Servicios", href: "#servicios" },
-  { name: "Proceso", href: "#proceso" },
-  { name: "Testimonios", href: "#testimonios" },
+  { name: "¿Por qué elegirnos?", href: "#beneficios" },
+  { name: "Soluciones para tu evento", href: "#servicios" },
+
+  { name: "Clientes", href: "#testimonios" },
   { name: "FAQ", href: "#faq" },
 ];
 
@@ -37,21 +38,18 @@ export const HEATING_OPTIONS = [
   {
     title: "45.000 Calorías",
     capacity: "45K",
-    guests: "80",
     area: "80 m²",
     description: "Ideal para eventos grandes",
   },
   {
     title: "35.000 Calorías",
     capacity: "35K",
-    guests: "60",
     area: "60 m²",
     description: "Perfecto para reuniones medianas",
   },
   {
     title: "Cañón 8.000 Calorías",
     capacity: "8K",
-    guests: "15",
     area: "Espacios reducidos",
     description: "Ideal para eventos íntimos",
   },
