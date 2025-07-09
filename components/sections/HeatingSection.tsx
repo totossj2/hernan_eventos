@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Phone, Wind, ShieldCheck, Maximize2 } from "lucide-react";
+import {
+  Shield,
+  Phone,
+  Wind,
+  ShieldCheck,
+  Maximize2,
+  BadgeCheck,
+  Scaling,
+} from "lucide-react";
 import Image from "next/image";
 import { HEATING_OPTIONS } from "@/lib/constants";
 
@@ -21,12 +29,12 @@ export function HeatingSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-10 max-w-4xl mx-auto mb-10">
-          <div className="flex items-start gap-4 bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 transition-transform  ">
+        <div className="grid md:grid-cols-1 gap-8 items-center mt-10 max-w-4xl mx-auto mb-20">
+          <div className="flex items-start gap-4  max-w-2xl mx-auto backdrop-blur-sm w-fit transition-transform mb-10 ">
             <div className="bg-[#f4c046] p-3 rounded-full">
               <ShieldCheck className="h-6 w-6 text-[#003056]" />
             </div>
-            <div>
+            <div className="max-w-2xl mx-auto">
               <h3 className="text-lg font-semibold text-white">
                 Máxima Seguridad
               </h3>
@@ -38,11 +46,11 @@ export function HeatingSection() {
             </div>
           </div>
 
-          <div className="flex items-start gap-4 bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 transition-transform  ">
+          <div className="flex items-start gap-4 max-w-2xl mx-auto w-fit backdrop-blur-sm  transition-transform  ">
             <div className="bg-[#f4c046] p-3 rounded-full">
-              <Maximize2 className="h-6 w-6 text-[#003056]" />
+              <Scaling className="h-6 w-6 text-[#003056]" />
             </div>
-            <div>
+            <div className="max-w-2xl mx-auto">
               <h3 className="text-lg font-semibold text-white">
                 Adaptables a cualquier espacio
               </h3>
@@ -54,7 +62,7 @@ export function HeatingSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 ">
+        <div className="grid md:grid-cols-2 gap-6 ">
           {HEATING_OPTIONS.map((option) => (
             <HeatingCard key={option.capacity} {...option} />
           ))}
@@ -98,21 +106,42 @@ interface HeatingCardProps {
   capacity: string;
   area: string;
   description: string;
+  image: string;
 }
 
-function HeatingCard({ title, capacity, area, description }: HeatingCardProps) {
+function HeatingCard({
+  title,
+  capacity,
+  area,
+  description,
+  image,
+}: HeatingCardProps) {
   return (
-    <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
-      <CardHeader className="text-center">
-        <div className="w-16 h-16 bg-[#f4c046] rounded-full flex items-center justify-center mx-auto mb-4">
-          <span className="text-2xl font-bold text-[#003056]">{capacity}</span>
-        </div>
-        <CardTitle className="text-xl">{title}</CardTitle>
-      </CardHeader>
-      <CardContent className="text-center">
-        <p className="text-sm text-blue-200">Cobertura: {area}</p>
-        <p className="text-sm text-blue-200 mt-2">{description}</p>
-      </CardContent>
+    <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white flex flex-row overflow-hidden">
+      <div className="flex flex-row w-2/3 items-center">
+        <CardHeader className="text-center items-center flex justify-center">
+          <div className="w-16 h-16 bg-[#f4c046] rounded-full flex items-center justify-center mx-auto">
+            <span className="text-2xl font-bold text-[#003056]">
+              {capacity}
+            </span>
+          </div>
+        </CardHeader>
+        <CardContent className="text-center flex flex-col justify-center items-center">
+          <CardTitle className="text-xl">{title}</CardTitle>
+
+          <p className="text-sm text-blue-200">Cobertura: {area}</p>
+          <p className="text-sm text-blue-200 mt-2">{description}</p>
+        </CardContent>
+      </div>
+      <div className="w-1/3 flex justify-center items-center rounded-r-lg">
+        <Image
+          src={image}
+          alt={title}
+          width={100}
+          height={100}
+          className="w-auto h-[200px]"
+        />
+      </div>
     </Card>
   );
 }

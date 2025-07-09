@@ -4,26 +4,22 @@ import { Award, Clock, Shield, Users } from "lucide-react";
 export function BenefitsSection() {
   const benefits = [
     {
-      icon: Award,
-      title: "35+ Años de Experiencia",
-      description:
-        "Hemos equipado más de 2,000 eventos exitosos en toda la región",
-    },
-    {
       icon: Clock,
       title: "Puntualidad Garantizada",
       description:
-        "Entrega y montaje siempre a tiempo. Tu evento no puede esperar",
+        "Tu tranquilidad es nuestra prioridad. Nuestra logística garantiza una puntualidad británica para que solo te preocupes por disfrutar.",
     },
     {
-      icon: Shield,
+      icon: Award,
       title: "Materiales Premium",
-      description: "Equipamiento de primera calidad, renovado constantemente",
+      description:
+        "La calidad se ve en los detalles. Invertimos constantemente en equipamiento de primeras marcas para que tu evento luzca impecable y funcione a la perfección.",
     },
     {
       icon: Users,
       title: "Atención Personalizada",
-      description: "Asesoramiento experto para que tu evento sea perfecto",
+      description:
+        "No somos un catálogo, somos tu socio. Desde la primera llamada, un experto te acompaña para dar vida a tu idea, ajustándose a tu visión y presupuesto.",
     },
   ];
 
@@ -35,10 +31,11 @@ export function BenefitsSection() {
             ¿Por qué elegir Hernan Eventos?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Más de 35 años de experiencia haciendo que cada evento sea memorable
+            Con más de 35 años de experiencia y 1.000 eventos exitosos, hemos
+            perfeccionado el arte de crear momentos inolvidables.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit) => (
             <Card
               key={benefit.title}

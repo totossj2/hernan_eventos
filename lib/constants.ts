@@ -36,21 +36,75 @@ export const EVENT_TYPES = [
 
 export const HEATING_OPTIONS = [
   {
-    title: "45.000 Calorías",
-    capacity: "45K",
-    area: "80 m²",
-    description: "Ideal para eventos grandes",
-  },
-  {
-    title: "35.000 Calorías",
-    capacity: "35K",
-    area: "60 m²",
-    description: "Perfecto para reuniones medianas",
+    title: "Piramide",
+    capacity: "8K",
+    area: "Espacios exteriores",
+    description: "Ideal para eventos en el exterior",
+    image: "/calefaccion/hongo exterior.jpg",
   },
   {
     title: "Cañón 8.000 Calorías",
     capacity: "8K",
     area: "Espacios reducidos",
     description: "Ideal para eventos íntimos",
+    image: "/calefaccion/cañon 800 calorias.jpg",
+  },
+
+  {
+    title: "35.000 Calorías",
+    capacity: "35K",
+    area: "60 m²",
+    description: "Perfecto para reuniones medianas",
+    image: "/calefaccion/Calefactor goodman.jpg",
+  },
+  {
+    title: "45.000 Calorías",
+    capacity: "45K",
+    area: "80 m²",
+    description: "Ideal para eventos grandes",
+    image: "/calefaccion/45k.webp",
+  },
+];
+
+export const CLIENTS = [
+  {
+    name: "Ministerio de Economía",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo Ministerio de Economía",
+  },
+  {
+    name: "Banco Nación",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo Banco Nación",
+  },
+  {
+    name: "YPF",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo YPF",
+  },
+  {
+    name: "Banco Provincia",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo Banco Provincia",
+  },
+  {
+    name: "AFIP",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo AFIP",
+  },
+  {
+    name: "Banco Ciudad",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo Banco Ciudad",
+  },
+  {
+    name: "Ministerio de Trabajo",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo Ministerio de Trabajo",
+  },
+  {
+    name: "ANSES",
+    logo: "/logos_clientes/MEE.jpg",
+    alt: "Logo ANSES",
   },
 ];
