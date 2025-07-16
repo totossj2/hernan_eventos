@@ -80,7 +80,7 @@ export function ServicesSection() {
             Todo lo que necesitas para tu evento en un solo lugar
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* Servicios principales - 6 columnas cada uno */}
           {mainServices.map((service) => (
             <Card

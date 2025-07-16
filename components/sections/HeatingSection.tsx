@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Shield,
   Phone,
@@ -8,56 +8,58 @@ import {
   Maximize2,
   BadgeCheck,
   Scaling,
-} from "lucide-react";
-import Image from "next/image";
-import { HEATING_OPTIONS } from "@/lib/constants";
+} from 'lucide-react';
+import Image from 'next/image';
+import { HEATING_OPTIONS } from '@/lib/constants';
 
 export function HeatingSection() {
   return (
     <section
       id="calefaccion"
-      className="py-20 bg-gradient-to-br from-[#003056] to-[#004070]"
+      className="py-10 m-4 rounded-lg  bg-gradient-to-br from-[#003056] to-[#004070]"
     >
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Calefacción segura y potente para eventos de invierno
-          </h2>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Equipos a gas, seguros y adaptables a cualquier espacio. Sin frío,
-            sin riesgos, sin estrés.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-1 gap-8 items-center mt-10 max-w-4xl mx-auto mb-20">
-          <div className="flex items-start gap-4  max-w-2xl mx-auto backdrop-blur-sm w-fit transition-transform mb-10 ">
-            <div className="bg-[#f4c046] p-3 rounded-full">
-              <ShieldCheck className="h-6 w-6 text-[#003056]" />
-            </div>
-            <div className="max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold text-white">
-                Máxima Seguridad
-              </h3>
-              <p className="text-blue-100 mt-2">
-                Equipos a gas con encendido piezoeléctrico y sin partes
-                calientes al alcance de los invitados. Perfectos para eventos
-                sociales.
-              </p>
-            </div>
+      <div className="container mx-auto px-4 gap-10 flex flex-col">
+        <div className="bg-white/10 backdrop-blur-sm border-white/20 text-white flex flex-row overflow-hidden flex flex-col p-8 rounded-lg">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Calefacción segura y potente para eventos de invierno
+            </h2>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Equipos a gas, seguros y adaptables a cualquier espacio. Sin frío,
+              sin riesgos, sin estrés.
+            </p>
           </div>
 
-          <div className="flex items-start gap-4 max-w-2xl mx-auto w-fit backdrop-blur-sm  transition-transform  ">
-            <div className="bg-[#f4c046] p-3 rounded-full">
-              <Scaling className="h-6 w-6 text-[#003056]" />
+          <div className="grid md:grid-cols-1 gap-4 items-center  max-w-4xl mx-auto ">
+            <div className="flex items-start gap-4  max-w-2xl mx-auto backdrop-blur-sm w-fit transition-transform mb-10 ">
+              <div className="bg-[#f4c046] p-3 rounded-full">
+                <ShieldCheck className="h-6 w-6 text-[#003056]" />
+              </div>
+              <div className="max-w-2xl mx-auto">
+                <h3 className="text-lg font-semibold text-white">
+                  Máxima Seguridad
+                </h3>
+                <p className="text-blue-100 mt-2">
+                  Equipos a gas con encendido piezoeléctrico y sin partes
+                  calientes al alcance de los invitados. Perfectos para eventos
+                  sociales.
+                </p>
+              </div>
             </div>
-            <div className="max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold text-white">
-                Adaptables a cualquier espacio
-              </h3>
-              <p className="text-blue-100 mt-2">
-                Modelos tipo hongo o pirámide para exteriores. Diferentes
-                potencias para espacios chicos o grandes.
-              </p>
+
+            <div className="flex items-start gap-4 max-w-2xl mx-auto w-fit backdrop-blur-sm  transition-transform  ">
+              <div className="bg-[#f4c046] p-3 rounded-full">
+                <Scaling className="h-6 w-6 text-[#003056]" />
+              </div>
+              <div className="max-w-2xl mx-auto">
+                <h3 className="text-lg font-semibold text-white">
+                  Adaptables a cualquier espacio
+                </h3>
+                <p className="text-blue-100 mt-2">
+                  Modelos tipo hongo o pirámide para exteriores. Diferentes
+                  potencias para espacios chicos o grandes.
+                </p>
+              </div>
             </div>
           </div>
         </div>
