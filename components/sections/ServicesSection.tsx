@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import {
   Tent,
   Table,
@@ -8,75 +8,75 @@ import {
   Music2,
   Fence,
   ArrowRight,
-} from "lucide-react";
-import Image from "next/image";
-import { Button } from "../ui/button";
+} from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '../ui/button';
 
 export function ServicesSection() {
   // Servicios principales (ocuparán 6 columnas cada uno)
   const mainServices = [
     {
-      title: "Carpas y Gazebos",
+      title: 'Carpas y Gazebos',
       description:
-        "Desde 3x3m hasta 20x30m. Resistentes al viento y lluvia, ideales para cualquier clima.",
+        'Desde 3x3m hasta 20x30m. Resistentes al viento y lluvia, ideales para cualquier clima.',
       icon: Tent,
-      image: "/catalogo/carpa.jpg",
-      alt: "Carpas elegantes para eventos",
+      image: '/catalogo/carpa.jpg',
+      alt: 'Carpas elegantes para eventos',
     },
     {
-      title: "Escenarios y Tarimas",
+      title: 'Escenarios y Tarimas',
       description:
-        "Estructuras modulares para presentaciones, shows y ceremonias especiales.",
+        'Estructuras modulares para presentaciones, shows y ceremonias especiales.',
       icon: Music2,
-      image: "/catalogo/escenario.jpg",
-      alt: "Escenarios y tarimas",
+      image: '/catalogo/escenario.jpg',
+      alt: 'Escenarios y tarimas',
     },
   ];
 
   // Servicios secundarios (ocuparán 3 columnas cada uno)
   const secondaryServices = [
     {
-      title: "Mesas y Sillas",
+      title: 'Mesas y Sillas',
       description:
-        "Mesas redondas, rectangulares y cocktail. Sillas Tiffany, plegables y ejecutivas.",
+        'Mesas redondas, rectangulares y cocktail. Sillas Tiffany, plegables y ejecutivas.',
       icon: Table,
-      image: "/catalogo/sillasymesas.jpg",
-      alt: "Mesas y sillas para eventos",
+      image: '/catalogo/sillasymesas.jpg',
+      alt: 'Mesas y sillas para eventos',
     },
     {
-      title: "Vajilla y Cristalería",
+      title: 'Vajilla y Cristalería',
       description:
-        "Platos, copas, cubiertos y mantelería de alta calidad para eventos elegantes.",
+        'Platos, copas, cubiertos y mantelería de alta calidad para eventos elegantes.',
       icon: Utensils,
-      image: "/catalogo/vajilla.jpg",
-      alt: "Vajilla y cristalería elegante",
+      image: '/catalogo/vajilla.jpg',
+      alt: 'Vajilla y cristalería elegante',
     },
     {
-      title: "Climatización",
+      title: 'Climatización',
       description:
-        "Equipos de aire acondicionado y calefacción para mantener el confort perfecto.",
+        'Equipos de aire acondicionado y calefacción para mantener el confort perfecto.',
       icon: Wind,
-      image: "/catalogo/DSC_2048.JPG",
-      alt: "Sistemas de climatización",
+      image: '/catalogo/DSC_2048.JPG',
+      alt: 'Sistemas de climatización',
     },
     {
-      title: "Vallas y Cerramientos",
+      title: 'Vallas y Cerramientos',
       description:
-        "Control de acceso y delimitación de espacios para eventos seguros y organizados.",
+        'Control de acceso y delimitación de espacios para eventos seguros y organizados.',
       icon: Fence,
-      image: "/catalogo/vallas.jpg",
-      alt: "Vallas y cerramientos",
+      image: '/catalogo/vallas.jpg',
+      alt: 'Vallas y cerramientos',
     },
   ];
 
   return (
-    <section id="servicios" className="py-20">
+    <section id="servicios" className="py-0">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center  mb-6 md:mb-16">
+          <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
             Nuestro Equipamiento
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
             Todo lo que necesitas para tu evento en un solo lugar
           </p>
         </div>
@@ -87,7 +87,7 @@ export function ServicesSection() {
               key={service.title}
               className="lg:col-span-6 overflow-hidden group relative hover:shadow-xl transition-shadow "
             >
-              <div className="relative h-64 overflow-hidden rounded-lg">
+              <div className="relative h-96 overflow-hidden rounded-lg">
                 <Image
                   src={service.image}
                   alt={service.alt}
@@ -98,30 +98,30 @@ export function ServicesSection() {
                 {/* Badge especial en la esquina superior derecha */}
                 <div className="absolute top-3 right-3 group-hover:opacity-0 transition-opacity duration-300">
                   <Badge className="bg-yellow-400 text-gray-900 text-xs uppercase font-semibold tracking-wide rounded-full px-3 py-1">
-                    {service.title === "Carpas y Gazebos"
-                      ? "Nuestra Especialidad"
-                      : "Alto Impacto"}
+                    {service.title === 'Carpas y Gazebos'
+                      ? 'Nuestra Especialidad'
+                      : 'Alto Impacto'}
                   </Badge>
                 </div>
-                <CardContent className="absolute bottom-0 left-0 right-0 p-6 text-white ">
-                  <div className="flex items-center gap-2 mb-2 ">
-                    <Badge className="bg-[#003056]">
-                      <service.icon className="h-4 w-4 mr-1" />
-                      {service.title}
-                    </Badge>
-                  </div>
+                {/* Título en la esquina superior izquierda */}
+                <div className="absolute top-4 left-4">
+                  <h3 className="text-lg font-semibold text-white">
+                    {service.title}
+                  </h3>
+                </div>
+                <CardContent className="absolute bottom-0 left-0 right-0 p-6 text-white">
                   <p className="text-gray-200 group-hover:opacity-0 transition-opacity duration-300">
                     {service.description}
                   </p>
                 </CardContent>
                 {/* Nuevo overlay con botones */}
-                <div className="absolute inset-0 p-6 flex justify-center items-end space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 p-6 flex justify-center items-end  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex flex-row gap-2 w-full justify-center ">
                     <a
                       href="#detalles"
                       className="px-4 py-2 border w-full text-center border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors"
                     >
-                      Ver Detalles
+                      Ver Trabajos
                     </a>
                     <a
                       href="#cotizar"
@@ -141,7 +141,7 @@ export function ServicesSection() {
               key={service.title}
               className="lg:col-span-3 overflow-hidden group relative hover:shadow-xl transition-shadow"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.alt}
@@ -149,28 +149,25 @@ export function ServicesSection() {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/90" />
-                <CardContent className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Badge className="bg-[#003056]">
-                      <service.icon className="h-4 w-4 mr-1" />
-                      {service.title}
-                    </Badge>
-                  </div>
-                  <p className="text-gray-200">{service.description}</p>
-                </CardContent>
-                {/* Nuevo overlay con botones */}
-                <div className="absolute inset-0 bg-black bg-opacity-70 flex justify-center items-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* Título en la esquina superior izquierda */}
+                <div className="absolute top-4 left-4">
+                  <h3 className="text-lg font-semibold text-white">
+                    {service.title}
+                  </h3>
+                </div>
+                {/* Botones en la parte inferior */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-center items-center gap-2 w-full">
                   <a
                     href="#detalles"
-                    className="px-4 py-2 border border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors"
+                    className="w-full px-4 py-2 border border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors text-center"
                   >
-                    Ver Detalles
+                    Catálogo
                   </a>
                   <a
                     href="#cotizar"
-                    className="px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded hover:bg-yellow-300 transition-colors"
+                    className="w-full px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded hover:bg-yellow-300 transition-colors text-center"
                   >
-                    Cotizar Ahora
+                    Cotizar
                   </a>
                 </div>
               </div>

@@ -1,6 +1,6 @@
-import { Phone, Mail, MapPin } from "lucide-react";
-import Image from "next/image";
-import { CONTACT, SERVICES, EVENT_TYPES } from "@/lib/constants";
+import { Phone, Mail, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { CONTACT, SERVICES, EVENT_TYPES } from '@/lib/constants';
 
 export function Footer() {
   return (
@@ -17,7 +17,7 @@ export function Footer() {
                 className="object-contain"
               />
             </div>
-            <p className="text-gray-400 mb-4">
+            <p className="text-base text-gray-400 mb-4">
               Tu socio confiable para eventos perfectos. Más de 35 años de
               experiencia nos respaldan.
             </p>

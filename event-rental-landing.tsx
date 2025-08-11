@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
+} from '@/components/ui/accordion';
 import {
   Phone,
   Mail,
@@ -24,10 +24,10 @@ import {
   Fence,
   PlayIcon as Stage,
   Table,
-} from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+} from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 export default function Component() {
   const { scrollTo } = useSmoothScroll();
@@ -89,7 +89,7 @@ export default function Component() {
           >
             <Button className="bg-[#003056] hover:bg-[#002040]">
               <Phone className="h-4 w-4 mr-2" />
-              Contactanos
+              <span className="hidden md:block">Contactanos</span>
             </Button>
           </a>
         </div>
@@ -131,7 +131,7 @@ export default function Component() {
           className="py-20 bg-gradient-to-br from-[#003056] to-[#004070]"
         >
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Calefacción segura y potente para eventos de invierno
               </h2>
@@ -265,7 +265,7 @@ export default function Component() {
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 ¿Por qué elegir Hernan Eventos?
               </h2>
@@ -334,7 +334,7 @@ export default function Component() {
         {/* Products Gallery */}
         <section id="servicios" className="py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Nuestro Equipamiento
               </h2>
@@ -489,7 +489,7 @@ export default function Component() {
         {/* Process Section */}
         <section id="proceso" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Proceso Simple y Eficiente
               </h2>
@@ -551,7 +551,7 @@ export default function Component() {
         {/* Testimonials */}
         <section id="testimonios" className="py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Lo que dicen nuestros clientes
               </h2>
@@ -653,7 +653,7 @@ export default function Component() {
         {/* FAQ Section */}
         <section id="faq" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+            <div className="text-center mb-6 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Preguntas Frecuentes
               </h2>

@@ -2,38 +2,38 @@ export function ProcessSection() {
   const steps = [
     {
       number: 1,
-      title: "Consulta Inicial",
+      title: 'Consulta Inicial',
       description:
-        "Nos cuentas los detalles de tu evento: fecha, lugar, cantidad de invitados y necesidades específicas.",
+        'Nos cuentas los detalles de tu evento: fecha, lugar, cantidad de invitados y necesidades específicas.',
     },
     {
       number: 2,
-      title: "Presupuesto Personalizado",
+      title: 'Presupuesto Personalizado',
       description:
-        "Te enviamos una cotización detallada en menos de 24 horas con todas las opciones disponibles.",
+        'Te enviamos una cotización detallada en menos de 24 horas con todas las opciones disponibles.',
     },
     {
       number: 3,
-      title: "Reserva y Planificación",
+      title: 'Reserva y Planificación',
       description:
-        "Confirmamos tu reserva y coordinamos todos los detalles de entrega y montaje.",
+        'Confirmamos tu reserva y coordinamos todos los detalles de entrega y montaje.',
     },
     {
       number: 4,
-      title: "Entrega y Montaje",
+      title: 'Entrega y Montaje',
       description:
-        "Nuestro equipo llega puntualmente, monta todo profesionalmente y se encarga de la recolección.",
+        'Nuestro equipo llega puntualmente, monta todo profesionalmente y se encarga de la recolección.',
     },
   ];
 
   return (
-    <section id="proceso" className="py-20 bg-gray-50">
+    <section id="proceso" className="py-0 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-6 md:mb-16">
+          <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
             Proceso Simple y Eficiente
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
             En solo 4 pasos tendrás todo listo para tu evento perfecto
           </p>
         </div>
@@ -43,7 +43,7 @@ export function ProcessSection() {
               <div className="w-16 h-16 bg-[#003056] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 {step.number}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+              <h3 className="text-lg font-semibold mb-3">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
             </div>
           ))}
