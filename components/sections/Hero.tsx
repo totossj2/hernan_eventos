@@ -77,7 +77,7 @@ export function Hero() {
         </div>
       </section>
       {/* Logos de clientes */}
-      <section className="bg-gray-100 py-0">
+      <section className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 px-4">
             <div className="flex flex-row items-center gap-8">
@@ -97,14 +97,14 @@ export function Hero() {
                   realizados
                 </p>
               </div>
-              <div className="hidden md:block w-[2px] h-2/3 bg-gray-300 rounded-full" />
+              <div className="hidden md:block w-[2px] h-full bg-gray-300 rounded-full" />
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center w-full">
+            <div className="grid grid-cols-2  lg:grid-cols-4  gap-x-8 gap-y-4 items-center w-full">
               {CLIENTS.map((client, index) => (
                 <motion.div
                   key={`logo-${index}`}
-                  className="flex items-center justify-center"
+                  className="flex flex-col items-center justify-center group cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                 >
                   <Image
@@ -112,8 +112,14 @@ export function Hero() {
                     alt={client.alt}
                     width={120}
                     height={60}
-                    className="opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                    className="opacity-70 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0"
                   />
+                  {/* Client name with fade in */}
+                  <div className="mt-2 h-6 md:h-8 overflow-hidden">
+                    <p className="text-xs text-gray-600 text-center font-medium transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                      {client.name}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>

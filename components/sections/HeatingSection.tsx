@@ -14,7 +14,7 @@ import { HEATING_OPTIONS } from '@/lib/constants';
 
 export function HeatingSection() {
   return (
-    <section id="calefaccion" className="bg-[#f3f4f6] ">
+    <section id="calefaccion" className="bg-[#f3f4f6] py-12">
       <div className=" md:m-4 rounded-lg py-4 md:py-10 bg-gradient-to-br from-[#003056] to-[#004070]">
         <div className="container mx-auto px-4 gap-10 flex flex-col ">
           <div className="bg-white/10 backdrop-blur-sm border-white/20 text-white flex flex-row overflow-hidden flex flex-col p-4 md:p-8 rounded-lg">

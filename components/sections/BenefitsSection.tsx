@@ -24,7 +24,7 @@ export function BenefitsSection() {
   ];
 
   return (
-    <section id="beneficios" className="py-0 bg-gray-50">
+    <section id="beneficios" className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-16">
           <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
@@ -35,11 +35,11 @@ export function BenefitsSection() {
             perfeccionado el arte de crear momentos inolvidables.
           </p>
         </div>
-        <div className="grid  lg:grid-cols-3 gap-8">
-          {benefits.map((benefit) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+          {benefits.map((benefit, index) => (
             <Card
               key={benefit.title}
-              className="text-center border-0 shadow-lg w-fit mx-auto"
+              className={`text-center border-0 shadow-lg w-full max-w-sm mx-auto`}
             >
               <CardHeader className="p-4">
                 <benefit.icon className="h-12 w-12 text-[#003056] mx-auto mb-4" />

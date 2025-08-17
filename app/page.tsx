@@ -7,6 +7,7 @@ import { ServicesSection } from '@/components/sections/ServicesSection';
 import { ProcessSection } from '@/components/sections/ProcessSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { FAQSection } from '@/components/sections/FAQSection';
+// import { Form } from '@/components/sections/Form';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <ProcessSection />
         <TestimonialsSection />
         <FAQSection />
+        {/* <Form /> */}
       </main>
       <Footer />
     </div>

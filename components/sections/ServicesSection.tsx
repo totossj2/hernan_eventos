@@ -70,7 +70,7 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="servicios" className="py-0">
+    <section id="servicios" className="py-12">
       <div className="container mx-auto px-4">
         <div className="text-center  mb-6 md:mb-16">
           <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
@@ -80,54 +80,61 @@ export function ServicesSection() {
             Todo lo que necesitas para tu evento en un solo lugar
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
           {/* Servicios principales - 6 columnas cada uno */}
           {mainServices.map((service) => (
             <Card
               key={service.title}
               className="lg:col-span-6 overflow-hidden group relative hover:shadow-xl transition-shadow "
             >
-              <div className="relative h-96 overflow-hidden rounded-lg">
-                <Image
-                  src={service.image}
-                  alt={service.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/90" />
-                {/* Badge especial en la esquina superior derecha */}
-                <div className="absolute top-3 right-3 group-hover:opacity-0 transition-opacity duration-300">
-                  <Badge className="bg-yellow-400 text-gray-900 text-xs uppercase font-semibold tracking-wide rounded-full px-3 py-1">
-                    {service.title === 'Carpas y Gazebos'
-                      ? 'Nuestra Especialidad'
-                      : 'Alto Impacto'}
-                  </Badge>
+              <div
+                className="relative h-96 overflow-hidden rounded-lg flex flex-col bg-cover bg-center bg-no-repeat group-hover:shadow-xl transition-shadow p-4"
+                style={{
+                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 100%), url(${service.image})`,
+                }}
+              >
+                <div className="flex flex-col-reverse md:flex-row justify-between">
+                  {/* Título en la esquina superior izquierda */}
+                  <div className="text-center flex items-center">
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  {/* Badge especial en la esquina superior derecha */}
+                  <div className="hidden md:flex md:justify-end transition-opacity duration-300">
+                    <Badge className="bg-yellow-400 hover:bg-yellow-300 hover:text-gray-900 text-gray-900 text-xs uppercase font-semibold tracking-wide rounded-full px-3 py-1">
+                      {service.title === 'Carpas y Gazebos'
+                        ? 'Nuestra Especialidad'
+                        : 'Alto Impacto'}
+                    </Badge>
+                  </div>
                 </div>
-                {/* Título en la esquina superior izquierda */}
-                <div className="absolute top-4 left-4">
-                  <h3 className="text-lg font-semibold text-white">
-                    {service.title}
-                  </h3>
-                </div>
-                <CardContent className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <p className="text-gray-200 group-hover:opacity-0 transition-opacity duration-300">
-                    {service.description}
-                  </p>
-                </CardContent>
-                {/* Nuevo overlay con botones */}
-                <div className="absolute inset-0 p-6 flex justify-center items-end  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex flex-row gap-2 w-full justify-center ">
+                {/* Espacio flexible para empujar contenido hacia abajo */}
+                <div className="flex-1"></div>
+
+                {/* Contenido inferior - texto y botones siempre visibles en mobile */}
+                <div className="relative h-24 flex gap-4 flex-col justify-end">
+                  {/* Descripción - siempre visible en mobile, oculta en hover solo en desktop */}
+                  <div className="md:group-hover:opacity-0 transition-opacity duration-300">
+                    <p className="text-gray-200 text-sm text-left break-words hyphens-auto">
+                      {service.description}
+                    </p>
+                  </div>
+                  {/* Botones - siempre visibles en mobile, por encima del texto en hover solo en desktop */}
+                  <div className="flex flex-row gap-2 w-full justify-center items-end md:absolute md:inset-0 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                     <a
                       href="#detalles"
                       className="px-4 py-2 border w-full text-center border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors"
                     >
-                      Ver Trabajos
+                      <span className="md:hidden">Trabajos</span>
+                      <span className="hidden md:inline">Ver Trabajos</span>
                     </a>
                     <a
                       href="#cotizar"
                       className="px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded hover:bg-yellow-300 transition-colors w-full text-center"
                     >
-                      Cotizar Ahora
+                      <span className="md:hidden">Cotizar</span>
+                      <span className="hidden md:inline">Cotizar Ahora</span>
                     </a>
                   </div>
                 </div>
@@ -141,34 +148,47 @@ export function ServicesSection() {
               key={service.title}
               className="lg:col-span-3 overflow-hidden group relative hover:shadow-xl transition-shadow"
             >
-              <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black/90" />
+              <div
+                className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col bg-cover bg-center bg-no-repeat group-hover:shadow-xl transition-shadow p-4"
+                style={{
+                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 100%), url(${service.image})`,
+                }}
+              >
                 {/* Título en la esquina superior izquierda */}
-                <div className="absolute top-4 left-4">
+                <div className="">
                   <h3 className="text-lg font-semibold text-white">
                     {service.title}
                   </h3>
                 </div>
-                {/* Botones en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-center items-center gap-2 w-full">
-                  <a
-                    href="#detalles"
-                    className="w-full px-4 py-2 border border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors text-center"
-                  >
-                    Catálogo
-                  </a>
-                  <a
-                    href="#cotizar"
-                    className="w-full px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded hover:bg-yellow-300 transition-colors text-center"
-                  >
-                    Cotizar
-                  </a>
+
+                {/* Espacio flexible para empujar contenido hacia abajo */}
+                <div className="flex-1"></div>
+
+                {/* Contenido inferior - texto y botones siempre visibles en mobile */}
+                <div className="relative flex h-fit gap-3 flex-col justify-end">
+                  {/* Descripción - siempre visible en mobile, oculta en hover solo en desktop */}
+                  <div className="md:group-hover:opacity-0 transition-opacity duration-300">
+                    <p className="text-gray-200 text-sm text-left break-words hyphens-auto">
+                      {service.description}
+                    </p>
+                  </div>
+                  {/* Botones - siempre visibles en mobile, por encima del texto en hover solo en desktop */}
+                  <div className="flex flex-row gap-2 w-full justify-center items-end md:absolute md:inset-x-0 md:bottom-0 md:h-fit md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                    <a
+                      href="#detalles"
+                      className="w-full px-4 py-2 border border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors text-center"
+                    >
+                      <span className="md:hidden">Catálogo</span>
+                      <span className="hidden md:inline">Catálogo</span>
+                    </a>
+                    <a
+                      href="#cotizar"
+                      className="w-full px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded hover:bg-yellow-300 transition-colors text-center"
+                    >
+                      <span className="md:hidden">Cotizar</span>
+                      <span className="hidden md:inline">Cotizar</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </Card>
