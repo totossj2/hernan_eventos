@@ -72,7 +72,7 @@ export const CLIENTS = [
   },
   {
     name: 'Municipalidad de Esteban Echeverría',
-    logo: '/logos_clientes/MEE.png',
+    logo: '/logos_clientes/MEE.png', // TODO: cambiar a la nueva imagen
     alt: 'Logo Municipalidad de Esteban Echeverría',
   },
   {

@@ -115,7 +115,7 @@ export function Hero() {
                     className="opacity-70 group-hover:opacity-100 transition-all duration-300 grayscale group-hover:grayscale-0"
                   />
                   {/* Client name with fade in */}
-                  <div className="mt-2 h-6 md:h-8 overflow-hidden">
+                  <div className="mt-2 h-8 overflow-hidden">
                     <p className="text-xs text-gray-600 text-center font-medium transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                       {client.name}
                     </p>
