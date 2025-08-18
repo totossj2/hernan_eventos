@@ -38,7 +38,7 @@ export function ServicesSection() {
     {
       title: 'Mesas y Sillas',
       description:
-        'Mesas redondas, rectangulares y cocktail. Sillas Tiffany, plegables y ejecutivas.',
+        'Mesas redondas, rectangulares y cocktail. Sillas plasticas o plegables.',
       icon: Table,
       image: '/catalogo/sillasymesas.jpg',
       alt: 'Mesas y sillas para eventos',
@@ -54,15 +54,14 @@ export function ServicesSection() {
     {
       title: 'Climatización',
       description:
-        'Equipos de aire acondicionado y calefacción para mantener el confort perfecto.',
+        'Equipos de aire acondicionado y calefacción para mantener el clima perfecto.',
       icon: Wind,
       image: '/catalogo/DSC_2048.JPG',
       alt: 'Sistemas de climatización',
     },
     {
       title: 'Vallas y Cerramientos',
-      description:
-        'Control de acceso y delimitación de espacios para eventos seguros y organizados.',
+      description: 'Eventos masivos seguros y organizados.',
       icon: Fence,
       image: '/catalogo/vallas.jpg',
       alt: 'Vallas y cerramientos',
@@ -95,17 +94,17 @@ export function ServicesSection() {
               >
                 <div className="flex flex-col-reverse md:flex-row justify-between">
                   {/* Título en la esquina superior izquierda */}
-                  <div className="text-center flex items-center">
-                    <h3 className="text-lg font-semibold text-white">
+                  <div className="text-left flex items-center">
+                    <h3 className="text-lg font-semibold text-white leading-tight">
                       {service.title}
                     </h3>
                   </div>
                   {/* Badge especial en la esquina superior derecha */}
-                  <div className="hidden md:flex md:justify-end transition-opacity duration-300">
-                    <Badge className="bg-yellow-400 hover:bg-yellow-300 hover:text-gray-900 text-gray-900 text-xs uppercase font-semibold tracking-wide rounded-full px-3 py-1">
+                  <div className="hidden md:flex md:justify-end transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                    <Badge className="bg-yellow-400 hover:bg-yellow-300 hover:text-gray-900 text-gray-900 text-xs uppercase font-semibold tracking-wide rounded-full px-3 py-1 h-fit">
                       {service.title === 'Carpas y Gazebos'
-                        ? 'Nuestra Especialidad'
-                        : 'Alto Impacto'}
+                        ? 'Estéticas'
+                        : 'multidireccionales'}
                     </Badge>
                   </div>
                 </div>
@@ -155,7 +154,7 @@ export function ServicesSection() {
                 }}
               >
                 {/* Título en la esquina superior izquierda */}
-                <div className="">
+                <div className="text-left">
                   <h3 className="text-lg font-semibold text-white">
                     {service.title}
                   </h3>
