@@ -4,7 +4,7 @@ export function ProcessSection() {
       number: 1,
       title: 'Consulta Inicial',
       description:
-        'Nos cuentas los detalles de tu evento: fecha, lugar, cantidad de invitados y necesidades específicas.',
+        'Nos contactas con los detalles de tu evento: fecha, lugar, cantidad de invitados y necesidades específicas.',
     },
     {
       number: 2,
@@ -22,7 +22,7 @@ export function ProcessSection() {
       number: 4,
       title: 'Entrega y Montaje',
       description:
-        'Nuestro equipo llega puntualmente, monta todo profesionalmente y se encarga de la recolección.',
+        'Nuestro equipo llega puntualmente, monta todo profesionalmente.',
     },
   ];
 

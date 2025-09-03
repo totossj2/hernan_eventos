@@ -10,20 +10,20 @@ import {
   Scaling,
 } from 'lucide-react';
 import Image from 'next/image';
-import { HEATING_OPTIONS } from '@/lib/constants';
+import { CLIMATIZATION_OPTIONS } from '@/lib/constants';
 
 export function HeatingSection() {
   return (
-    <section id="calefaccion" className="bg-[#f3f4f6] py-12">
+          <section id="climatizacion" className="bg-[#f3f4f6] py-12">
       <div className=" md:m-4 rounded-lg py-4 md:py-10 bg-gradient-to-br from-[#003056] to-[#004070]">
         <div className="container mx-auto px-4 gap-10 flex flex-col ">
           <div className="bg-white/10 backdrop-blur-sm border-white/20 text-white flex flex-row overflow-hidden flex flex-col p-4 md:p-8 rounded-lg">
             <div className="text-center md:mb-16">
               <h2 className="text-xl md:text-4xl font-semibold text-white mb-4">
-                Calefacción segura y potente para eventos de invierno
+                Climatización completa para eventos todo el año
               </h2>
               <p className="text-base md:text-xl text-blue-100 max-w-2xl mx-auto">
-                Equipos a gas, seguros y adaptables a cualquier espacio.
+                Sistemas de calefacción y aire acondicionado, seguros y adaptables a cualquier espacio.
               </p>
             </div>
 
@@ -61,14 +61,17 @@ export function HeatingSection() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 ">
-            {HEATING_OPTIONS.map((option) => (
-              <HeatingCard key={option.capacity} {...option} />
+            {CLIMATIZATION_OPTIONS.map((option) => (
+              <HeatingCard
+                key={`${option.title}-${option.capacity}`}
+                {...option}
+              />
             ))}
           </div>
 
           <div className="text-center mb-2 md:mb-4 mt-4 md:mt-6">
             <p className="text-center text-red-500 font-semibold ">
-              ¡Alta demanda invernal! Reservá con anticipación para asegurar tu
+              ¡Alta demanda en temporada! Reservá con anticipación para asegurar tu
               equipo.
             </p>
             <p className="text-center text-sm text-gray-300 mt-2">
@@ -79,7 +82,7 @@ export function HeatingSection() {
 
           <div className="text-center">
             <a
-              href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20la%20calefacción"
+              href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20la%20climatización"
               target="_blank"
             >
               <Button

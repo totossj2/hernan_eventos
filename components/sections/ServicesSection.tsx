@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '../ui/button';
+import Link from 'next/link';
 
 export function ServicesSection() {
   // Servicios principales (ocuparán 6 columnas cada uno)
@@ -22,6 +23,7 @@ export function ServicesSection() {
       icon: Tent,
       image: '/catalogo/carpa.jpg',
       alt: 'Carpas elegantes para eventos',
+      href: '/servicios/carpas',
     },
     {
       title: 'Escenarios y Tarimas',
@@ -30,6 +32,7 @@ export function ServicesSection() {
       icon: Music2,
       image: '/catalogo/escenario.jpg',
       alt: 'Escenarios y tarimas',
+      href: '/servicios/escenarios',
     },
   ];
 
@@ -42,6 +45,7 @@ export function ServicesSection() {
       icon: Table,
       image: '/catalogo/sillasymesas.jpg',
       alt: 'Mesas y sillas para eventos',
+      href: '/servicios/mesas',
     },
     {
       title: 'Vajilla y Cristalería',
@@ -50,6 +54,7 @@ export function ServicesSection() {
       icon: Utensils,
       image: '/catalogo/vajilla.jpg',
       alt: 'Vajilla y cristalería elegante',
+      href: '/servicios/vajilla',
     },
     {
       title: 'Climatización',
@@ -58,6 +63,7 @@ export function ServicesSection() {
       icon: Wind,
       image: '/catalogo/DSC_2048.JPG',
       alt: 'Sistemas de climatización',
+              href: '/servicios/climatizacion',
     },
     {
       title: 'Vallas y Cerramientos',
@@ -65,6 +71,7 @@ export function ServicesSection() {
       icon: Fence,
       image: '/catalogo/vallas.jpg',
       alt: 'Vallas y cerramientos',
+      href: '/servicios', // Por ahora redirige a la página general de servicios
     },
   ];
 
@@ -121,13 +128,13 @@ export function ServicesSection() {
                   </div>
                   {/* Botones - siempre visibles en mobile, por encima del texto en hover solo en desktop */}
                   <div className="flex flex-row gap-2 w-full justify-center items-end md:absolute md:inset-0 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href="#detalles"
+                    <Link
+                      href={service.href}
                       className="px-4 py-2 border w-full text-center border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors"
                     >
                       <span className="md:hidden">Trabajos</span>
                       <span className="hidden md:inline">Ver Trabajos</span>
-                    </a>
+                    </Link>
                     <a
                       href="#cotizar"
                       className="px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded hover:bg-yellow-300 transition-colors w-full text-center"
@@ -173,13 +180,13 @@ export function ServicesSection() {
                   </div>
                   {/* Botones - siempre visibles en mobile, por encima del texto en hover solo en desktop */}
                   <div className="flex flex-row gap-2 w-full justify-center items-end md:absolute md:inset-x-0 md:bottom-0 md:h-fit md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href="#detalles"
+                    <Link
+                      href={service.href}
                       className="w-full px-4 py-2 border border-white text-white font-semibold rounded hover:bg-white hover:text-gray-900 transition-colors text-center"
                     >
                       <span className="md:hidden">Catálogo</span>
                       <span className="hidden md:inline">Catálogo</span>
-                    </a>
+                    </Link>
                     <a
                       href="#cotizar"
                       className="w-full px-4 py-2 bg-yellow-400 text-gray-900 font-bold rounded hover:bg-yellow-300 transition-colors text-center"
@@ -192,6 +199,16 @@ export function ServicesSection() {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Botón adicional para ver todos los servicios */}
+        <div className="text-center mt-8">
+          <Link href="/servicios">
+            <Button className="bg-[#003056] hover:bg-[#002040] text-white px-8 py-3">
+              Ver Todos los Servicios
+              <ArrowRight className="h-4 w-4 ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
