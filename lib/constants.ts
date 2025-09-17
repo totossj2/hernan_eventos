@@ -8,10 +8,10 @@ export const CONTACT = {
 };
 
 export const NAVIGATION = [
-  { name: '¿Por qué elegirnos?', href: '#beneficios' },
-  { name: 'Soluciones para tu evento', href: '#servicios' },
+  { name: 'Quienes Somos', href: '/quines_somos' },
+
   { name: 'Servicios', href: '/servicios' },
-  { name: 'Clientes', href: '#testimonios' },
+  { name: 'Trabajos', href: '/trabajos' },
 ];
 
 export const SERVICES = [
@@ -24,12 +24,14 @@ export const SERVICES = [
 ];
 
 export const EVENT_TYPES = [
-  'Bodas',
-  'Eventos Corporativos',
-  'Fiestas de 15 años',
-  'Cumpleaños',
-  'Graduaciones',
-  'Ferias y Exposiciones',
+  'Fiesta privada',
+  'Casamiento',
+  'Exposición',
+  'Conferencia',
+  'Evento empresarial',
+  'Lanzamiento de producto',
+  'Taller / curso',
+  'Otro',
 ];
 
 export const CLIMATIZATION_OPTIONS = [
@@ -531,7 +533,8 @@ export const SERVICE_DATA = {
       },
     ],
     cta: {
-      title: '¿Quieres que tu evento tenga la temperatura perfecta todo el año?',
+      title:
+        '¿Quieres que tu evento tenga la temperatura perfecta todo el año?',
       description:
         'Nuestros sistemas de climatización garantizan el confort de tus invitados en cualquier condición climática.',
       buttonText: 'Consultar Soluciones Disponibles',
