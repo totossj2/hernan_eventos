@@ -8,10 +8,10 @@ export const CONTACT = {
 };
 
 export const NAVIGATION = [
-  { name: 'Quienes Somos', href: '/quines_somos' },
-
+  { name: 'Inicio', href: '/' },
   { name: 'Servicios', href: '/servicios' },
   { name: 'Trabajos', href: '/trabajos' },
+  { name: 'Quienes Somos', href: '/quienes_somos' },
 ];
 
 export const SERVICES = [

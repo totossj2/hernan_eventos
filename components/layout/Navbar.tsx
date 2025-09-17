@@ -1,11 +1,17 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Phone } from 'lucide-react';
+import { Phone, Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NAVIGATION, CONTACT } from '@/lib/constants';
 import { useRouter, usePathname } from 'next/navigation';
+import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetClose,
+} from '@/components/ui/sheet';
 
 export function Navbar() {
   const router = useRouter();
@@ -88,6 +94,56 @@ export function Navbar() {
             Contactanos
           </Button>
         </a>
+        {/* Mobile menu */}
+        <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" aria-label="Abrir menú">
+                <Menu className="h-6 w-6 text-[#003056]" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-white">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center justify-between mb-6">
+                  <Link
+                    href="/"
+                    className="cursor-pointer"
+                    onClick={(e) => handleScroll(e, '/')}
+                  >
+                    <Image
+                      src="/logo.png"
+                      alt="Hernan Eventos Logo"
+                      height={120}
+                      width={120}
+                      className="object-contain"
+                    />
+                  </Link>
+                </div>
+                <nav className="flex-1 flex flex-col space-y-4">
+                  {NAVIGATION.map((item) => (
+                    <SheetClose asChild key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-base font-medium text-[#003056] hover:text-[#00305690]"
+                        onClick={(e) => handleScroll(e, item.href)}
+                      >
+                        {item.name}
+                      </Link>
+                    </SheetClose>
+                  ))}
+                </nav>
+                <div className="pt-4 border-t">
+                  <a href={CONTACT.whatsapp} target="_blank" className="block">
+                    <Button className="w-full bg-[#003056] hover:bg-[#002040]">
+                      <Phone className="h-4 w-4 mr-2" />
+                      Contactanos
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

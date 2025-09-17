@@ -4,21 +4,22 @@ import { LenisProvider } from '@/components/providers/LenisProvider';
 
 export const metadata: Metadata = {
   title:
-    'Hernán Eventos | Alquiler de Carpas, Vajilla y Calefacción en Zona Norte y Sur GBA',
+    'Hernán Eventos | Soluciones Confiables de Alquiler para tu Evento en GBA',
   description:
-    'Ofrecemos alquiler de carpas, sillas, mesas, escenarios, calefacción, tarimas, vajilla y más para eventos en Zona Norte, Zona Sur y Gran Buenos Aires. Soluciones seguras, puntuales y profesionales para todo tipo de evento.',
+    'Hernán Eventos ofrece soluciones confiables de alquiler para todo tipo de evento. Carpas, escenarios, mobiliario, vajilla, climatización y más en Zona Norte, Zona Sur y Gran Buenos Aires. Puntualidad, seguridad y servicio profesional garantizado.',
   keywords: [
+    'alquiler de carpas gba',
     'alquiler de carpas zona norte',
     'alquiler de carpas zona sur',
-    'vajilla para eventos gba',
-    'alquiler de calefacción para eventos',
-    'alquiler de mesas y sillas',
-    'eventos Gran Buenos Aires',
-    'carpas para fiestas',
-    'eventos zona norte gba',
-    'eventos zona sur gba',
+    'alquiler de escenarios gba',
+    'mobiliario para eventos gba',
+    'alquiler de vajilla zona norte',
+    'alquiler de mesas y sillas gba',
+    'climatización para eventos',
+    'eventos en Gran Buenos Aires',
     'Hernán Eventos',
   ],
+
   authors: [{ name: 'Hernán Eventos', url: 'https://hernaneventos.com' }],
   creator: 'Hernán Eventos',
   publisher: 'Hernán Eventos',
@@ -54,10 +55,10 @@ export const metadata: Metadata = {
     siteName: 'Hernán Eventos',
     images: [
       {
-        url: 'https://hernaneventos.com/logo.png',
+        url: 'https://hernaneventos.com/toscas.jpg',
         width: 1200,
         height: 630,
-        alt: 'Carpas y calefacción para eventos en zona norte y sur',
+        alt: 'Soluciones Confiables de Alquiler para tu Evento',
       },
     ],
     locale: 'es_AR',
@@ -68,7 +69,7 @@ export const metadata: Metadata = {
     title: 'Hernán Eventos | Equipamiento para Eventos en GBA',
     description:
       'Alquiler de carpas, calefacción, vajilla y más para eventos en Zona Norte y Zona Sur.',
-    images: ['https://hernaneventos.com/logo.png'],
+    images: ['https://hernaneventos.com/toscas.jpg'],
   },
   alternates: {
     canonical: 'https://hernaneventos.com',
@@ -81,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es_AR">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
@@ -98,6 +99,94 @@ export default function RootLayout({
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'Hernán Eventos',
+              url: 'https://hernaneventos.com',
+              logo: 'https://hernaneventos.com/logo.png',
+              description:
+                'Soluciones confiables de alquiler de carpas, escenarios, mobiliario y climatización en Gran Buenos Aires.',
+              telephone: '(011) 6093-9880',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Bourquet 560, Luis Guillon',
+                addressLocality: 'Gran Buenos Aires',
+                addressRegion: 'Buenos Aires',
+                addressCountry: 'AR',
+              },
+              sameAs: [
+                'https://www.facebook.com/hernaneventos',
+                'https://www.instagram.com/hernaneventos',
+                'https://www.linkedin.com/company/hernaneventos',
+              ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Servicios de Alquiler para Eventos',
+                itemListElement: [
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Alquiler de Carpas y Gazebos',
+                      description:
+                        'Carpas y gazebos para eventos con instalación profesional',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Alquiler de Escenarios y Tarimas',
+                      description: 'Escenarios y tarimas con estructura segura',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Alquiler de Mesas y Sillas',
+                      description: 'Mobiliario premium para eventos',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Alquiler de Vajilla y Cristalería',
+                      description:
+                        'Vajilla y cristalería premium con limpieza incluida',
+                    },
+                  },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Sistemas de Climatización',
+                      description:
+                        'Calefacción y aire acondicionado para eventos',
+                    },
+                  },
+                ],
+              },
+              foundingDate: '1989',
+              numberOfEmployees: '10-50',
+              priceRange: '$$',
+              serviceArea: {
+                '@type': 'GeoCircle',
+                geoMidpoint: {
+                  '@type': 'GeoCoordinates',
+                  latitude: -34.6037,
+                  longitude: -58.3816,
+                },
+                geoRadius: '50000',
+              },
+            }),
+          }}
+        />
       </head>
       <body>
         <LenisProvider>{children}</LenisProvider>

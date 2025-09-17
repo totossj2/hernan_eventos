@@ -1,5 +1,44 @@
+import type { Metadata } from 'next';
 import { ServiceLayout } from '@/components/layout/ServiceLayout';
 import { SERVICE_DATA } from '@/lib/constants';
+
+export const metadata: Metadata = {
+  title: 'Alquiler de Vajilla y Cristalería | Hernán Eventos GBA',
+  description:
+    'Alquiler de vajilla y cristalería para eventos en Gran Buenos Aires. Porcelana premium, cristalería fina y limpieza incluida. Más de 35 años de experiencia.',
+  keywords: [
+    'alquiler vajilla gba',
+    'alquiler cristalería zona norte',
+    'vajilla eventos zona sur',
+    'alquiler porcelana premium',
+    'cristalería fina eventos',
+    'limpieza vajilla incluida',
+    'Hernán Eventos vajilla',
+  ],
+  openGraph: {
+    title: 'Alquiler de Vajilla y Cristalería | Hernán Eventos',
+    description:
+      'Vajilla y cristalería premium para eventos en GBA. Porcelana fina y limpieza incluida.',
+    url: 'https://hernaneventos.com/servicios/vajilla',
+    images: [
+      {
+        url: 'https://hernaneventos.com/catalogo/vajilla.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Alquiler de Vajilla y Cristalería para Eventos',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alquiler de Vajilla y Cristalería para Eventos',
+    description: 'Vajilla premium con limpieza incluida en GBA.',
+    images: ['https://hernaneventos.com/catalogo/vajilla.jpg'],
+  },
+  alternates: {
+    canonical: 'https://hernaneventos.com/servicios/vajilla',
+  },
+};
 
 export default function VajillaPage() {
   const serviceData = SERVICE_DATA.vajilla;

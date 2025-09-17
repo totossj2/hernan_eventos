@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
@@ -14,6 +15,44 @@ import Link from 'next/link';
 import { SERVICE_DATA } from '@/lib/constants';
 import { CONTACT } from '@/lib/constants';
 import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Servicios de Alquiler para Eventos | Hernán Eventos GBA',
+  description:
+    'Descubre nuestros servicios completos de alquiler para eventos: carpas, escenarios, mobiliario, vajilla y climatización en Gran Buenos Aires. Más de 35 años de experiencia.',
+  keywords: [
+    'servicios eventos gba',
+    'alquiler completo eventos',
+    'carpas escenarios mobiliario',
+    'vajilla climatización eventos',
+    'servicios integrales eventos',
+    'Hernán Eventos servicios',
+  ],
+  openGraph: {
+    title: 'Servicios Completos de Alquiler para Eventos | Hernán Eventos',
+    description:
+      'Soluciones integrales para eventos: carpas, escenarios, mobiliario, vajilla y climatización en GBA. Experiencia y profesionalismo garantizado.',
+    url: 'https://hernaneventos.com/servicios',
+    images: [
+      {
+        url: 'https://hernaneventos.com/catalogo/Servicios.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Servicios de Alquiler para Eventos',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Servicios Completos de Alquiler para Eventos',
+    description:
+      'Carpas, escenarios, mobiliario, vajilla y climatización para eventos en GBA.',
+    images: ['https://hernaneventos.com/catalogo/Servicios.webp'],
+  },
+  alternates: {
+    canonical: 'https://hernaneventos.com/servicios',
+  },
+};
 
 const services = [
   {
@@ -170,7 +209,7 @@ export default function ServiciosPage() {
       <section className="py-20 bg-[#003056] text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿No encuentras lo que buscas?
+            ¿No encontrás lo que buscás?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             Contáctanos para recibir asesoramiento personalizado y encontrar la
