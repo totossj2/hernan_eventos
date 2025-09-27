@@ -172,6 +172,7 @@ export default function ServiciosPage() {
                     alt={service.name}
                     fill
                     className="object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <CardHeader>

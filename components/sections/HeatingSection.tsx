@@ -14,7 +14,7 @@ import { CLIMATIZATION_OPTIONS } from '@/lib/constants';
 
 export function HeatingSection() {
   return (
-          <section id="climatizacion" className="bg-[#f3f4f6] py-12">
+    <section id="climatizacion" className="bg-[#f3f4f6] py-12">
       <div className=" md:m-4 rounded-lg py-4 md:py-10 bg-gradient-to-br from-[#003056] to-[#004070]">
         <div className="container mx-auto px-4 gap-10 flex flex-col ">
           <div className="bg-white/10 backdrop-blur-sm border-white/20 text-white flex flex-row overflow-hidden flex flex-col p-4 md:p-8 rounded-lg">
@@ -23,7 +23,8 @@ export function HeatingSection() {
                 Climatización completa para eventos todo el año
               </h2>
               <p className="text-base md:text-xl text-blue-100 max-w-2xl mx-auto">
-                Sistemas de calefacción y aire acondicionado, seguros y adaptables a cualquier espacio.
+                Sistemas de calefacción y aire acondicionado, seguros y
+                adaptables a cualquier espacio.
               </p>
             </div>
 
@@ -71,8 +72,8 @@ export function HeatingSection() {
 
           <div className="text-center mb-2 md:mb-4 mt-4 md:mt-6">
             <p className="text-center text-red-500 font-semibold ">
-              ¡Alta demanda en temporada! Reservá con anticipación para asegurar tu
-              equipo.
+              ¡Alta demanda en temporada! Reservá con anticipación para asegurar
+              tu equipo.
             </p>
             <p className="text-center text-sm text-gray-300 mt-2">
               Cobertura en GBA y CABA • Equipos revisados antes de cada entrega
@@ -148,6 +149,7 @@ function HeatingCard({
           width={100}
           height={100}
           className="w-auto object-contain h-[200px]"
+          loading="lazy"
         />
       </div>
     </Card>

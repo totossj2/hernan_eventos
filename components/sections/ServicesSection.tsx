@@ -63,7 +63,7 @@ export function ServicesSection() {
       icon: Wind,
       image: '/catalogo/DSC_2048.JPG',
       alt: 'Sistemas de climatización',
-              href: '/servicios/climatizacion',
+      href: '/servicios/climatizacion',
     },
     {
       title: 'Vallas y Cerramientos',
@@ -93,13 +93,16 @@ export function ServicesSection() {
               key={service.title}
               className="lg:col-span-6 overflow-hidden group relative hover:shadow-xl transition-shadow "
             >
-              <div
-                className="relative h-96 overflow-hidden rounded-lg flex flex-col bg-cover bg-center bg-no-repeat group-hover:shadow-xl transition-shadow p-4"
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 100%), url(${service.image})`,
-                }}
-              >
-                <div className="flex flex-col-reverse md:flex-row justify-between">
+              <div className="relative h-96 overflow-hidden rounded-lg flex flex-col group-hover:shadow-xl transition-shadow p-4">
+                <Image
+                  src={service.image}
+                  alt={service.alt}
+                  fill
+                  className="object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/90" />
+                <div className="relative z-10 flex flex-col-reverse md:flex-row justify-between">
                   {/* Título en la esquina superior izquierda */}
                   <div className="text-left flex items-center">
                     <h3 className="text-lg font-semibold text-white leading-tight">
@@ -110,8 +113,8 @@ export function ServicesSection() {
                   <div className="hidden md:flex md:justify-end transition-opacity duration-300 opacity-0 group-hover:opacity-100">
                     <Badge className="bg-yellow-400 hover:bg-yellow-300 hover:text-gray-900 text-gray-900 text-xs uppercase font-semibold tracking-wide rounded-full px-3 py-1 h-fit">
                       {service.title === 'Carpas y Gazebos'
-                        ? 'Estéticas'
-                        : 'multidireccionales'}
+                        ? 'Resistente a lluvias'
+                        : 'Grandes eventos'}
                     </Badge>
                   </div>
                 </div>
@@ -119,7 +122,7 @@ export function ServicesSection() {
                 <div className="flex-1"></div>
 
                 {/* Contenido inferior - texto y botones siempre visibles en mobile */}
-                <div className="relative h-24 flex gap-4 flex-col justify-end">
+                <div className="relative z-10 h-24 flex gap-4 flex-col justify-end">
                   {/* Descripción - siempre visible en mobile, oculta en hover solo en desktop */}
                   <div className="md:group-hover:opacity-0 transition-opacity duration-300">
                     <p className="text-gray-200 text-sm text-left break-words hyphens-auto">
@@ -154,14 +157,17 @@ export function ServicesSection() {
               key={service.title}
               className="lg:col-span-3 overflow-hidden group relative hover:shadow-xl transition-shadow"
             >
-              <div
-                className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col bg-cover bg-center bg-no-repeat group-hover:shadow-xl transition-shadow p-4"
-                style={{
-                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.9) 100%), url(${service.image})`,
-                }}
-              >
+              <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col group-hover:shadow-xl transition-shadow p-4">
+                <Image
+                  src={service.image}
+                  alt={service.alt}
+                  fill
+                  className="object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/90" />
                 {/* Título en la esquina superior izquierda */}
-                <div className="text-left">
+                <div className="relative z-10 text-left">
                   <h3 className="text-lg font-semibold text-white">
                     {service.title}
                   </h3>
@@ -171,7 +177,7 @@ export function ServicesSection() {
                 <div className="flex-1"></div>
 
                 {/* Contenido inferior - texto y botones siempre visibles en mobile */}
-                <div className="relative flex h-fit gap-3 flex-col justify-end">
+                <div className="relative z-10 flex h-fit gap-3 flex-col justify-end">
                   {/* Descripción - siempre visible en mobile, oculta en hover solo en desktop */}
                   <div className="md:group-hover:opacity-0 transition-opacity duration-300">
                     <p className="text-gray-200 text-sm text-left break-words hyphens-auto">

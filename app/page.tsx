@@ -16,10 +16,10 @@ export default function Home() {
       <main className="flex-1 flex flex-col gap-0 pt-16 pb-16">
         <Hero />
         {/* <HeatingSection />*/}
-        <BenefitsSection />
         <ServicesSection />
+        <BenefitsSection />
         <ProcessSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         {/* <FAQSection /> */}
         <Form />
       </main>
