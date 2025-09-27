@@ -69,42 +69,42 @@ export const CLIMATIZATION_OPTIONS = [
 export const CLIENTS = [
   {
     name: 'Municipalidad de Esteban Echeverría',
-    logo: '/logos_clientes/mee.png',
+    logo: '/logos_clientes/mee.webp',
     alt: 'Logo Municipalidad de Esteban Echeverría',
   },
   {
     name: 'Senior Publicidad',
-    logo: '/logos_clientes/senior.png',
+    logo: '/logos_clientes/senior.webp',
     alt: 'Logo Senior Publicidad',
   },
   {
     name: 'Club Atlético River Plate',
-    logo: '/logos_clientes/river.png',
+    logo: '/logos_clientes/river.webp',
     alt: 'Logo River Plate',
   },
   {
     name: 'Embajada de Marruecos',
-    logo: '/logos_clientes/marruecos.png',
+    logo: '/logos_clientes/marruecos.webp',
     alt: 'Logo Embajada de Marruecos',
   },
   {
     name: 'Gobierno de la Ciudad de Buenos Aires',
-    logo: '/logos_clientes/CABA.png',
+    logo: '/logos_clientes/CABA.webp',
     alt: 'Logo Gobierno de la Ciudad de Buenos Aires',
   },
   {
     name: 'AutoClásica',
-    logo: '/logos_clientes/autoclasica.png',
+    logo: '/logos_clientes/autoclasica.webp',
     alt: 'Logo AutoClásica',
   },
   {
     name: 'Expoagro',
-    logo: '/logos_clientes/expoagro.png',
+    logo: '/logos_clientes/expoagro.webp',
     alt: 'Logo Expo Agro',
   },
   {
     name: 'Dhue Producciones',
-    logo: '/logos_clientes/dhue.png',
+    logo: '/logos_clientes/dhue.webp',
     alt: 'Logo Dhue',
   },
 ];
