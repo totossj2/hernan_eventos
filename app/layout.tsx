@@ -5,6 +5,7 @@ import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import { CriticalCSS } from '@/components/CriticalCSS';
 import { OptimizedScripts } from '@/components/OptimizedScripts';
+import { SmartScriptLoader } from '@/components/SmartScriptLoader';
 
 // Optimize font loading with next/font
 const inter = Inter({
@@ -111,6 +112,21 @@ export default function RootLayout({
         />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Preload critical resources for better LCP */}
+        <link
+          rel="preload"
+          href="/hero_desktop.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          href="/hero_mobile.webp"
+          as="image"
+          type="image/webp"
+        />
+        <link rel="preload" href="/logo.png" as="image" type="image/png" />
 
         {/* Critical CSS for Hero section */}
         <CriticalCSS />
@@ -220,10 +236,10 @@ export default function RootLayout({
         />
         {children}
 
-        {/* Google Tag Manager - Optimized with Next.js Script */}
+        {/* Google Tag Manager - Optimized with lazyOnload */}
         <Script
           id="gtm-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -237,6 +253,7 @@ export default function RootLayout({
 
         <DeferredScripts />
         <OptimizedScripts />
+        <SmartScriptLoader />
       </body>
     </html>
   );

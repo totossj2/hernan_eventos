@@ -1,8 +1,19 @@
 'use client';
 
-import { Navbar } from '@/components/layout/Navbar';
 import { Hero } from '@/components/sections/Hero';
 import dynamic from 'next/dynamic';
+
+// Lazy load Navbar to reduce initial bundle
+const Navbar = dynamic(
+  () =>
+    import('@/components/layout/Navbar').then((mod) => ({
+      default: mod.Navbar,
+    })),
+  {
+    ssr: false,
+    loading: () => <div className="h-16 bg-white shadow-sm" />,
+  }
+);
 
 // Lazy load heavy components with ssr: false for better TBT
 const BenefitsSection = dynamic(
