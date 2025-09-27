@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { LenisProvider } from '@/components/providers/LenisProvider';
 
 export const metadata: Metadata = {
   title:
@@ -213,7 +212,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-        <LenisProvider>{children}</LenisProvider>
+        {children}
       </body>
     </html>
   );

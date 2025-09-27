@@ -2,10 +2,11 @@
 
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { CLIENTS } from '@/lib/constants';
 import { StarIcon } from 'lucide-react';
+import heroMobile from '@/public/hero_mobile.webp';
+// Removed framer-motion for better performance
 
 export function Hero() {
   const [textIndex, setTextIndex] = useState(0);
@@ -42,6 +43,22 @@ export function Hero() {
           />
         </div>
 
+        {/* Imagen de fondo para mobile */}
+        <div className="col-start-1 row-start-1 block md:hidden">
+          <Image
+            src={heroMobile}
+            alt="Evento elegante con carpas y decoración profesional"
+            width={360}
+            height={670}
+            className="w-full h-full object-cover"
+            priority
+            sizes="100vw"
+            quality={85}
+            placeholder="blur"
+            blurDataURL="/tiny-hero.webp"
+          />
+        </div>
+
         {/* Gradiente overlay */}
         <div className="col-start-1 row-start-1 bg-gradient-to-r from-black/40 via-black/60 to-black/60" />
 
@@ -65,18 +82,9 @@ export function Hero() {
                 Cotizar mi Evento Ahora
               </Button>
             </a>
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={textIndex}
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -5 }}
-                transition={{ duration: 0.3 }}
-                className="mt-4 text-sm md:text-base text-gray-300"
-              >
-                {texts[textIndex]}
-              </motion.p>
-            </AnimatePresence>
+            <p className="mt-4 text-sm md:text-base text-gray-300 transition-opacity duration-300">
+              {texts[textIndex]}
+            </p>
           </div>
         </div>
       </section>
@@ -106,10 +114,9 @@ export function Hero() {
 
             <div className="grid grid-cols-2  lg:grid-cols-4  gap-x-8 gap-y-4 items-center w-full">
               {CLIENTS.map((client, index) => (
-                <motion.div
+                <div
                   key={`logo-${index}`}
-                  className="flex flex-col items-center justify-center group"
-                  whileHover={{ scale: 1.05 }}
+                  className="flex flex-col items-center justify-center group hover:scale-105 transition-transform duration-300"
                 >
                   <Image
                     src={client.logo}
@@ -124,7 +131,7 @@ export function Hero() {
                       {client.name}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

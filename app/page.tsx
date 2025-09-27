@@ -1,13 +1,42 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
-import { HeatingSection } from '@/components/sections/HeatingSection';
-import { BenefitsSection } from '@/components/sections/BenefitsSection';
-import { ServicesSection } from '@/components/sections/ServicesSection';
-import { ProcessSection } from '@/components/sections/ProcessSection';
-import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
-import { FAQSection } from '@/components/sections/FAQSection';
-import Form from '@/components/sections/Form';
+import dynamic from 'next/dynamic';
+
+// Lazy load heavy components
+const BenefitsSection = dynamic(
+  () =>
+    import('@/components/sections/BenefitsSection').then((mod) => ({
+      default: mod.BenefitsSection,
+    })),
+  {
+    loading: () => <div className="py-12 bg-gray-50 animate-pulse" />,
+  }
+);
+
+const ServicesSection = dynamic(
+  () =>
+    import('@/components/sections/ServicesSection').then((mod) => ({
+      default: mod.ServicesSection,
+    })),
+  {
+    loading: () => <div className="py-12 bg-white animate-pulse" />,
+  }
+);
+
+const ProcessSection = dynamic(
+  () =>
+    import('@/components/sections/ProcessSection').then((mod) => ({
+      default: mod.ProcessSection,
+    })),
+  {
+    loading: () => <div className="py-12 bg-gray-50 animate-pulse" />,
+  }
+);
+
+const Form = dynamic(() => import('@/components/sections/SimpleForm'), {
+  loading: () => <div className="py-12 bg-white animate-pulse" />,
+});
 
 export default function Home() {
   return (

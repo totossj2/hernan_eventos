@@ -100,6 +100,7 @@ export function ServicesSection() {
                   fill
                   className="object-cover"
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/90" />
                 <div className="relative z-10 flex flex-col-reverse md:flex-row justify-between">
@@ -164,6 +165,7 @@ export function ServicesSection() {
                   fill
                   className="object-cover"
                   loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/90" />
                 {/* Título en la esquina superior izquierda */}

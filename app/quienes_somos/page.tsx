@@ -2,7 +2,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { QuienesSomos } from './quienes_somos';
 
-import Form from '@/components/sections/Form';
+import Form from '@/components/sections/SimpleForm';
 
 export default function Home() {
   return (
