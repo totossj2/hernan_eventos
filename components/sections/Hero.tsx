@@ -82,9 +82,23 @@ export function Hero() {
                 Cotizar mi Evento Ahora
               </Button>
             </a>
-            <p className="mt-4 text-sm md:text-base text-gray-300 transition-opacity duration-300">
-              {texts[textIndex]}
-            </p>
+            <div className="mt-4 h-6 relative overflow-hidden">
+              <div
+                className="absolute inset-0 flex flex-col justify-center items-center transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateY(-${textIndex * 24}px)`,
+                }}
+              >
+                {texts.map((text, index) => (
+                  <div
+                    key={index}
+                    className="text-sm md:text-base text-gray-300 h-6 flex items-center"
+                  >
+                    {text}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
