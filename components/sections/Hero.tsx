@@ -26,7 +26,7 @@ export function Hero() {
     <>
       <section
         id="hero"
-        className="relative h-[50vh] md:h-[90vh] flex items-center justify-center overflow-hidden"
+        className="relative h-[60vh] md:h-[90vh] flex items-center justify-center overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/60 to-black/60 z-10" />
 
@@ -44,15 +44,15 @@ export function Hero() {
           className="object-cover  block md:hidden"
           priority
         />
-        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 py-4">
           <h1 className=" text-2xl md:text-6xl font-semibold mb-6 leading-tight">
-            La infraestructura para tu evento, resuelta.
-            <br />
-            Calidad y puntualidad en GBA y CABA
+            Alquiler de Carpas y Equipamiento para Eventos en Zona Norte y todo
+            GBA
           </h1>
           <p className="text-lg md:text-2xl mb-8 text-gray-300">
-            Calefacción, vajilla, sillas, carpas y más, entregado a tiempo y
-            listo para usar.{' '}
+            Montamos tu evento con puntualidad y calidad profesional. Desde
+            carpas, escenarios y climatización hasta vajilla, sillas y mesas,
+            listo para usar
           </p>
           <a href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos">
             <Button

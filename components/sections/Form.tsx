@@ -77,6 +77,7 @@ const availableServices = [
   { id: 'tarima', label: 'Tarima' },
   { id: 'vajilla', label: 'Vajilla' },
   { id: 'sillas-mesas', label: 'Sillas / Mesas' },
+  { id: 'vallas', label: 'Vallas' },
 ];
 
 export default function ContactForm() {
@@ -155,6 +156,7 @@ export default function ContactForm() {
       tarima: 'Tarima',
       vajilla: 'Vajilla',
       'sillas-mesas': 'Sillas y Mesas',
+      vallas: 'Vallas',
     };
 
     const selectedServices =
@@ -235,7 +237,7 @@ Espero tu respuesta!`;
           <p className="text-xl text-gray-600 mb-6">
             Completa el formulario y recibe tu presupuesto en menos de 2 horas
           </p>
-          <div className="flex items-center justify-center gap-6 text-sm text-green-600 bg-green-50 px-6 py-3 rounded-lg">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm text-green-600 bg-green-50 px-6 py-3 rounded-lg">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
               <span>Respuesta en 2 horas</span>
