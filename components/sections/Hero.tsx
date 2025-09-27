@@ -6,7 +6,45 @@ import { useState, useEffect } from 'react';
 import { CLIENTS } from '@/lib/constants';
 import { StarIcon } from 'lucide-react';
 import heroMobile from '@/public/hero_mobile.webp';
-// Removed framer-motion for better performance
+import dynamic from 'next/dynamic';
+
+// Lazy load framer-motion to avoid LCP impact
+const MotionText = dynamic(
+  () =>
+    import('framer-motion').then((mod) => ({
+      default: ({
+        textIndex,
+        texts,
+      }: {
+        textIndex: number;
+        texts: string[];
+      }) => {
+        const { motion, AnimatePresence } = mod;
+        return (
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={textIndex}
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -5 }}
+              transition={{ duration: 0.3 }}
+              className="mt-4 text-sm md:text-base text-gray-300"
+            >
+              {texts[textIndex]}
+            </motion.p>
+          </AnimatePresence>
+        );
+      },
+    })),
+  {
+    ssr: false,
+    loading: () => (
+      <p className="mt-4 text-sm md:text-base text-gray-300 opacity-0">
+        ✅ Atención rápida por WhatsApp
+      </p>
+    ),
+  }
+);
 
 export function Hero() {
   const [textIndex, setTextIndex] = useState(0);
@@ -82,23 +120,7 @@ export function Hero() {
                 Cotizar mi Evento Ahora
               </Button>
             </a>
-            <div className="mt-4 h-6 relative overflow-hidden">
-              <div
-                className="absolute inset-0 flex flex-col justify-center items-center transition-transform duration-500 ease-in-out"
-                style={{
-                  transform: `translateY(-${textIndex * 24}px)`,
-                }}
-              >
-                {texts.map((text, index) => (
-                  <div
-                    key={index}
-                    className="text-sm md:text-base text-gray-300 h-6 flex items-center"
-                  >
-                    {text}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <MotionText textIndex={textIndex} texts={texts} />
           </div>
         </div>
       </section>
