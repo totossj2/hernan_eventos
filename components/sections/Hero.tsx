@@ -26,54 +26,74 @@ export function Hero() {
     <>
       <section
         id="hero"
-        className="relative h-[60vh] md:h-[90vh] flex items-center justify-center overflow-hidden"
+        className="w-full h-[670px] md:h-[90vh] grid grid-cols-1 grid-rows-1 overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/60 to-black/60 z-10" />
+        {/* Imagen de fondo para desktop */}
+        <div className="col-start-1 row-start-1 hidden md:block">
+          <Image
+            src="/hero_desktop.webp"
+            alt="Evento elegante con carpas y decoración profesional"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover object-center"
+            priority
+            sizes="100vw"
+            quality={85}
+          />
+        </div>
 
-        <Image
-          src="/hero_desktop.webp"
-          alt="Evento elegante con carpas y decoración profesional"
-          fill
-          className="object-cover object-center hidden md:block"
-          priority
-        />
-        <Image
-          src="/hero_mobile.webp"
-          alt="Evento elegante con carpas y decoración profesional"
-          fill
-          className="object-cover  block md:hidden"
-          priority
-        />
-        <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-4 py-4">
-          <h1 className=" text-2xl md:text-6xl font-semibold mb-6 leading-tight">
-            Alquiler de Carpas y Equipamiento para Eventos en Zona Norte y todo
-            GBA
-          </h1>
-          <p className="text-lg md:text-2xl mb-8 text-gray-300">
-            Montamos tu evento con puntualidad y calidad profesional. Desde
-            carpas, escenarios y climatización hasta vajilla, sillas y mesas,
-            listo para usar
-          </p>
-          <a href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos">
-            <Button
-              size="lg"
-              className="bg-[#003056] hover:bg-[#002040] text-lg px-8 py-4"
-            >
-              Cotizar mi Evento Ahora
-            </Button>
-          </a>
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={textIndex}
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -5 }}
-              transition={{ duration: 0.3 }}
-              className="mt-4 text-sm md:text-base text-gray-300"
-            >
-              {texts[textIndex]}
-            </motion.p>
-          </AnimatePresence>
+        {/* Imagen de fondo para mobile */}
+        <div className="col-start-1 row-start-1 block md:hidden">
+          <Image
+            src="/hero_mobile.webp"
+            alt="Evento elegante con carpas y decoración profesional"
+            width={360}
+            height={670}
+            className="w-full h-full object-cover"
+            priority
+            sizes="100vw"
+            quality={85}
+            placeholder="blur"
+            blurDataURL="/tiny-hero.webp"
+          />
+        </div>
+
+        {/* Gradiente overlay */}
+        <div className="col-start-1 row-start-1 bg-gradient-to-r from-black/40 via-black/60 to-black/60" />
+
+        {/* Contenido centrado */}
+        <div className="col-start-1 row-start-1 flex items-center justify-center text-center text-white max-w-4xl mx-auto px-4 py-4">
+          <div>
+            <h1 className=" text-2xl md:text-6xl font-semibold mb-6 leading-tight">
+              Alquiler de Carpas y Equipamiento para Eventos en Zona Norte y
+              todo GBA
+            </h1>
+            <p className="text-lg md:text-2xl mb-8 text-gray-300">
+              Montamos tu evento con puntualidad y calidad profesional. Desde
+              carpas, escenarios y climatización hasta vajilla, sillas y mesas,
+              listo para usar
+            </p>
+            <a href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos">
+              <Button
+                size="lg"
+                className="bg-[#003056] hover:bg-[#002040] text-lg px-8 py-4"
+              >
+                Cotizar mi Evento Ahora
+              </Button>
+            </a>
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={textIndex}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="mt-4 text-sm md:text-base text-gray-300"
+              >
+                {texts[textIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
         </div>
       </section>
       {/* Logos de clientes */}
