@@ -42,22 +42,6 @@ export function Hero() {
           />
         </div>
 
-        {/* Imagen de fondo para mobile */}
-        <div className="col-start-1 row-start-1 block md:hidden">
-          <Image
-            src="/hero_mobile.webp"
-            alt="Evento elegante con carpas y decoración profesional"
-            width={360}
-            height={670}
-            className="w-full h-full object-cover"
-            priority
-            sizes="100vw"
-            quality={85}
-            placeholder="blur"
-            blurDataURL="/tiny-hero.webp"
-          />
-        </div>
-
         {/* Gradiente overlay */}
         <div className="col-start-1 row-start-1 bg-gradient-to-r from-black/40 via-black/60 to-black/60" />
 
