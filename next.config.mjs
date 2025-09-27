@@ -24,20 +24,46 @@ const nextConfig = {
   // Optimize bundle splitting
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {
-      // Optimize bundle splitting for better caching
+      // More aggressive bundle splitting to reduce TBT
       config.optimization.splitChunks = {
         chunks: 'all',
+        minSize: 20000,
+        maxSize: 100000,
         cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
+          // Separate React and React-DOM
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+            name: 'react',
             chunks: 'all',
+            priority: 20,
           },
+          // Separate Next.js
+          nextjs: {
+            test: /[\\/]node_modules[\\/]next[\\/]/,
+            name: 'nextjs',
+            chunks: 'all',
+            priority: 15,
+          },
+          // Separate Radix UI components
           radix: {
             test: /[\\/]node_modules[\\/]@radix-ui[\\/]/,
             name: 'radix-ui',
             chunks: 'all',
             priority: 10,
+          },
+          // Separate other UI libraries
+          ui: {
+            test: /[\\/]node_modules[\\/](framer-motion|lucide-react|cmdk)[\\/]/,
+            name: 'ui-libs',
+            chunks: 'all',
+            priority: 8,
+          },
+          // Default vendor chunk
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+            priority: 5,
           },
         },
       };
