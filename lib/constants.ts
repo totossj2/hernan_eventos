@@ -1,6 +1,6 @@
 export const CONTACT = {
   phone: '(011) 6093-9880',
-  email: 'info@hernaneventos.com',
+  email: 'hernan@hernaneventos.com',
   address: 'Bourquet 560, Luis Guillon',
   whatsapp:
     'https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos',
