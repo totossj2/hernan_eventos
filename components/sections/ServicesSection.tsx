@@ -21,7 +21,7 @@ export function ServicesSection() {
       description:
         'Desde 3x3m hasta 20x30m. Resistentes al viento y lluvia, ideales para cualquier clima.',
       icon: Tent,
-      image: '/catalogo/carpa.jpg',
+      image: '/catalogo/carpa.webp',
       alt: 'Carpas elegantes para eventos',
       href: '/servicios/carpas',
     },
@@ -43,7 +43,7 @@ export function ServicesSection() {
       description:
         'Mesas redondas, rectangulares y cocktail. Sillas plasticas o plegables.',
       icon: Table,
-      image: '/catalogo/sillasymesas.jpg',
+      image: '/catalogo/sillasymesas.webp',
       alt: 'Mesas y sillas para eventos',
       href: '/servicios/mesas',
     },
@@ -52,7 +52,7 @@ export function ServicesSection() {
       description:
         'Platos, copas, cubiertos y mantelería de alta calidad para eventos elegantes.',
       icon: Utensils,
-      image: '/catalogo/vajilla.jpg',
+      image: '/catalogo/vajilla.webp',
       alt: 'Vajilla y cristalería elegante',
       href: '/servicios/vajilla',
     },
@@ -69,7 +69,7 @@ export function ServicesSection() {
       title: 'Vallas y Cerramientos',
       description: 'Eventos masivos seguros y organizados.',
       icon: Fence,
-      image: '/catalogo/vallas.jpg',
+      image: '/catalogo/vallas.webp',
       alt: 'Vallas y cerramientos',
       href: '/servicios', // Por ahora redirige a la página general de servicios
     },

@@ -59,7 +59,7 @@ const services = [
     key: 'carpas',
     name: 'Carpas y Gazebos',
     description: 'Disfrutá tu evento sin preocuparte por el clima',
-    image: '/catalogo/carpa.jpg',
+    image: '/catalogo/carpa.webp',
     features: [
       'Múltiples tamaños',
       'Instalación profesional',

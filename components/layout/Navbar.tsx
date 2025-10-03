@@ -81,10 +81,11 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-[#003056] hover:text-[#00305690] transition-colors"
+              className="relative text-sm font-medium text-[#003056] hover:text-[#002040] transition-colors group"
               onClick={(e) => handleScroll(e, item.href)}
             >
               {item.name}
+              <span className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-0.5 origin-right scale-x-0 bg-[#003056] transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100"></span>
             </Link>
           ))}
         </nav>
@@ -124,10 +125,11 @@ export function Navbar() {
                     <SheetClose asChild key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-base font-medium text-[#003056] hover:text-[#00305690]"
+                        className="relative text-base font-medium text-[#003056] hover:text-[#00305690] group"
                         onClick={(e) => handleScroll(e, item.href)}
                       >
                         {item.name}
+                        <span className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-0.5 origin-right scale-x-0 bg-[#003056] transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100"></span>
                       </Link>
                     </SheetClose>
                   ))}

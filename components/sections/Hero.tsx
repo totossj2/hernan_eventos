@@ -3,8 +3,6 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { CLIENTS } from '@/lib/constants';
-import { StarIcon } from 'lucide-react';
 import heroMobile from '@/public/hero_mobile.webp';
 import dynamic from 'next/dynamic';
 
@@ -104,72 +102,44 @@ export function Hero() {
         <div className="col-start-1 row-start-1 flex items-center justify-center text-center text-white max-w-4xl mx-auto px-4 py-4">
           <div>
             <h1 className=" text-2xl md:text-6xl font-semibold mb-6 leading-tight">
-              Alquiler de Carpas y Equipamiento para Eventos en Zona Norte y
-              todo GBA
+              Alquiler de Carpas y Escenarios con 35 Años de Experiencia y
+              Garantía
             </h1>
             <p className="text-lg md:text-2xl mb-8 text-gray-300">
-              Montamos tu evento con puntualidad y calidad profesional. Desde
-              carpas, escenarios y climatización hasta vajilla, sillas y mesas,
-              listo para usar
+              Brindamos soluciones seguras y profesionales para tu evento.
+              Cotizá gratis con un asesor especializado.
             </p>
-            <a href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos">
-              <Button
-                size="lg"
-                className="bg-[#003056] hover:bg-[#002040] text-lg px-8 py-4"
+            <div className="flex flex-col md:flex-row gap-2 justify-center w-full max-w-lg md:max-w-xl mx-auto">
+              {' '}
+              <a
+                href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos"
+                className="flex-1"
               >
-                Cotizar mi Evento Ahora
-              </Button>
-            </a>
-            <MotionText textIndex={textIndex} texts={texts} />
-          </div>
-        </div>
-      </section>
-      {/* Logos de clientes */}
-      <section className="bg-gray-100 py-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-12 px-4">
-            <div className="flex flex-row items-center gap-8">
-              <div className="flex flex-col gap-2">
-                <h2 className="text-2xl font-semibold text-gray-800">
-                  Clientes que confían en nosotros
-                </h2>
-                <div className="flex flex-row items-center gap-2">
-                  <StarIcon className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  <StarIcon className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  <StarIcon className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  <StarIcon className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  <StarIcon className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                </div>
-                <p className="text-sm text-gray-700">
-                  35 años de experiencia en el rubro - más de 1.000 eventos
-                  realizados
-                </p>
-              </div>
-              <div className="hidden md:block w-[2px] h-full bg-gray-300 rounded-full" />
-            </div>
-
-            <div className="grid grid-cols-2  lg:grid-cols-4  gap-x-8 gap-y-4 items-center w-full">
-              {CLIENTS.map((client, index) => (
-                <div
-                  key={`logo-${index}`}
-                  className="flex flex-col items-center justify-center group hover:scale-105 transition-transform duration-300"
+                <Button
+                  size="lg"
+                  className="w-full bg-[#003056] border border-[#003056] hover:bg-green-500 hover:border-green-500 transition-all duration-300 ease-in-out text-lg px-8 py-4 flex items-center justify-center gap-3"
                 >
                   <Image
-                    src={client.logo}
-                    alt={client.alt}
-                    width={120}
-                    height={60}
-                    className="opacity-100 md:opacity-70 group-hover:opacity-100 transition-all duration-300 md:grayscale group-hover:grayscale-0"
+                    src="/whatsapp.svg"
+                    alt="WhatsApp"
+                    width={25}
+                    height={25}
+                    className="object-contain"
                   />
-                  {/* Client name with fade in */}
-                  <div className="mt-2 h-10 overflow-hidden">
-                    <p className="text-xs text-gray-600 text-center font-medium transform translate-y-2 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                      {client.name}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                  COTIZAR AHORA
+                </Button>
+              </a>
+              <a href="/trabajos" className="flex-1">
+                <Button
+                  size="lg"
+                  className="w-full border border-white  bg-black/30 text-white hover:bg-white hover:text-[#002040] transition-all duration-300 ease-in-out text-lg px-8 py-4"
+                >
+                  Ver Nuestros Trabajos
+                </Button>
+              </a>
             </div>
+
+            <MotionText textIndex={textIndex} texts={texts} />
           </div>
         </div>
       </section>
