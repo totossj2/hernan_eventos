@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="flex flex-col gap-2  px-4 py-4 rounded-lg">
             <div className="flex items-center space-x-2 mb-4">
               <Image
@@ -58,28 +58,21 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div className=" px-4 py-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-4">Eventos</h3>
-            <ul className="space-y-2 text-gray-400">
-              {EVENT_TYPES.map((eventType) => (
-                <li key={eventType}>{eventType}</li>
-              ))}
-            </ul>
-          </div>
-          <div className=" px-4 py-4 rounded-lg">
+
+          <div className="px-4 py-4 rounded-lg min-h-[200px] flex flex-col justify-start">
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-[#f4c046]" />
-                {CONTACT.phone}
+                <span className="text-sm sm:text-base">{CONTACT.phone}</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-[#f4c046]" />
-                {CONTACT.email}
+                <span className="text-sm sm:text-base">{CONTACT.email}</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2 text-[#f4c046]" />
-                {CONTACT.address}
+                <span className="text-sm sm:text-base">{CONTACT.address}</span>
               </div>
             </div>
           </div>

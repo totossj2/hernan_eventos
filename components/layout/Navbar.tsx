@@ -11,6 +11,7 @@ import {
   SheetTrigger,
   SheetContent,
   SheetClose,
+  SheetTitle,
 } from '@/components/ui/sheet';
 
 export function Navbar() {
@@ -104,6 +105,7 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-white">
+              <SheetTitle className="sr-only">Menú de navegación</SheetTitle>
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between mb-6">
                   <Link
