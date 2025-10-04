@@ -1,23 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
-
-// Lazy load heavy form dependencies
-const useForm = dynamic(
-  () => import('react-hook-form').then((mod) => ({ default: mod.useForm })),
-  { ssr: false }
-);
-const zodResolver = dynamic(
-  () =>
-    import('@hookform/resolvers/zod').then((mod) => ({
-      default: mod.zodResolver,
-    })),
-  { ssr: false }
-);
-const z = dynamic(() => import('zod').then((mod) => ({ default: mod.z })), {
-  ssr: false,
-});
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
