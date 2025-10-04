@@ -11,34 +11,40 @@ import {
 export function TestimonialsSection() {
   const testimonials = [
     {
-      text: 'Hernan Eventos hizo que nuestra boda fuera perfecta. El equipamiento llegó impecable y el montaje fue rápido y profesional. ¡Altamente recomendados!',
-      author: 'María Rodríguez',
-      event: 'Boda - 150 invitados',
-      initials: 'MR',
+      text: 'Excelente servicio y asesoramiento. Muy atento el personal, resolvieron de manera efectiva a pesar del tiempo acotado. Quedo en contacto para futuros trabajos. 100% recomendable!',
+      author: 'Diego Lomonaco',
+      event: 'Evento corporativo - Tigre',
+      initials: 'DL',
     },
     {
-      text: 'Para nuestro evento corporativo necesitábamos todo impecable. Hernan Eventos superó nuestras expectativas en calidad y servicio.',
-      author: 'Carlos González',
-      event: 'Evento Corporativo - 300 personas',
-      initials: 'CG',
+      text: 'Alquilamos una carpa toda equipada para un evento corporativo, nos cumplieron con todo y el asesoramiento fue inmejorable. Todo salió perfecto.',
+      author: 'Paula Ferrario',
+      event: 'Feria gastronómica - San Isidro',
+      initials: 'PF',
     },
     {
-      text: 'La fiesta de 15 años de mi hija fue un sueño hecho realidad. Gracias Hernan Eventos por hacer todo tan fácil y hermoso.',
-      author: 'Laura Martínez',
-      event: 'Fiesta de 15 años - 200 invitados',
-      initials: 'LM',
+      text: 'Excelente servicio!!! Más que recomendable para cualquiera que esté buscando calidad, profesionalismo y buen gusto👏🏼 Cambia tu evento al 100%',
+      author: 'Maite Luquet',
+      event: 'Casamiento - Palermo',
+      initials: 'ML',
     },
     {
-      text: 'Excelente servicio y atención al detalle. Nuestro evento fue un éxito total gracias a la profesionalidad del equipo.',
-      author: 'Ana Silva',
-      event: 'Cumpleaños Empresarial - 80 personas',
+      text: 'Contratamos a Hernan para un evento al aire libre y quedamos más que conformes. La carpa era de excelente calidad, el armado fue puntual y prolijo.',
+      author: 'ArgentinaStream',
+      event: 'Festival musical - Banfield',
       initials: 'AS',
     },
     {
-      text: 'La calidad del equipamiento superó nuestras expectativas. Todo funcionó perfectamente durante todo el evento.',
-      author: 'Roberto Pérez',
-      event: 'Conferencia - 250 asistentes',
-      initials: 'RP',
+      text: 'Son excelentes. En servicio y . Todos los productos que siempre alquilamos y en la atención. Muchas Gracias !!',
+      author: 'SANTIAGO BOAN- EMMANUEL',
+      event: 'Evento corporativo - Lomas de Zamora',
+      initials: 'SB',
+    },
+    {
+      text: 'Excelente servicio. Son Puntuales y muy bien predispuestos a los cambios de último momento',
+      author: 'Mica Lagrotta',
+      event: 'Fiesta de cumpleaños - Temperley',
+      initials: 'ML',
     },
   ];
 
@@ -71,7 +77,7 @@ export function TestimonialsSection() {
                 >
                   <div className="p-1">
                     <Card className="border-0 shadow-lg h-full">
-                      <CardContent className="p-6 h-full flex flex-col">
+                      <CardContent className="p-6 h-[312px] flex flex-col">
                         <div className="flex mb-4">
                           {[...Array(5)].map((_, i) => (
                             <Star
@@ -111,7 +117,7 @@ export function TestimonialsSection() {
 
         <div className="text-center mb-6 md:mb-16">
           <a
-            className="text-base md:text-xl text-[#111111] w-full flex justify-center items-center hover:underline hover:text-[#003056]"
+            className="text-base md:text-xl text-[#111111] w-full flex flex-col md:flex-row justify-center items-center hover:underline hover:text-[#003056]"
             href="https://maps.app.goo.gl/2L2Cr8SPVpz1x8KB6"
             target="_blank"
           >

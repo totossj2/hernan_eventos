@@ -4,18 +4,6 @@ import { Hero } from '@/components/sections/Hero';
 import { Navbar } from '@/components/layout/Navbar';
 import dynamic from 'next/dynamic';
 
-// Lazy load heavy components with ssr: false for better TBT
-const BenefitsSection = dynamic(
-  () =>
-    import('@/components/sections/BenefitsSection').then((mod) => ({
-      default: mod.BenefitsSection,
-    })),
-  {
-    loading: () => <div className="py-12 bg-gray-50 animate-pulse" />,
-    ssr: false, // Client-side only for better TBT
-  }
-);
-
 const WhoWeAre = dynamic(() => import('@/components/sections/WhoWeAre'), {
   loading: () => <div className="py-12 bg-gray-50 animate-pulse" />,
   ssr: false, // Client-side only for better TBT
@@ -32,17 +20,6 @@ const ServicesSection = dynamic(
   }
 );
 
-const ProcessSection = dynamic(
-  () =>
-    import('@/components/sections/ProcessSection').then((mod) => ({
-      default: mod.ProcessSection,
-    })),
-  {
-    loading: () => <div className="py-12 bg-gray-50 animate-pulse" />,
-    ssr: false, // Client-side only for better TBT
-  }
-);
-
 const Form = dynamic(() => import('@/components/sections/SimpleForm'), {
   loading: () => <div className="py-12 bg-white animate-pulse" />,
   ssr: false, // Client-side only for better TBT
@@ -55,6 +32,17 @@ const ClientsSection = dynamic(
     })),
   {
     loading: () => <div className="py-12 bg-gray-100 animate-pulse" />,
+    ssr: false, // Client-side only for better TBT
+  }
+);
+
+const TestimonialsSection = dynamic(
+  () =>
+    import('@/components/sections/TestimonialsSection').then((mod) => ({
+      default: mod.TestimonialsSection,
+    })),
+  {
+    loading: () => <div className="py-12 bg-gray-50 animate-pulse" />,
     ssr: false, // Client-side only for better TBT
   }
 );
@@ -76,15 +64,10 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 flex flex-col gap-0 pt-16">
         <Hero />
-        {/* <HeatingSection />*/}
         <WhoWeAre />
         <ClientsSection />
-
+        <TestimonialsSection />
         <ServicesSection />
-        <BenefitsSection />
-        {/* <ProcessSection />*/}
-        {/* <TestimonialsSection /> */}
-        {/* <FAQSection /> */}
         <Form />
       </main>
       <Footer />

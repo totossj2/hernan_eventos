@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { Resend } from 'resend';
 
-// Schema de validación del lado del servidor para formulario de cotización
+// Schema de validación del lado del servidor para formulario simplificado
 const quotationFormSchema = z.object({
   // Datos de contacto
   name: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
@@ -15,26 +15,11 @@ const quotationFormSchema = z.object({
       'Ingresa un número de teléfono válido (solo números, espacios, guiones y paréntesis)'
     )
     .transform((val) => val.replace(/[\s\-\(\)]/g, '')), // Limpiar formato para almacenamiento
-  email: z
-    .string()
-    .email('Ingresa un email válido')
-    .optional()
-    .or(z.literal('')),
 
   // Datos del evento
-  eventDate: z.string().min(1, 'Selecciona una fecha para tu evento'),
-  guests: z.string().min(1, 'Indica la cantidad de invitados'),
   eventType: z.string().min(1, 'Selecciona un tipo de evento'),
-  location: z.string().min(2, 'Indica la dirección o ciudad del evento'),
-
-  // Servicios
-  services: z.array(z.string()).min(1, 'Selecciona al menos un servicio'),
-
-  // Campo opcional
-  message: z.string().optional(),
-
-  // Extras
-  urgentEvent: z.boolean().optional(),
+  eventDate: z.string().min(1, 'Ingresa el día y mes del evento'),
+  message: z.string().min(1, 'El mensaje es obligatorio'),
 
   // Campos adicionales del sistema
   formType: z.string().optional(),
@@ -109,11 +94,6 @@ async function sendEmail(data: z.infer<typeof quotationFormSchema>) {
     <div style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; line-height:1.5; color:#111827">
       <h2 style="margin:0 0 8px; font-size:20px;">📋 CONSULTA WEB</h2>
       <p style="margin:0 0 12px;">Has recibido una nueva consulta desde el formulario web.</p>
-      ${
-        data.urgentEvent
-          ? '<div style="background:#fef3c7; border:1px solid #f59e0b; padding:8px; border-radius:6px; margin-bottom:16px;"><strong>🚨 EVENTO URGENTE - Menos de 7 días</strong></div>'
-          : ''
-      }
       <table style="border-collapse: collapse; width:100%;">
         <tbody>
           <tr><td style="padding:6px 0; width:160px; color:#6B7280; font-weight:500;">Nombre</td><td style="padding:6px 0;">${escapeHtml(
@@ -122,46 +102,20 @@ async function sendEmail(data: z.infer<typeof quotationFormSchema>) {
           <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Teléfono</td><td style="padding:6px 0;">${escapeHtml(
             data.phone
           )}</td></tr>
-          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Email</td><td style="padding:6px 0;">${escapeHtml(
-            data.email || 'No proporcionado'
-          )}</td></tr>
           <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Tipo de evento</td><td style="padding:6px 0;">${escapeHtml(
             data.eventType
           )}</td></tr>
-          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Fecha del evento</td><td style="padding:6px 0;">${escapeHtml(
+          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Día y mes del evento</td><td style="padding:6px 0;">${escapeHtml(
             data.eventDate
-          )}</td></tr>
-          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Cantidad de invitados</td><td style="padding:6px 0;">${escapeHtml(
-            data.guests
-          )}</td></tr>
-          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Ubicación</td><td style="padding:6px 0;">${escapeHtml(
-            data.location
           )}</td></tr>
         </tbody>
       </table>
       <div style="margin-top:16px;">
-        <div style="color:#6B7280; margin-bottom:8px; font-weight:500;">🎯 Servicios solicitados:</div>
-        <div style="background:#f3f4f6; padding:8px; border-radius:6px;">
-          ${data.services
-            .map(
-              (service) =>
-                `<span style="display:inline-block; background:#3b82f6; color:white; padding:4px 8px; margin:2px; border-radius:4px; font-size:12px;">${escapeHtml(
-                  service
-                )}</span>`
-            )
-            .join('')}
-        </div>
-      </div>
-      ${
-        data.message
-          ? `<div style="margin-top:16px;">
-        <div style="color:#6B7280; margin-bottom:4px; font-weight:500;">💬 Mensaje adicional</div>
+        <div style="color:#6B7280; margin-bottom:4px; font-weight:500;">💬 Mensaje</div>
         <div style="white-space:pre-wrap; background:#f9fafb; padding:8px; border-radius:6px;">${escapeHtml(
           data.message
         )}</div>
-      </div>`
-          : ''
-      }
+      </div>
       <div style="margin-top:16px; padding:8px; background:#ecfdf5; border-radius:6px; font-size:12px; color:#059669;">
         <strong>📱 Acción recomendada:</strong> Contactar por WhatsApp al ${
           data.phone
@@ -175,7 +129,6 @@ async function sendEmail(data: z.infer<typeof quotationFormSchema>) {
     to: [toAddress],
     subject,
     html,
-    reply_to: data.email,
   } as any);
 
   if (error) {

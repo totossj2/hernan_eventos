@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import {
   Loader2,
@@ -15,33 +14,23 @@ import {
   Users,
   Calendar,
 } from 'lucide-react';
-import { CONTACT, EVENT_TYPES } from '@/lib/constants';
+import { EVENT_TYPES } from '@/lib/constants';
 
 interface FormData {
   name: string;
   phone: string;
-  email: string;
-  eventDate: string;
-  guests: string;
   eventType: string;
-  location: string;
-  services: string[];
+  eventDate: string;
   message: string;
-  urgentEvent: boolean;
 }
 
 export default function SimpleForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
-    email: '',
-    eventDate: '',
-    guests: '',
     eventType: '',
-    location: '',
-    services: [],
+    eventDate: '',
     message: '',
-    urgentEvent: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,10 +38,7 @@ export default function SimpleForm() {
   const [error, setError] = useState<string>('');
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
-  const handleInputChange = (
-    field: keyof FormData,
-    value: string | string[] | boolean
-  ) => {
+  const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     // Limpiar error del campo cuando el usuario lo modifica
     if (fieldErrors[field]) {
@@ -62,15 +48,6 @@ export default function SimpleForm() {
         return newErrors;
       });
     }
-  };
-
-  const handleServiceToggle = (service: string) => {
-    setFormData((prev) => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter((s) => s !== service)
-        : [...prev.services, service],
-    }));
   };
 
   // Función para validar teléfono
@@ -93,10 +70,6 @@ export default function SimpleForm() {
     // Validaciones frontend
     const errors: Record<string, string> = {};
 
-    if (formData.services.length === 0) {
-      errors.services = 'Por favor selecciona al menos un servicio';
-    }
-
     const phoneError = validatePhone(formData.phone);
     if (phoneError) {
       errors.phone = phoneError;
@@ -110,10 +83,9 @@ export default function SimpleForm() {
     setIsSubmitting(true);
 
     try {
-      // Preparar datos para envío - convertir email vacío a undefined
+      // Preparar datos para envío
       const submitData = {
         ...formData,
-        email: formData.email.trim() === '' ? undefined : formData.email,
       };
 
       const response = await fetch('/api/contact', {
@@ -127,14 +99,9 @@ export default function SimpleForm() {
         setFormData({
           name: '',
           phone: '',
-          email: '',
-          eventDate: '',
-          guests: '',
           eventType: '',
-          location: '',
-          services: [],
+          eventDate: '',
           message: '',
-          urgentEvent: false,
         });
       } else {
         const errorData = await response.json();
@@ -196,10 +163,10 @@ export default function SimpleForm() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
               Cotizá tu Evento
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               Contanos los detalles de tu evento y recibí una cotización
               personalizada en menos de 1 hora
             </p>
@@ -215,25 +182,25 @@ export default function SimpleForm() {
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Clock className="w-5 h-5 text-[#003056]" />
-                    <span className="text-gray-700">
+                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
                       Respuesta en menos de 1 hora
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <MessageCircle className="w-5 h-5 text-[#003056]" />
-                    <span className="text-gray-700">
+                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
                       Atención personalizada por WhatsApp
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-5 h-5 text-[#003056]" />
-                    <span className="text-gray-700">
+                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
                       35 años de experiencia
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-[#003056]" />
-                    <span className="text-gray-700">
+                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
                       Más de 1.000 eventos realizados
                     </span>
                   </div>
@@ -273,7 +240,7 @@ export default function SimpleForm() {
                       }
                       required
                       className={fieldErrors.phone ? 'border-red-500' : ''}
-                      placeholder="Ej: 11 1234-5678 o +54 11 1234-5678"
+                      placeholder="Ej: 11 1234-5678"
                     />
                     {fieldErrors.phone && (
                       <p className="text-red-500 text-sm mt-1">
@@ -283,113 +250,46 @@ export default function SimpleForm() {
                   </div>
                 </div>
 
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                  />
-                </div>
-
                 {/* Event Details */}
                 <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="eventType">Tipo de evento *</Label>
+                    <select
+                      id="eventType"
+                      value={formData.eventType}
+                      onChange={(e) =>
+                        handleInputChange('eventType', e.target.value)
+                      }
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003056]"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Seleccionar
+                      </option>
+                      {EVENT_TYPES.map((type) => (
+                        <option key={type} value={type}>
+                          {type}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                   <div>
                     <Label htmlFor="eventDate">Fecha del evento *</Label>
                     <Input
                       id="eventDate"
-                      type="date"
+                      type="text"
                       value={formData.eventDate}
                       onChange={(e) =>
                         handleInputChange('eventDate', e.target.value)
                       }
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="guests">Cantidad de invitados *</Label>
-                    <Input
-                      id="guests"
-                      value={formData.guests}
-                      onChange={(e) =>
-                        handleInputChange('guests', e.target.value)
-                      }
-                      placeholder="Ej: 50-100"
+                      placeholder="Ej: 15 de marzo"
                       required
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="eventType">Tipo de evento *</Label>
-                  <select
-                    id="eventType"
-                    value={formData.eventType}
-                    onChange={(e) =>
-                      handleInputChange('eventType', e.target.value)
-                    }
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003056]"
-                    required
-                  >
-                    <option value="">Seleccionar tipo de evento</option>
-                    {EVENT_TYPES.map((type) => (
-                      <option key={type} value={type}>
-                        {type}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <Label htmlFor="location">Ubicación del evento *</Label>
-                  <Input
-                    id="location"
-                    value={formData.location}
-                    onChange={(e) =>
-                      handleInputChange('location', e.target.value)
-                    }
-                    placeholder="Dirección o ciudad"
-                    required
-                  />
-                </div>
-
-                {/* Services */}
-                <div>
-                  <Label>Servicios necesarios *</Label>
-                  <div className="grid grid-cols-2 gap-2 mt-2">
-                    {[
-                      'Carpas',
-                      'Mesas y Sillas',
-                      'Vajilla',
-                      'Climatización',
-                      'Escenarios',
-                      'Vallas',
-                    ].map((service) => (
-                      <div
-                        key={service}
-                        className="flex items-center space-x-2"
-                      >
-                        <Checkbox
-                          id={service}
-                          checked={formData.services.includes(service)}
-                          onCheckedChange={() => handleServiceToggle(service)}
-                        />
-                        <Label htmlFor={service} className="text-sm">
-                          {service}
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
-                  {fieldErrors.services && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {fieldErrors.services}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="message">Mensaje adicional</Label>
+                  <Label htmlFor="message">Mensaje *</Label>
                   <Textarea
                     id="message"
                     value={formData.message}
@@ -398,20 +298,8 @@ export default function SimpleForm() {
                     }
                     placeholder="Contanos más detalles sobre tu evento..."
                     rows={3}
+                    required
                   />
-                </div>
-                {/* Urgent Event Checkbox */}
-                <div className="flex items-center space-x-2">
-                  <Checkbox
-                    id="urgentEvent"
-                    checked={formData.urgentEvent}
-                    onCheckedChange={(checked) =>
-                      handleInputChange('urgentEvent', checked as boolean)
-                    }
-                  />
-                  <Label htmlFor="urgentEvent" className="text-sm">
-                    Evento urgente (menos de 7 días)
-                  </Label>
                 </div>
 
                 <Button
