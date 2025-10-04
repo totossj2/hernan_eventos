@@ -27,6 +27,7 @@ interface FormData {
   location: string;
   services: string[];
   message: string;
+  urgentEvent: boolean;
 }
 
 export default function SimpleForm() {
@@ -40,16 +41,27 @@ export default function SimpleForm() {
     location: '',
     services: [],
     message: '',
+    urgentEvent: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string>('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
   const handleInputChange = (
     field: keyof FormData,
-    value: string | string[]
+    value: string | string[] | boolean
   ) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+    // Limpiar error del campo cuando el usuario lo modifica
+    if (fieldErrors[field]) {
+      setFieldErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[field];
+        return newErrors;
+      });
+    }
   };
 
   const handleServiceToggle = (service: string) => {
@@ -61,15 +73,53 @@ export default function SimpleForm() {
     }));
   };
 
+  // Función para validar teléfono
+  const validatePhone = (phone: string): string | null => {
+    if (!phone.trim()) return 'El teléfono es obligatorio';
+    if (phone.length < 8) return 'El teléfono debe tener al menos 8 dígitos';
+    if (phone.length > 15)
+      return 'El teléfono no puede tener más de 15 dígitos';
+    if (!/^[\+]?[0-9\s\-\(\)]+$/.test(phone)) {
+      return 'Ingresa un número de teléfono válido (solo números, espacios, guiones y paréntesis)';
+    }
+    return null;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
+    setFieldErrors({});
+
+    // Validaciones frontend
+    const errors: Record<string, string> = {};
+
+    if (formData.services.length === 0) {
+      errors.services = 'Por favor selecciona al menos un servicio';
+    }
+
+    const phoneError = validatePhone(formData.phone);
+    if (phoneError) {
+      errors.phone = phoneError;
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
+      // Preparar datos para envío - convertir email vacío a undefined
+      const submitData = {
+        ...formData,
+        email: formData.email.trim() === '' ? undefined : formData.email,
+      };
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submitData),
       });
 
       if (response.ok) {
@@ -84,10 +134,27 @@ export default function SimpleForm() {
           location: '',
           services: [],
           message: '',
+          urgentEvent: false,
         });
+      } else {
+        const errorData = await response.json();
+
+        // Si hay errores de validación específicos del servidor
+        if (errorData.errors && Array.isArray(errorData.errors)) {
+          const serverErrors: Record<string, string> = {};
+          errorData.errors.forEach((err: any) => {
+            if (err.path && err.message) {
+              serverErrors[err.path[0]] = err.message;
+            }
+          });
+          setFieldErrors(serverErrors);
+        } else {
+          setError(errorData.message || 'Error al enviar el formulario');
+        }
       }
     } catch (error) {
       console.error('Error submitting form:', error);
+      setError('Error de conexión. Por favor intenta nuevamente.');
     } finally {
       setIsSubmitting(false);
     }
@@ -176,6 +243,11 @@ export default function SimpleForm() {
 
             {/* Form */}
             <div className="bg-white rounded-lg p-6 shadow-sm">
+              {error && (
+                <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
+                  <p className="text-red-600 text-sm">{error}</p>
+                </div>
+              )}
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Contact Info */}
                 <div className="grid md:grid-cols-2 gap-4">
@@ -200,7 +272,14 @@ export default function SimpleForm() {
                         handleInputChange('phone', e.target.value)
                       }
                       required
+                      className={fieldErrors.phone ? 'border-red-500' : ''}
+                      placeholder="Ej: 11 1234-5678 o +54 11 1234-5678"
                     />
+                    {fieldErrors.phone && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {fieldErrors.phone}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -302,6 +381,11 @@ export default function SimpleForm() {
                       </div>
                     ))}
                   </div>
+                  {fieldErrors.services && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {fieldErrors.services}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -315,6 +399,19 @@ export default function SimpleForm() {
                     placeholder="Contanos más detalles sobre tu evento..."
                     rows={3}
                   />
+                </div>
+                {/* Urgent Event Checkbox */}
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="urgentEvent"
+                    checked={formData.urgentEvent}
+                    onCheckedChange={(checked) =>
+                      handleInputChange('urgentEvent', checked as boolean)
+                    }
+                  />
+                  <Label htmlFor="urgentEvent" className="text-sm">
+                    Evento urgente (menos de 7 días)
+                  </Label>
                 </div>
 
                 <Button

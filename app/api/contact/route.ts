@@ -6,7 +6,15 @@ import { Resend } from 'resend';
 const quotationFormSchema = z.object({
   // Datos de contacto
   name: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
-  phone: z.string().min(8, 'El teléfono debe tener al menos 8 dígitos'),
+  phone: z
+    .string()
+    .min(8, 'El teléfono debe tener al menos 8 dígitos')
+    .max(15, 'El teléfono no puede tener más de 15 dígitos')
+    .regex(
+      /^[\+]?[0-9\s\-\(\)]+$/,
+      'Ingresa un número de teléfono válido (solo números, espacios, guiones y paréntesis)'
+    )
+    .transform((val) => val.replace(/[\s\-\(\)]/g, '')), // Limpiar formato para almacenamiento
   email: z
     .string()
     .email('Ingresa un email válido')
@@ -96,11 +104,11 @@ async function sendEmail(data: z.infer<typeof quotationFormSchema>) {
 
   const resend = new Resend(apiKey);
 
-  const subject = `Nueva solicitud de cotización - ${data.eventType}`;
+  const subject = `CONSULTA WEB - ${data.eventType}`;
   const html = `
     <div style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; line-height:1.5; color:#111827">
-      <h2 style="margin:0 0 8px; font-size:20px;">📋 Nueva solicitud de cotización</h2>
-      <p style="margin:0 0 12px;">Has recibido una nueva solicitud de cotización desde el formulario web.</p>
+      <h2 style="margin:0 0 8px; font-size:20px;">📋 CONSULTA WEB</h2>
+      <p style="margin:0 0 12px;">Has recibido una nueva consulta desde el formulario web.</p>
       ${
         data.urgentEvent
           ? '<div style="background:#fef3c7; border:1px solid #f59e0b; padding:8px; border-radius:6px; margin-bottom:16px;"><strong>🚨 EVENTO URGENTE - Menos de 7 días</strong></div>'
