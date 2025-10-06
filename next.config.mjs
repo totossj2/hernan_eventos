@@ -23,12 +23,15 @@ const nextConfig = {
   compress: true,
   // Optimize bundle splitting
   webpack: (config, { dev, isServer }) => {
+    // Add chunk loading error handling
+    config.output.chunkLoadingGlobal = 'webpackChunkHernanEventos';
+    config.output.globalObject = 'self';
     if (!dev && !isServer) {
-      // Ultra-aggressive bundle splitting to minimize TBT
+      // Optimized bundle splitting to minimize TBT while avoiding chunk loading issues
       config.optimization.splitChunks = {
         chunks: 'all',
-        minSize: 10000,
-        maxSize: 50000,
+        minSize: 20000,
+        maxSize: 200000,
         minChunks: 1,
         cacheGroups: {
           // Separate React core

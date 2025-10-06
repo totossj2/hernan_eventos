@@ -9,9 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { ArrowRight, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { SERVICE_DATA } from '@/lib/constants';
 import { CONTACT } from '@/lib/constants';
 import React from 'react';
@@ -103,6 +102,18 @@ const services = [
       'Seguridad garantizada',
     ],
   },
+  {
+    key: 'vallas',
+    name: 'Vallado y cerramiento',
+    description: 'Temperatura perfecta para tu evento todo el año',
+    image: '/climatizacion/piramide.webp',
+    features: [
+      'Calefacción y aire acondicionado',
+      'Múltiples potencias',
+      'Instalación profesional',
+      'Seguridad garantizada',
+    ],
+  },
 ];
 
 export default function ServiciosPage() {
@@ -128,7 +139,8 @@ export default function ServiciosPage() {
             Nuestros Servicios
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
-            Soluciones completas para hacer de tu evento algo inolvidable
+            Alquiler integral de carpas, escenarios y mobiliario para eventos en
+            GBA y CABA{' '}
           </p>
           <p className="text-lg md:text-xl mb-8 text-gray-300">
             Más de 35 años de experiencia nos respaldan en la organización de
@@ -192,13 +204,6 @@ export default function ServiciosPage() {
                       </div>
                     ))}
                   </div>
-
-                  <Link href={`/servicios/${service.key}`}>
-                    <Button className="w-full bg-[#003056] hover:bg-[#002040]">
-                      Ver Detalles
-                      <ArrowRight className="h-4 w-4 ml-2" />
-                    </Button>
-                  </Link>
                 </CardContent>
               </Card>
             ))}

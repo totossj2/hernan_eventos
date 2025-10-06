@@ -1,14 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import {
-  Tent,
-  Table,
-  Utensils,
-  Wind,
-  Music2,
-  Fence,
-  ArrowRight,
-} from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import Link from 'next/link';
@@ -20,7 +11,6 @@ export function ServicesSection() {
       title: 'Carpas y Gazebos',
       description:
         'Desde 3x3m hasta 20x30m. Resistentes al viento y lluvia, ideales para cualquier clima.',
-      icon: Tent,
       image: '/catalogo/carpa.webp',
       alt: 'Carpas elegantes para eventos',
       href: '/servicios/carpas',
@@ -29,7 +19,6 @@ export function ServicesSection() {
       title: 'Escenarios y Tarimas',
       description:
         'Estructuras modulares para presentaciones, shows y ceremonias especiales.',
-      icon: Music2,
       image: '/catalogo/escenario.jpg',
       alt: 'Escenarios y tarimas',
       href: '/servicios/escenarios',
@@ -42,7 +31,6 @@ export function ServicesSection() {
       title: 'Mesas y Sillas',
       description:
         'Mesas redondas, rectangulares y cocktail. Sillas plasticas o plegables.',
-      icon: Table,
       image: '/catalogo/sillasymesas.webp',
       alt: 'Mesas y sillas para eventos',
       href: '/servicios/mesas',
@@ -51,7 +39,6 @@ export function ServicesSection() {
       title: 'Vajilla y Cristalería',
       description:
         'Platos, copas, cubiertos y mantelería de alta calidad para eventos elegantes.',
-      icon: Utensils,
       image: '/catalogo/vajilla.webp',
       alt: 'Vajilla y cristalería elegante',
       href: '/servicios/vajilla',
@@ -60,7 +47,6 @@ export function ServicesSection() {
       title: 'Climatización',
       description:
         'Equipos de aire acondicionado y calefacción para mantener el clima perfecto.',
-      icon: Wind,
       image: '/catalogo/DSC_2048.JPG',
       alt: 'Sistemas de climatización',
       href: '/servicios/climatizacion',
@@ -68,7 +54,6 @@ export function ServicesSection() {
     {
       title: 'Vallas y Cerramientos',
       description: 'Eventos masivos seguros y organizados.',
-      icon: Fence,
       image: '/catalogo/vallas.webp',
       alt: 'Vallas y cerramientos',
       href: '/servicios', // Por ahora redirige a la página general de servicios
@@ -89,11 +74,7 @@ export function ServicesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
           {/* Servicios principales - 6 columnas cada uno */}
           {mainServices.map((service) => (
-            <Link
-              key={service.title}
-              href={service.href}
-              className="lg:col-span-6"
-            >
+            <div key={service.title} className="lg:col-span-6">
               <Card className="overflow-hidden">
                 <div className="relative h-96 overflow-hidden rounded-lg flex flex-col p-4">
                   <Image
@@ -123,16 +104,12 @@ export function ServicesSection() {
                   </div>
                 </div>
               </Card>
-            </Link>
+            </div>
           ))}
 
           {/* Servicios secundarios - 3 columnas cada uno */}
           {secondaryServices.map((service) => (
-            <Link
-              key={service.title}
-              href={service.href}
-              className="lg:col-span-3"
-            >
+            <div key={service.title} className="lg:col-span-3">
               <Card className="overflow-hidden">
                 <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col p-4">
                   <Image
@@ -160,11 +137,11 @@ export function ServicesSection() {
                   </div>
                 </div>
               </Card>
-            </Link>
+            </div>
           ))}
         </div>
 
-        {/* Botón adicional para ver todos los servicios */}
+        {/* Botón adicional para ver todos los servicios 
         <div className="text-center mt-8">
           <Link href="/servicios">
             <Button className="bg-[#003056] hover:bg-[#002040] text-white px-8 py-3">
@@ -172,7 +149,7 @@ export function ServicesSection() {
               <ArrowRight className="h-4 w-4 ml-2" />
             </Button>
           </Link>
-        </div>
+        </div>*/}
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ export default function SimpleForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
-    eventType: '',
+    eventType: 'default',
     eventDate: '',
     message: '',
   });
@@ -99,7 +99,7 @@ export default function SimpleForm() {
         setFormData({
           name: '',
           phone: '',
-          eventType: '',
+          eventType: 'default',
           eventDate: '',
           message: '',
         });
@@ -263,7 +263,7 @@ export default function SimpleForm() {
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#003056]"
                       required
                     >
-                      <option value="" disabled selected>
+                      <option value="default" disabled>
                         Seleccionar
                       </option>
                       {EVENT_TYPES.map((type) => (
