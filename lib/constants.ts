@@ -8,8 +8,8 @@ export const CONTACT = {
 };
 
 export const NAVIGATION = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Servicios', href: '/servicios' },
+  //{ name: 'Inicio', href: '/' },
+  //{ name: 'Servicios', href: '/servicios' },
   //{ name: 'Trabajos', href: '/trabajos' },
   //{ name: 'Quienes Somos', href: '/quienes_somos' },
 ];
@@ -179,20 +179,7 @@ export const SERVICE_DATA = {
         'Precios sin sorpresas',
       ],
     },
-    testimonials: [
-      {
-        name: 'María González',
-        company: 'Eventos Elegantes',
-        text: 'Las carpas de Hernán Eventos son de excelente calidad. La instalación fue impecable y el servicio muy profesional.',
-        rating: 5,
-      },
-      {
-        name: 'Carlos Rodríguez',
-        company: 'Fiestas del Sur',
-        text: 'Hemos usado sus carpas en múltiples eventos. Siempre cumplen con los tiempos y la calidad prometida.',
-        rating: 5,
-      },
-    ],
+
     cta: {
       title: '¿Necesitas una carpa para tu evento?',
       description:

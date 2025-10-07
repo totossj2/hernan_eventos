@@ -176,31 +176,31 @@ export default function SimpleForm() {
             {/* Benefits */}
             <div className="space-y-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-4">
                   ¿Por qué elegirnos?
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   <div className="flex items-center gap-3">
                     <Clock className="w-5 h-5 text-[#003056]" />
-                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
+                    <span className="text-sm md:text-base text-gray-600 max-w-2xl">
                       Respuesta en menos de 1 hora
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <MessageCircle className="w-5 h-5 text-[#003056]" />
-                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
+                    <span className="text-sm md:text-base text-gray-600 max-w-2xl">
                       Atención personalizada por WhatsApp
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-5 h-5 text-[#003056]" />
-                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
+                    <span className="text-sm md:text-base text-gray-600 max-w-2xl">
                       35 años de experiencia
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-[#003056]" />
-                    <span className="text-base md:text-xl text-gray-600 max-w-2xl">
+                    <span className="text-sm md:text-base text-gray-600 max-w-2xl">
                       Más de 1.000 eventos realizados
                     </span>
                   </div>

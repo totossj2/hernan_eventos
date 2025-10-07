@@ -16,8 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title:
-    'Hernán Eventos | Soluciones Confiables de Alquiler para tu Evento en GBA',
+  title: 'Hernán Eventos | Soluciones Confiables para tu Evento',
   description:
     'Hernán Eventos ofrece soluciones confiables de alquiler para todo tipo de evento. Carpas, escenarios, mobiliario, vajilla, climatización y más en Zona Norte, Zona Sur y Gran Buenos Aires. Puntualidad, seguridad y servicio profesional garantizado.',
   keywords: [

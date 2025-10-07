@@ -129,7 +129,7 @@ export function Hero() {
                   COTIZAR AHORA
                 </Button>
               </a>
-              <a href="/trabajos" className="flex-1">
+              <a href="/trabajos" className="flex-1 hidden">
                 <Button
                   size="lg"
                   className="w-full border border-white  bg-black/30 text-white hover:bg-white hover:text-[#002040] transition-all duration-300 ease-in-out text-lg px-8 py-4"

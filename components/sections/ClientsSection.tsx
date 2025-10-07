@@ -7,7 +7,7 @@ import { StarIcon } from 'lucide-react';
 export function ClientsSection() {
   return (
     <section className="bg-gray-100 py-12">
-      <div className="max-w-7xl mx-auto">
+      <div className="container  mx-auto ">
         <div className="flex flex-col md:flex-row gap-12 px-4">
           <div className="flex flex-row items-center gap-8">
             <div className="flex flex-col gap-2">
