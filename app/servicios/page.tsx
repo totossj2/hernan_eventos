@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { HeroServices } from '@/components/sections/HeroServices';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -14,6 +15,7 @@ import Image from 'next/image';
 import { SERVICE_DATA } from '@/lib/constants';
 import { CONTACT } from '@/lib/constants';
 import React from 'react';
+import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
   title: 'Servicios de Alquiler para Eventos | Hernán Eventos GBA',
@@ -98,20 +100,30 @@ const services = [
     features: [
       'Calefacción y aire acondicionado',
       'Múltiples potencias',
-      'Instalación profesional',
       'Seguridad garantizada',
     ],
   },
   {
-    key: 'vallas',
-    name: 'Vallado y cerramiento',
-    description: 'Temperatura perfecta para tu evento todo el año',
+    key: 'gradas',
+    name: 'Gradas y Palcos',
+    description:
+      'Gradas y palcos seguros y personalizables, ideales para todo tipo de eventos y espectáculos',
     image: '/climatizacion/piramide.webp',
     features: [
-      'Calefacción y aire acondicionado',
-      'Múltiples potencias',
-      'Instalación profesional',
-      'Seguridad garantizada',
+      'Altura y tamaño personalizables',
+      'Disponibles con y sin techo',
+      'Estructura segura y resistente',
+    ],
+  },
+  {
+    key: 'vallas',
+    name: 'Vallado y Cerramientos',
+    description: 'Garantizamos seguridad y control de accesos para tu evento',
+    image: '/climatizacion/piramide.webp',
+    features: [
+      'Eventos masivos seguros',
+      'Adaptable a cualquier tipo de evento',
+      'Vallas de alta resistencia y calidad profesional',
     ],
   },
 ];
@@ -121,52 +133,23 @@ export default function ServiciosPage() {
     <>
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/catalogo/Servicios.webp"
-            alt="Servicios de Eventos"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-semibold mb-6">
-            Nuestros Servicios
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-200">
-            Alquiler integral de carpas, escenarios y mobiliario para eventos en
-            GBA y CABA{' '}
-          </p>
-          <p className="text-lg md:text-xl mb-8 text-gray-300">
-            Más de 35 años de experiencia nos respaldan en la organización de
-            eventos exitosos
-          </p>
-
-          <a href={CONTACT.whatsapp} target="_blank">
-            <Button
-              size="lg"
-              className="bg-[#003056] hover:bg-[#002040] text-lg px-8 py-4"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Consultar Servicios
-            </Button>
-          </a>
-        </div>
-      </section>
+      <HeroServices
+        title="Nuestros Servicios"
+        subtitle="Alquiler integral de carpas, escenarios y mobiliario para eventos en GBA y CABA"
+        description="Más de 35 años de experiencia nos respaldan en la organización de eventos exitosos"
+        imageSrc="/catalogo/Servicios.webp"
+        imageAlt="Servicios de Eventos"
+        buttonText="Consultar Servicios"
+      />
 
       {/* Services Grid */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003056] mb-4">
+            <h2 className="text-xl md:text-4xl font-semibold text-[#003056] mb-4">
               ¿Qué ofrecemos?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
               Ofrecemos soluciones integrales que se complementan para que tu
               evento sea perfecto
             </p>
@@ -176,14 +159,14 @@ export default function ServiciosPage() {
             {services.map((service) => (
               <Card
                 key={service.key}
-                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                className="overflow-hidden hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="relative h-64">
+                <div className="relative h-64 overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.name}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition duration-300"
                     loading="lazy"
                   />
                 </div>
@@ -210,6 +193,8 @@ export default function ServiciosPage() {
           </div>
         </div>
       </section>
+
+      <SimpleForm />
 
       {/* CTA Section */}
       <section className="py-20 bg-[#003056] text-white">

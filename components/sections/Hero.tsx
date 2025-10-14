@@ -101,7 +101,7 @@ export function Hero() {
         {/* Contenido centrado */}
         <div className="col-start-1 row-start-1 flex items-center justify-center text-center text-white max-w-4xl mx-auto px-4 py-4">
           <div>
-            <h1 className=" text-2xl md:text-6xl font-semibold mb-6 leading-tight">
+            <h1 className=" text-3xl md:text-6xl font-semibold mb-6 leading-tight">
               Alquiler de Carpas y Escenarios con 35 Años de Experiencia y
               Garantía
             </h1>

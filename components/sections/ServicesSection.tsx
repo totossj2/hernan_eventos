@@ -37,16 +37,14 @@ export function ServicesSection() {
     },
     {
       title: 'Vajilla y Cristalería',
-      description:
-        'Platos, copas, cubiertos y mantelería de alta calidad para eventos elegantes.',
+      description: 'Platos, copas, cubiertos y mantelería de alta calidad.',
       image: '/catalogo/vajilla.webp',
       alt: 'Vajilla y cristalería elegante',
       href: '/servicios/vajilla',
     },
     {
       title: 'Climatización',
-      description:
-        'Equipos de aire acondicionado y calefacción para mantener el clima perfecto.',
+      description: 'Equipos de aire acondicionado y calefacción.',
       image: '/catalogo/DSC_2048.JPG',
       alt: 'Sistemas de climatización',
       href: '/servicios/climatizacion',
@@ -76,7 +74,7 @@ export function ServicesSection() {
           {mainServices.map((service) => (
             <div key={service.title} className="lg:col-span-6">
               <Card className="overflow-hidden">
-                <div className="relative h-96 overflow-hidden rounded-lg flex flex-col p-4">
+                <div className="relative h-96 overflow-hidden rounded-lg flex flex-col p-3 py-2">
                   <Image
                     src={service.image}
                     alt={service.alt}
@@ -85,11 +83,11 @@ export function ServicesSection() {
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_60%,rgba(0,0,0,0.95)_100%)]" />{' '}
+                  <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_30%,rgba(0,0,0,0.95)_100%)]" />{' '}
                   {/* Espacio flexible para empujar contenido hacia abajo */}
                   <div className="flex-1"></div>
                   {/* Contenido inferior - solo texto */}
-                  <div className="relative z-10 flex gap-4 flex-col justify-end">
+                  <div className="relative z-10 flex gap-1 flex-col justify-end">
                     <div className="relative z-10 flex flex-col-reverse md:flex-row justify-between">
                       {/* Título en la esquina superior izquierda */}
                       <div className="text-left flex items-center">
@@ -111,7 +109,7 @@ export function ServicesSection() {
           {secondaryServices.map((service) => (
             <div key={service.title} className="lg:col-span-3">
               <Card className="overflow-hidden">
-                <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col p-4">
+                <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col p-3 py-2">
                   <Image
                     src={service.image}
                     alt={service.alt}
@@ -120,11 +118,11 @@ export function ServicesSection() {
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_60%,rgba(0,0,0,0.95)_100%)]" />{' '}
+                  <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_30%,rgba(0,0,0,0.95)_100%)]" />{' '}
                   {/* Espacio flexible para empujar contenido hacia abajo */}
                   <div className="flex-1"></div>
                   {/* Contenido inferior - solo texto */}
-                  <div className="relative z-10 flex h-fit gap-3 flex-col justify-end">
+                  <div className="relative z-10 flex h-fit gap-1 flex-col justify-end">
                     {/* Título en la esquina superior izquierda */}
                     <div className="relative z-10 text-left">
                       <h3 className="text-lg font-semibold text-white">
