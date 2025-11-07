@@ -44,7 +44,7 @@
 ### 5. **Preload de Recursos Críticos** ✅
 
 - **Hero images**: `/hero_desktop.webp` y `/hero_mobile.webp`
-- **Logo**: `/logo.png`
+- **Logo**: `/logo.webp`
 - **Type**: Especificado para mejor priorización
 
 ### 6. **Script Loading Inteligente** ✅

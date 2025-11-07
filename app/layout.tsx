@@ -7,6 +7,7 @@ import { CriticalCSS } from '@/components/CriticalCSS';
 import { OptimizedScripts } from '@/components/OptimizedScripts';
 import { SmartScriptLoader } from '@/components/SmartScriptLoader';
 import { AsyncCSSLoaderScript } from '@/components/AsyncCSSLoader';
+import { HeroPreloads } from '@/components/HeroPreloads';
 
 // Optimize font loading with next/font
 const inter = Inter({
@@ -120,20 +121,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
-        {/* Preload critical resources for better LCP */}
-        <link
-          rel="preload"
-          href="/hero_desktop.webp"
-          as="image"
-          type="image/webp"
-        />
-        <link
-          rel="preload"
-          href="/hero_mobile.webp"
-          as="image"
-          type="image/webp"
-        />
-        <link rel="preload" href="/logo.png" as="image" type="image/png" />
+        {/* Preload global critical resources */}
+        <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
+
+        {/* Preload hero resources only on home page */}
+        <HeroPreloads />
 
         {/* Critical CSS for Hero section */}
         <CriticalCSS />
@@ -164,7 +156,7 @@ export default function RootLayout({
               '@type': 'LocalBusiness',
               name: 'Hernán Eventos',
               url: 'https://hernaneventos.com',
-              logo: 'https://hernaneventos.com/logo.png',
+              logo: 'https://hernaneventos.com/logo.webp',
               description:
                 'Soluciones confiables de alquiler de carpas, escenarios, mobiliario y climatización en Gran Buenos Aires.',
               telephone: '(011) 6093-9880',

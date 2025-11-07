@@ -10,7 +10,7 @@ export function Footer() {
           <div className="flex flex-col gap-2  px-4 py-4 rounded-lg">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Hernan Eventos Logo"
                 height={200}
                 width={200}

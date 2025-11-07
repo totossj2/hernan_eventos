@@ -22,12 +22,14 @@ export const PERFORMANCE_CONFIG = {
   PREFETCH_PRIORITY: 'low',
 } as const;
 
-// Critical resources that should be preloaded
-export const CRITICAL_RESOURCES = [
+// Critical resources that should be preloaded on home page only
+export const HERO_RESOURCES = [
   '/hero_desktop.webp',
   '/hero_mobile.webp',
-  '/logo.png',
 ] as const;
+
+// Global critical resources (used on all pages)
+export const GLOBAL_CRITICAL_RESOURCES = ['/logo.webp'] as const;
 
 // Non-critical resources that can be prefetched
 export const PREFETCH_RESOURCES = [

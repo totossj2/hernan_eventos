@@ -69,7 +69,7 @@ export function Navbar() {
             onClick={(e) => handleScroll(e, '/')}
           >
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="Hernan Eventos Logo"
               height={200}
               width={200}
@@ -114,7 +114,7 @@ export function Navbar() {
                     onClick={(e) => handleScroll(e, '/')}
                   >
                     <Image
-                      src="/logo.png"
+                      src="/logo.webp"
                       alt="Hernan Eventos Logo"
                       height={120}
                       width={120}
