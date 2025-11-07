@@ -18,6 +18,10 @@ const nextConfig = {
   // Performance optimizations for better LCP
   experimental: {
     optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react'],
+    // CSS Chunking: Divide CSS en chunks por ruta para cargar solo lo necesario
+    // Esto reduce el CSS inicial y mejora el LCP
+    // Nota: Es experimental pero estable en Next.js 15.2.4
+    cssChunking: true, // Modo "loose" - adivina dependencias para mantener orden
   },
   // Enable compression
   compress: true,

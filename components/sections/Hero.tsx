@@ -66,7 +66,7 @@ export function Hero() {
         className="w-full h-[670px] md:h-[90vh] grid grid-cols-1 grid-rows-1 overflow-hidden"
       >
         {/* Imagen de fondo para desktop */}
-        <div className="col-start-1 row-start-1 hidden md:block">
+        <div className="col-start-1 row-start-1 hidden md:block h-[670px] md:h-[90vh]">
           <Image
             src="/hero_desktop.webp"
             alt="Evento elegante con carpas y decoración profesional"
@@ -80,7 +80,7 @@ export function Hero() {
         </div>
 
         {/* Imagen de fondo para mobile */}
-        <div className="col-start-1 row-start-1 block md:hidden">
+        <div className="col-start-1 row-start-1 block md:hidden h-[670px] md:h-[90vh]">
           <Image
             src={heroMobile}
             alt="Evento elegante con carpas y decoración profesional"
@@ -96,10 +96,10 @@ export function Hero() {
         </div>
 
         {/* Gradiente overlay */}
-        <div className="col-start-1 row-start-1 bg-gradient-to-r from-black/40 via-black/60 to-black/60" />
+        <div className="col-start-1 row-start-1 bg-gradient-to-r from-black/40 via-black/60 to-black/60 h-[670px] md:h-[90vh]" />
 
         {/* Contenido centrado */}
-        <div className="col-start-1 row-start-1 flex items-center justify-center text-center text-white max-w-4xl mx-auto px-4 py-4">
+        <div className="col-start-1 row-start-1 flex items-center justify-center text-center text-white max-w-4xl mx-auto px-4 py-4 h-[670px] md:h-[90vh]">
           <div>
             <h1 className=" text-3xl md:text-6xl font-semibold mb-6 leading-tight">
               Alquiler de Carpas y Escenarios con 35 Años de Experiencia y

@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google';
 import { CriticalCSS } from '@/components/CriticalCSS';
 import { OptimizedScripts } from '@/components/OptimizedScripts';
 import { SmartScriptLoader } from '@/components/SmartScriptLoader';
+import { AsyncCSSLoaderScript } from '@/components/AsyncCSSLoader';
 
 // Optimize font loading with next/font
 const inter = Inter({
@@ -136,6 +137,9 @@ export default function RootLayout({
 
         {/* Critical CSS for Hero section */}
         <CriticalCSS />
+
+        {/* Script to load CSS asynchronously - Must be in head before CSS loads */}
+        <AsyncCSSLoaderScript />
 
         {/* Structured Data - Moved to body for better LCP */}
       </head>
