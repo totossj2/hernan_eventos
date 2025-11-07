@@ -74,6 +74,7 @@ export function Hero() {
             height={1080}
             className="w-full h-full object-cover object-center"
             priority
+            fetchPriority="high"
             sizes="100vw"
             quality={85}
           />
@@ -88,6 +89,7 @@ export function Hero() {
             height={670}
             className="w-full h-full object-cover"
             priority
+            fetchPriority="high"
             sizes="100vw"
             quality={85}
             placeholder="blur"
