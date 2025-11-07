@@ -25,6 +25,7 @@ export const SERVICES = [
 
 export const EVENT_TYPES = [
   'Fiesta privada',
+  'Acto Escolar',
   'Casamiento',
   'Exposición',
   'Conferencia',
@@ -528,3 +529,84 @@ export const SERVICE_DATA = {
     },
   },
 };
+
+export const DATOS_PRACTICOS = [
+  {
+    badge: 'Capacidades',
+    title: 'Tamaños disponibles',
+    description:
+      'Escenarios de 5x5, 10x5 y 15x10 m, altura estándar de 0,5 m o 1 m.',
+  },
+  {
+    badge: 'Seguridad',
+    title: 'Estructura reforzada',
+    description:
+      'Piso antideslizante y marco de hierro galvanizado preparado para uso intensivo.',
+  },
+  {
+    badge: 'Timing',
+    title: 'Montaje rápido',
+    description:
+      'Armado en 2 horas, sin interrumpir las actividades cotidianas del colegio.',
+  },
+  {
+    badge: 'Logística',
+    title: 'Transporte incluido',
+    description:
+      'Entregas puntuales en todo GBA y CABA con supervisión de nuestro equipo.',
+  },
+  {
+    badge: 'Protección',
+    title: 'Cubierta opcional',
+    description:
+      'Techo y laterales para sol o lluvia, configurables según la necesidad del evento.',
+  },
+  {
+    badge: 'Inversión',
+    title: 'Precio orientativo',
+    description:
+      'Desde $800.000, dependiendo del tamaño elegido y la distancia del traslado.',
+  },
+];
+export const TRABAJOS_ESCENARIOS = [
+  {
+    id: 1,
+    image: '/trabajos/tarimas/escenario_NT_aerea.webp',
+    alt: 'Escenario aéreo para acto escolar - Colegio Nuestra Tierra',
+    title: 'Colegio Nuestra Tierra – Escenario con Visibilidad Total',
+    description:
+      'Escenario antideslizante con faldón negro. Elevación calculada para que todos los alumnos sean visibles desde cualquier punto.',
+  },
+  {
+    id: 2,
+    image: '/trabajos/tarimas/escenario_NT_costado.webp',
+    alt: 'Vista lateral del escenario - Colegio Nuestra Tierra',
+    title: 'Vista Lateral - Estructura Reforzada para Montajes Escolares',
+    description:
+      'Sistema modular de alta resistencia, armado en menos de 3 horas. Soporta coreografías y tránsito constante con total estabilidad.',
+  },
+  {
+    id: 3,
+    image: '/trabajos/tarimas/grilli_tarima.webp',
+    alt: 'Escenario para evento escolar - Grilli',
+    title: 'Grilli – Escenario Exterior de 5x2,5 m',
+    description:
+      'Montaje al aire libre con piso elevado de 1 m y telón posterior. Solución completa con protección trasera y acceso seguro para alumnos.',
+  },
+  {
+    id: 4,
+    image: '/trabajos/tarimas/escenario_x.webp',
+    alt: 'Escenario modular con acabado premium para actos escolares.',
+    title: 'Escenario Modular para Cierre de Ciclo Lectivo',
+    description:
+      'Diseño limpio con acabado premium y faldón frontal. Ideal para actos de fin de año en auditorios o espacios cerrados.',
+  },
+  {
+    id: 5,
+    image: '/trabajos/tarimas/escenario_x1.webp',
+    alt: 'Escenario con pantalla LED de alta definición para eventos.',
+    title: 'Escenario con Pantalla LED Integrada',
+    description:
+      'Estructura lista para shows o presentaciones con conexión audiovisual. Montaje rápido y soporte para pantalla LED de gran formato.',
+  },
+];

@@ -74,7 +74,7 @@ export function ServicesSection() {
           {mainServices.map((service) => (
             <div key={service.title} className="lg:col-span-6">
               <Card className="overflow-hidden">
-                <div className="relative h-96 overflow-hidden rounded-lg flex flex-col p-3 py-2">
+                <div className="relative h-96 overflow-hidden rounded-lg flex flex-col p-3 py-3">
                   <Image
                     src={service.image}
                     alt={service.alt}
@@ -109,7 +109,7 @@ export function ServicesSection() {
           {secondaryServices.map((service) => (
             <div key={service.title} className="lg:col-span-3">
               <Card className="overflow-hidden">
-                <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col p-3 py-2">
+                <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col p-3 py-3">
                   <Image
                     src={service.image}
                     alt={service.alt}
