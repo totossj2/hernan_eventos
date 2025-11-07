@@ -10,7 +10,7 @@ export function ServicesSection() {
     {
       title: 'Carpas y Gazebos',
       description:
-        'Desde 3x3m hasta 20x30m. Resistentes al viento y lluvia, ideales para cualquier clima.',
+        'Desde 5x2.5m hasta 8x36m. Resistentes al viento y lluvia, ideales para cualquier clima.',
       image: '/catalogo/carpa.webp',
       alt: 'Carpas elegantes para eventos',
       href: '/servicios/carpas',
