@@ -33,7 +33,11 @@ export const metadata: Metadata = {
     'eventos en Gran Buenos Aires',
     'Hernán Eventos',
   ],
-
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
   authors: [{ name: 'Hernán Eventos', url: 'https://hernaneventos.com' }],
   creator: 'Hernán Eventos',
   publisher: 'Hernán Eventos',

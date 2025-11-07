@@ -210,16 +210,99 @@ export function CriticalCSS() {
             .md\\:hidden {
               display: none;
             }
+            .md\\:flex {
+              display: flex;
+            }
             .md\\:flex-row {
               flex-direction: row;
+            }
+            .md\\:grid-cols-2 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .md\\:grid-cols-3 {
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            .md\\:grid-cols-4 {
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            .md\\:text-xl {
+              font-size: 1.25rem;
+              line-height: 1.75rem;
+            }
+            .md\\:text-2xl {
+              font-size: 1.5rem;
+              line-height: 2rem;
+            }
+            .md\\:text-4xl {
+              font-size: 2.25rem;
+              line-height: 2.5rem;
             }
             .md\\:text-6xl {
               font-size: 3.75rem;
               line-height: 1;
             }
-            .md\\:text-2xl {
-              font-size: 1.5rem;
-              line-height: 2rem;
+            .md\\:mb-16 {
+              margin-bottom: 4rem;
+            }
+            .md\\:mb-0 {
+              margin-bottom: 0;
+            }
+            .md\\:mt-0 {
+              margin-top: 0;
+            }
+            .md\\:mt-2 {
+              margin-top: 0.5rem;
+            }
+            .md\\:p-3 {
+              padding: 0.75rem;
+            }
+            .md\\:h-auto {
+              height: auto;
+            }
+            .md\\:aspect-square {
+              aspect-ratio: 1 / 1;
+            }
+            .md\\:opacity-70 {
+              opacity: 0.7;
+            }
+            .md\\:opacity-0 {
+              opacity: 0;
+            }
+            .md\\:grayscale {
+              filter: grayscale(100%);
+            }
+            .md\\:pl-4 {
+              padding-left: 1rem;
+            }
+            .md\\:-ml-4 {
+              margin-left: -1rem;
+            }
+            .md\\:basis-1\\/2 {
+              flex-basis: 50%;
+            }
+          }
+          
+          @media (min-width: 1024px) {
+            .lg\\:grid-cols-2 {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .lg\\:grid-cols-3 {
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            .lg\\:grid-cols-4 {
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            .lg\\:grid-cols-12 {
+              grid-template-columns: repeat(12, minmax(0, 1fr));
+            }
+            .lg\\:col-span-3 {
+              grid-column: span 3 / span 3;
+            }
+            .lg\\:col-span-6 {
+              grid-column: span 6 / span 6;
+            }
+            .lg\\:basis-1\\/3 {
+              flex-basis: 33.333333%;
             }
           }
           
