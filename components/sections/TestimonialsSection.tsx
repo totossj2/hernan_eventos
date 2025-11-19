@@ -18,7 +18,7 @@ export function TestimonialsSection() {
     },
     {
       text: 'Alquilamos una carpa toda equipada para un evento corporativo, nos cumplieron con todo y el asesoramiento fue inmejorable. Todo salió perfecto.',
-      author: 'Paula Ferrario',
+      author: 'Paula Gómez',
       event: 'Feria gastronómica - San Isidro',
       initials: 'PF',
     },
@@ -36,13 +36,13 @@ export function TestimonialsSection() {
     },
     {
       text: 'Son excelentes. En servicio y . Todos los productos que siempre alquilamos y en la atención. Muchas Gracias !!',
-      author: 'SANTIAGO BOAN- EMMANUEL',
+      author: 'Santiago Boan',
       event: 'Evento corporativo - Lomas de Zamora',
       initials: 'SB',
     },
     {
       text: 'Excelente servicio. Son Puntuales y muy bien predispuestos a los cambios de último momento',
-      author: 'Mica Lagrotta',
+      author: 'Micaela Lagrotta',
       event: 'Fiesta de cumpleaños - Temperley',
       initials: 'ML',
     },

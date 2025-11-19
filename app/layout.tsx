@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Hernán Eventos | Soluciones Confiables para tu Evento',
+  title: 'Ferrario Tents & Structures | Soluciones Confiables para tu Evento',
   description:
-    'Hernán Eventos ofrece soluciones confiables de alquiler para todo tipo de evento. Carpas, escenarios, mobiliario, vajilla, climatización y más en Zona Norte, Zona Sur y Gran Buenos Aires. Puntualidad, seguridad y servicio profesional garantizado.',
+    'Ferrario Tents & Structures ofrece soluciones confiables de alquiler para todo tipo de evento. Carpas, escenarios, mobiliario, vajilla, climatización y más en Zona Norte, Zona Sur y Gran Buenos Aires. Puntualidad, seguridad y servicio profesional garantizado.',
   keywords: [
     'alquiler de carpas gba',
     'alquiler de carpas zona norte',
@@ -31,16 +31,18 @@ export const metadata: Metadata = {
     'alquiler de mesas y sillas gba',
     'climatización para eventos',
     'eventos en Gran Buenos Aires',
-    'Hernán Eventos',
+    'Ferrario Tents & Structures',
   ],
   viewport: {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 5,
   },
-  authors: [{ name: 'Hernán Eventos', url: 'https://hernaneventos.com' }],
-  creator: 'Hernán Eventos',
-  publisher: 'Hernán Eventos',
+  authors: [
+    { name: 'Ferrario Tents & Structures', url: 'https://hernaneventos.com' },
+  ],
+  creator: 'Ferrario Tents & Structures',
+  publisher: 'Ferrario Tents & Structures',
   generator: 'Next.js',
   icons: {
     icon: [
@@ -67,11 +69,12 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'Hernán Eventos | Todo para tu Evento en Zona Norte y Zona Sur GBA',
+    title:
+      'Ferrario Tents & Structures | Todo para tu Evento en Zona Norte y Zona Sur GBA',
     description:
       'Servicio profesional de alquiler de carpas, calefacción, vajilla, mesas y sillas en Gran Buenos Aires. Especialistas en eventos sociales y corporativos.',
     url: 'https://hernaneventos.com',
-    siteName: 'Hernán Eventos',
+    siteName: 'Ferrario Tents & Structures',
     images: [
       {
         url: 'https://hernaneventos.com/toscas.jpg',
@@ -85,7 +88,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hernán Eventos | Equipamiento para Eventos en GBA',
+    title: 'Ferrario Tents & Structures | Equipamiento para Eventos en GBA',
     description:
       'Alquiler de carpas, calefacción, vajilla y más para eventos en Zona Norte y Zona Sur.',
     images: ['https://hernaneventos.com/toscas.jpg'],
@@ -158,7 +161,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
-              name: 'Hernán Eventos',
+              name: 'Ferrario Tents & Structures',
               url: 'https://hernaneventos.com',
               logo: 'https://hernaneventos.com/logo.webp',
               description:

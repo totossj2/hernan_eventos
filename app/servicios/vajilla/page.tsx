@@ -3,7 +3,7 @@ import { ServiceLayout } from '@/components/layout/ServiceLayout';
 import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Alquiler de Vajilla y Cristalería | Hernán Eventos GBA',
+  title: 'Alquiler de Vajilla y Cristalería | Ferrario Tents & Structures GBA',
   description:
     'Alquiler de vajilla y cristalería para eventos en Gran Buenos Aires. Porcelana premium, cristalería fina y limpieza incluida. Más de 35 años de experiencia.',
   keywords: [
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     'alquiler porcelana premium',
     'cristalería fina eventos',
     'limpieza vajilla incluida',
-    'Hernán Eventos vajilla',
+    'Ferrario Tents & Structures vajilla',
   ],
   openGraph: {
-    title: 'Alquiler de Vajilla y Cristalería | Hernán Eventos',
+    title: 'Alquiler de Vajilla y Cristalería | Ferrario Tents & Structures',
     description:
       'Vajilla y cristalería premium para eventos en GBA. Porcelana fina y limpieza incluida.',
     url: 'https://hernaneventos.com/servicios/vajilla',

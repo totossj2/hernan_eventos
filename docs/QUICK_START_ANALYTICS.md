@@ -1,4 +1,4 @@
-# 📊 Quick Start: Google Analytics para Hernán Eventos
+# 📊 Quick Start: Google Analytics para Ferrario Tents & Structures
 
 ## ⚡ Resumen Rápido
 

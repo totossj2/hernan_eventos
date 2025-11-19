@@ -3,7 +3,7 @@ import { ServiceLayout } from '@/components/layout/ServiceLayout';
 import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Alquiler de Mesas y Sillas | Hernán Eventos GBA',
+  title: 'Alquiler de Mesas y Sillas | Ferrario Tents & Structures GBA',
   description:
     'Alquiler de mesas y sillas para eventos en Gran Buenos Aires. Múltiples estilos, materiales premium y entrega incluida. Más de 35 años de experiencia.',
   keywords: [
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     'alquiler mobiliario premium',
     'entrega mobiliario incluida',
     'mobiliario para eventos sociales',
-    'Hernán Eventos mobiliario',
+    'Ferrario Tents & Structures mobiliario',
   ],
   openGraph: {
-    title: 'Alquiler de Mesas y Sillas | Hernán Eventos',
+    title: 'Alquiler de Mesas y Sillas | Ferrario Tents & Structures',
     description:
       'Mobiliario premium para eventos en GBA. Múltiples estilos y entrega incluida.',
     url: 'https://hernaneventos.com/servicios/mesas',

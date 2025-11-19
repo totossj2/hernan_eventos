@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
 // Envío de email con Resend
 async function sendEmail(data: z.infer<typeof quotationFormSchema>) {
   const apiKey = process.env.RESEND_API_KEY;
-  const fromAddress = process.env.RESEND_FROM; // Ej: "Hernan Eventos <no-reply@tu-dominio.com>"
+  const fromAddress = process.env.RESEND_FROM;
   const toAddress = process.env.RESEND_TO; // Destino interno donde recibirás las solicitudes
 
   if (!apiKey) {

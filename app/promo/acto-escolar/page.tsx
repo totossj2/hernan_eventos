@@ -22,7 +22,8 @@ import React from 'react';
 import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
-  title: 'Alquiler de Escenarios para Actos Escolares | Hernán Eventos GBA',
+  title:
+    'Alquiler de Escenarios para Actos Escolares | Ferrario Tents & Structures GBA',
   description:
     'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
   keywords: [
@@ -31,7 +32,8 @@ export const metadata: Metadata = {
     'escenario colegio gba',
   ],
   openGraph: {
-    title: 'Servicios Completos de Alquiler para Eventos | Hernán Eventos',
+    title:
+      'Servicios Completos de Alquiler para Eventos | Ferrario Tents & Structures',
     description:
       'Soluciones integrales para eventos: carpas, escenarios, mobiliario, vajilla y climatización en GBA. Experiencia y profesionalismo garantizado.',
     url: 'https://hernaneventos.com/servicios',

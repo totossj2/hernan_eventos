@@ -70,7 +70,7 @@ export function Navbar() {
           >
             <Image
               src="/logo.webp"
-              alt="Hernan Eventos Logo"
+              alt="Ferrario Tents & Structures Logo"
               height={200}
               width={200}
               className="object-contain"
@@ -115,7 +115,7 @@ export function Navbar() {
                   >
                     <Image
                       src="/logo.webp"
-                      alt="Hernan Eventos Logo"
+                      alt="Ferrario Tents & Structures Logo"
                       height={120}
                       width={120}
                       className="object-contain"

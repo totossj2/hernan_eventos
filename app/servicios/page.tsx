@@ -18,7 +18,7 @@ import React from 'react';
 import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
-  title: 'Servicios de Alquiler para Eventos | Hernán Eventos GBA',
+  title: 'Servicios de Alquiler para Eventos | Ferrario Tents & Structures GBA',
   description:
     'Descubre nuestros servicios completos de alquiler para eventos: carpas, escenarios, mobiliario, vajilla y climatización en Gran Buenos Aires. Más de 35 años de experiencia.',
   keywords: [
@@ -27,10 +27,11 @@ export const metadata: Metadata = {
     'carpas escenarios mobiliario',
     'vajilla climatización eventos',
     'servicios integrales eventos',
-    'Hernán Eventos servicios',
+    'Ferrario Tents & Structures servicios',
   ],
   openGraph: {
-    title: 'Servicios Completos de Alquiler para Eventos | Hernán Eventos',
+    title:
+      'Servicios Completos de Alquiler para Eventos | Ferrario Tents & Structures',
     description:
       'Soluciones integrales para eventos: carpas, escenarios, mobiliario, vajilla y climatización en GBA. Experiencia y profesionalismo garantizado.',
     url: 'https://hernaneventos.com/servicios',

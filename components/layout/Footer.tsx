@@ -10,8 +10,8 @@ export function Footer() {
           <div className="flex flex-col gap-2  px-4 py-4 rounded-lg">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-                src="/logo.webp"
-                alt="Hernan Eventos Logo"
+                src="/logo_blanco.webp"
+                alt="Ferrario Tents & Structures Logo"
                 height={200}
                 width={200}
                 className="object-contain"
@@ -79,8 +79,8 @@ export function Footer() {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} Hernan Eventos. Todos los derechos
-            reservados.
+            &copy; {new Date().getFullYear()} Ferrario Tents & Structures. Todos
+            los derechos reservados.
           </p>
         </div>
       </div>

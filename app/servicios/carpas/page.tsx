@@ -3,7 +3,7 @@ import { ServiceLayout } from '@/components/layout/ServiceLayout';
 import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Alquiler de Carpas y Gazebos | Hernán Eventos GBA',
+  title: 'Alquiler de Carpas y Gazebos | Ferrario Tents & Structures GBA',
   description:
     'Alquiler de carpas y gazebos para eventos en Gran Buenos Aires. Múltiples tamaños, instalación profesional y resistencia al clima. Más de 35 años de experiencia.',
   keywords: [
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     'alquiler carpas resistentes',
     'instalación carpas profesional',
     'carpas para eventos sociales',
-    'Hernán Eventos carpas',
+    'Ferrario Tents & Structures carpas',
   ],
   openGraph: {
-    title: 'Alquiler de Carpas y Gazebos | Hernán Eventos',
+    title: 'Alquiler de Carpas y Gazebos | Ferrario Tents & Structures',
     description:
       'Carpas y gazebos profesionales para eventos en GBA. Instalación incluida y resistencia garantizada.',
     url: 'https://hernaneventos.com/servicios/carpas',

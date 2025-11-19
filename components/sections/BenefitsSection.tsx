@@ -28,7 +28,7 @@ export function BenefitsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-16">
           <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
-            ¿Por qué elegir Hernan Eventos?
+            ¿Por qué elegir Ferrario Tents & Structures?
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
             Con más de 35 años de experiencia y 1.000 eventos exitosos, hemos

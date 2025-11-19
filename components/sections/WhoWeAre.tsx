@@ -13,8 +13,8 @@ export function WhoWeAre() {
             </h2>
             <div className="w-20 h-1 bg-[#003056]"></div>
             <p className="text-base md:text-xl text-gray-600 max-w-2xl">
-              En Hernan Eventos no solo alquilamos equipos; brindamos soluciones
-              con la tranquilidad que da más de{' '}
+              En Ferrario Tents & Structures no solo alquilamos equipos;
+              brindamos soluciones con la tranquilidad que da más de{' '}
               <strong>35 años en el rubro</strong>. Conocemos cada detalle para
               que tu evento sea un éxito, desde la planificación hasta el
               montaje profesional.
@@ -26,7 +26,7 @@ export function WhoWeAre() {
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/nosotros/hernan_lorenzo.webp"
-                alt="Hernán y Lorenzo - Equipo de Hernan Eventos"
+                alt="Hernán y Lorenzo - Equipo de Ferrario Tents & Structures"
                 width={600}
                 height={450}
                 className="w-full h-full object-cover"

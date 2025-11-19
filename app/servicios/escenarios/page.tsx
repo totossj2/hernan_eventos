@@ -3,7 +3,7 @@ import { ServiceLayout } from '@/components/layout/ServiceLayout';
 import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'Alquiler de Escenarios y Tarimas | Hernán Eventos GBA',
+  title: 'Alquiler de Escenarios y Tarimas | Ferrario Tents & Structures GBA',
   description:
     'Alquiler de escenarios y tarimas para eventos en Gran Buenos Aires. Alturas ajustables, estructura segura e instalación profesional. Más de 35 años de experiencia.',
   keywords: [
@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     'alquiler escenarios seguros',
     'instalación escenarios profesional',
     'escenarios para eventos sociales',
-    'Hernán Eventos escenarios',
+    'Ferrario Tents & Structures escenarios',
   ],
   openGraph: {
-    title: 'Alquiler de Escenarios y Tarimas | Hernán Eventos',
+    title: 'Alquiler de Escenarios y Tarimas | Ferrario Tents & Structures',
     description:
       'Escenarios y tarimas profesionales para eventos en GBA. Estructura segura e instalación incluida.',
     url: 'https://hernaneventos.com/servicios/escenarios',
