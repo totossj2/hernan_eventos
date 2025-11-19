@@ -77,7 +77,7 @@ export function TestimonialsSection() {
                 >
                   <div className="p-1">
                     <Card className="border-0 shadow-lg h-full">
-                      <CardContent className="p-6 h-[312px] flex flex-col">
+                      <CardContent className="p-6 h-[360px] flex flex-col">
                         <div className="flex mb-4">
                           {[...Array(5)].map((_, i) => (
                             <Star
@@ -86,7 +86,7 @@ export function TestimonialsSection() {
                             />
                           ))}
                         </div>
-                        <p className="text-gray-600 mb-4 flex-grow">
+                        <p className=" text-base  text-gray-600 max-w-2xl mx-auto text-gray-600 mb-4 flex-grow">
                           {testimonial.text}
                         </p>
                         <div className="flex items-center mt-auto">
@@ -122,7 +122,7 @@ export function TestimonialsSection() {
             target="_blank"
           >
             Estamos en Google Maps con 5 estrellas
-            <div className="flex justify-center items-center gap-1 ml-2">
+            <div className="flex justify-center items-center gap-1 mt-2 md:mt-0 md:ml-2">
               <Star className="w-5 h-5 text-yellow-400 fill-current" />
               <Star className="w-5 h-5 text-yellow-400 fill-current" />
               <Star className="w-5 h-5 text-yellow-400 fill-current" />

@@ -2,29 +2,46 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { Resend } from 'resend';
 
-// Schema de validación del lado del servidor para formulario simplificado
-const quotationFormSchema = z.object({
-  // Datos de contacto
-  name: z.string().min(2, 'El nombre debe tener al menos 2 caracteres'),
-  phone: z
-    .string()
-    .min(8, 'El teléfono debe tener al menos 8 dígitos')
-    .max(15, 'El teléfono no puede tener más de 15 dígitos')
-    .regex(
-      /^[\+]?[0-9\s\-\(\)]+$/,
-      'Ingresa un número de teléfono válido (solo números, espacios, guiones y paréntesis)'
-    )
-    .transform((val) => val.replace(/[\s\-\(\)]/g, '')), // Limpiar formato para almacenamiento
+// Schema de validación que acepta tanto formulario completo como simplificado
+const quotationFormSchema = z
+  .object({
+    // Datos de contacto
+    name: z.string().optional().default(''),
+    phone: z
+      .string()
+      .min(8, 'El teléfono debe tener al menos 8 dígitos')
+      .max(15, 'El teléfono no puede tener más de 15 dígitos')
+      .regex(
+        /^[\+]?[0-9\s\-\(\)]+$/,
+        'Ingresa un número de teléfono válido (solo números, espacios, guiones y paréntesis)'
+      )
+      .transform((val) => val.replace(/[\s\-\(\)]/g, '')), // Limpiar formato para almacenamiento
 
-  // Datos del evento
-  eventType: z.string().min(1, 'Selecciona un tipo de evento'),
-  eventDate: z.string().min(1, 'Ingresa el día y mes del evento'),
-  message: z.string().min(1, 'El mensaje es obligatorio'),
+    // Datos del evento (formulario completo)
+    eventType: z.string().optional(),
+    eventDate: z.string().optional(),
+    message: z.string().optional(),
 
-  // Campos adicionales del sistema
-  formType: z.string().optional(),
-  timestamp: z.string().optional(),
-});
+    // Campos del formulario simplificado
+    localidad: z.string().optional(),
+    cantidadPersonas: z.string().optional(),
+
+    // Campos adicionales del sistema
+    formType: z.string().optional(),
+    timestamp: z.string().optional(),
+  })
+  .refine(
+    (data) => {
+      // Validar que tenga al menos los campos del formulario completo O los del simplificado
+      const hasFullForm = data.eventType && data.eventDate && data.message;
+      const hasSimpleForm = data.localidad && data.cantidadPersonas;
+      return hasFullForm || hasSimpleForm;
+    },
+    {
+      message:
+        'Debe proporcionar los datos del formulario completo o del formulario simplificado',
+    }
+  );
 
 export async function POST(request: NextRequest) {
   try {
@@ -89,37 +106,69 @@ async function sendEmail(data: z.infer<typeof quotationFormSchema>) {
 
   const resend = new Resend(apiKey);
 
-  const subject = `CONSULTA WEB - ${data.eventType}`;
+  // Determinar si es formulario completo o simplificado
+  const isSimpleForm = data.localidad && data.cantidadPersonas;
+  const subject = isSimpleForm
+    ? `CONSULTA WEB - Formulario Rápido`
+    : `CONSULTA WEB - ${data.eventType || 'Sin tipo'}`;
+
+  // Construir el HTML según el tipo de formulario
+  let formFields = '';
+  if (isSimpleForm) {
+    // Formulario simplificado
+    formFields = `
+      <tr><td style="padding:6px 0; width:160px; color:#6B7280; font-weight:500;">Nombre</td><td style="padding:6px 0;">${escapeHtml(
+      data.name || 'No proporcionado'
+    )}</td></tr>
+      <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Teléfono</td><td style="padding:6px 0;">${escapeHtml(
+      data.phone
+    )}</td></tr>
+      <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Localidad</td><td style="padding:6px 0;">${escapeHtml(
+      data.localidad
+    )}</td></tr>
+      <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Cantidad de personas</td><td style="padding:6px 0;">${escapeHtml(
+      data.cantidadPersonas
+    )}</td></tr>
+    `;
+  } else {
+    // Formulario completo
+    formFields = `
+      <tr><td style="padding:6px 0; width:160px; color:#6B7280; font-weight:500;">Nombre</td><td style="padding:6px 0;">${escapeHtml(
+      data.name || 'No proporcionado'
+    )}</td></tr>
+      <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Teléfono</td><td style="padding:6px 0;">${escapeHtml(
+      data.phone
+    )}</td></tr>
+      <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Tipo de evento</td><td style="padding:6px 0;">${escapeHtml(
+      data.eventType || 'No especificado'
+    )}</td></tr>
+      <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Día y mes del evento</td><td style="padding:6px 0;">${escapeHtml(
+      data.eventDate || 'No especificado'
+    )}</td></tr>
+    `;
+  }
+
   const html = `
     <div style="font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; line-height:1.5; color:#111827">
-      <h2 style="margin:0 0 8px; font-size:20px;">📋 CONSULTA WEB</h2>
+      <h2 style="margin:0 0 8px; font-size:20px;">📋 CONSULTA WEB${isSimpleForm ? ' - Formulario Rápido' : ''}</h2>
       <p style="margin:0 0 12px;">Has recibido una nueva consulta desde el formulario web.</p>
       <table style="border-collapse: collapse; width:100%;">
         <tbody>
-          <tr><td style="padding:6px 0; width:160px; color:#6B7280; font-weight:500;">Nombre</td><td style="padding:6px 0;">${escapeHtml(
-            data.name
-          )}</td></tr>
-          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Teléfono</td><td style="padding:6px 0;">${escapeHtml(
-            data.phone
-          )}</td></tr>
-          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Tipo de evento</td><td style="padding:6px 0;">${escapeHtml(
-            data.eventType
-          )}</td></tr>
-          <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Día y mes del evento</td><td style="padding:6px 0;">${escapeHtml(
-            data.eventDate
-          )}</td></tr>
+          ${formFields}
         </tbody>
       </table>
+      ${!isSimpleForm && data.message ? `
       <div style="margin-top:16px;">
         <div style="color:#6B7280; margin-bottom:4px; font-weight:500;">💬 Mensaje</div>
         <div style="white-space:pre-wrap; background:#f9fafb; padding:8px; border-radius:6px;">${escapeHtml(
-          data.message
-        )}</div>
+      data.message
+    )}</div>
       </div>
+      ` : ''}
       <div style="margin-top:16px; padding:8px; background:#ecfdf5; border-radius:6px; font-size:12px; color:#059669;">
         <strong>📱 Acción recomendada:</strong> Contactar por WhatsApp al ${
-          data.phone
-        } para enviar cotización personalizada.
+    data.phone
+  } para enviar cotización personalizada.
       </div>
     </div>
   `;

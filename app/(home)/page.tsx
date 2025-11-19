@@ -25,6 +25,14 @@ const Form = dynamic(() => import('@/components/sections/SimpleForm'), {
   ssr: false, // Client-side only for better TBT
 });
 
+const SimpleFormHorizontal = dynamic(
+  () => import('@/components/sections/SimpleFormHorizontal'),
+  {
+    loading: () => <div className="py-12 bg-blue-50 animate-pulse" />,
+    ssr: false, // Client-side only for better TBT
+  }
+);
+
 const ClientsSection = dynamic(
   () =>
     import('@/components/sections/ClientsSection').then((mod) => ({
@@ -64,6 +72,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1 flex flex-col gap-0 pt-16">
         <Hero />
+        <SimpleFormHorizontal />
         <WhoWeAre />
         <ClientsSection />
         <TestimonialsSection />

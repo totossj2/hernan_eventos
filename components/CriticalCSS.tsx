@@ -59,7 +59,7 @@ export function CriticalCSS() {
           /* Critical Hero Styles */
           #hero {
             width: 100%;
-            height: 670px;
+            height: 470px;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
@@ -68,7 +68,7 @@ export function CriticalCSS() {
           
           @media (min-width: 768px) {
             #hero {
-              height: 90vh;
+              height: 70vh;
             }
           }
           
