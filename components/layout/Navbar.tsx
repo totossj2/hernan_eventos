@@ -71,8 +71,8 @@ export function Navbar() {
             <Image
               src="/logo.webp"
               alt="Ferrario Tents & Structures Logo"
-              height={200}
-              width={200}
+              height={150}
+              width={150}
               className="object-contain"
             />
           </Link>
