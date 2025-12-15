@@ -1,4 +1,4 @@
-# 📊 Quick Start: Google Analytics para Ferrario Tents & Structures
+# 📊 Quick Start: Google Analytics para Ferrario Structures
 
 ## ⚡ Resumen Rápido
 

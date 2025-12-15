@@ -1,4 +1,4 @@
-# Implementación de Tracking para Ferrario Tents & Structures
+# Implementación de Tracking para Ferrario Structures
 
 ## 🎯 Resumen Ejecutivo
 

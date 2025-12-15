@@ -1,4 +1,4 @@
-# Guía de Google Analytics para Ferrario Tents & Structures
+# Guía de Google Analytics para Ferrario Structures
 
 ## 📊 Índice
 

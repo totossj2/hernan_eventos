@@ -65,20 +65,21 @@ export function Navbar() {
         <div className="flex items-center space-x-2">
           <Link
             href="/"
-            className="cursor-pointer"
+            className="cursor-pointer flex items-center space-x-2"
             onClick={(e) => handleScroll(e, '/')}
           >
-            <Image
-              src="/logo.webp"
-              alt="Ferrario Tents & Structures Logo"
-              height={150}
-              width={150}
-              className="object-contain"
-            />
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-semibold text-[#003056]">
+                Ferrario Structures —
+              </span>
+              <span className="text-xs tracking-[0.07em] text-[#003056]">
+                Infraestructura técnica temporal
+              </span>
+            </div>
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-3">
-          {NAVIGATION.map((item) => (
+          {NAVIGATION.map((item: { name: string; href: string }) => (
             <Link
               key={item.name}
               href={item.href}
@@ -110,20 +111,21 @@ export function Navbar() {
                 <div className="flex items-center justify-between mb-6">
                   <Link
                     href="/"
-                    className="cursor-pointer"
+                    className="cursor-pointer flex items-center space-x-2"
                     onClick={(e) => handleScroll(e, '/')}
                   >
-                    <Image
-                      src="/logo.webp"
-                      alt="Ferrario Tents & Structures Logo"
-                      height={120}
-                      width={120}
-                      className="object-contain"
-                    />
+                    <div className="flex flex-col leading-tight">
+                      <span className="text-xl font-semibold text-[#003056]">
+                        Ferrario Structures —
+                      </span>
+                      <span className="text-xs  tracking-[0.07em] text-[#003056]">
+                        Infraestructura técnica temporal
+                      </span>
+                    </div>
                   </Link>
                 </div>
                 <nav className="flex-1 flex flex-col space-y-4">
-                  {NAVIGATION.map((item) => (
+                  {NAVIGATION.map((item: { name: string; href: string }) => (
                     <SheetClose asChild key={item.name}>
                       <Link
                         href={item.href}

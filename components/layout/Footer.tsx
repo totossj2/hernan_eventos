@@ -11,15 +11,23 @@ export function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <Image
                 src="/logo_blanco.webp"
-                alt="Ferrario Tents & Structures Logo"
+                alt="Ferrario Structures Logo"
                 height={200}
                 width={200}
                 className="object-contain"
               />
             </div>
-            <p className="text-base text-white mb-4">
-              Tu socio confiable para eventos perfectos. Más de 35 años de
-              experiencia nos respaldan.
+            <div className="mb-3">
+              <p className="text-base font-semibold text-white leading-tight">
+                Ferrario Structures
+              </p>
+              <p className="text-xs uppercase tracking-[0.12em] text-gray-300">
+                Infraestructura técnica temporal
+              </p>
+            </div>
+            <p className="text-sm text-white mb-4">
+              Tu socio confiable para montajes y soluciones técnicas temporales
+              para eventos. Más de 35 años de experiencia nos respaldan.
             </p>
             <div className="flex space-x-4 ">
               <a
@@ -79,8 +87,8 @@ export function Footer() {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} Ferrario Tents & Structures. Todos
-            los derechos reservados.
+            &copy; {new Date().getFullYear()} Ferrario Structures. Todos los
+            derechos reservados.
           </p>
         </div>
       </div>

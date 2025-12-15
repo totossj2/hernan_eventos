@@ -28,11 +28,13 @@ export function BenefitsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-16">
           <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
-            ¿Por qué elegir Ferrario Tents & Structures?
+            ¿Por qué elegir Ferrario Structures?
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Con más de 35 años de experiencia y 1.000 eventos exitosos, hemos
-            perfeccionado el arte de crear momentos inolvidables.
+            Con más de 35 años de experiencia montando{' '}
+            <strong>infraestructura técnica temporal</strong> y más de 1.000
+            eventos exitosos, hemos perfeccionado el arte de crear momentos
+            inolvidables.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">

@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ferrario Tents & Structures | Soluciones Confiables para tu Evento',
+  title: 'Ferrario Structures | Infraestructura técnica temporal para eventos',
   description:
-    'Ferrario Tents & Structures ofrece soluciones confiables de alquiler para todo tipo de evento. Carpas, escenarios, mobiliario, vajilla, climatización y más en Zona Norte, Zona Sur y Gran Buenos Aires. Puntualidad, seguridad y servicio profesional garantizado.',
+    'Ferrario Structures ofrece soluciones confiables de infraestructura técnica temporal para todo tipo de evento. Carpas, escenarios, mobiliario, vajilla, climatización y más en Zona Norte, Zona Sur y Gran Buenos Aires. Puntualidad, seguridad y servicio profesional garantizado.',
   keywords: [
     'alquiler de carpas gba',
     'alquiler de carpas zona norte',
@@ -31,18 +31,17 @@ export const metadata: Metadata = {
     'alquiler de mesas y sillas gba',
     'climatización para eventos',
     'eventos en Gran Buenos Aires',
-    'Ferrario Tents & Structures',
+    'Ferrario Structures',
+    'infraestructura técnica temporal',
   ],
   viewport: {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 5,
   },
-  authors: [
-    { name: 'Ferrario Tents & Structures', url: 'https://hernaneventos.com' },
-  ],
-  creator: 'Ferrario Tents & Structures',
-  publisher: 'Ferrario Tents & Structures',
+  authors: [{ name: 'Ferrario Structures', url: 'https://hernaneventos.com' }],
+  creator: 'Ferrario Structures',
+  publisher: 'Ferrario Structures',
   generator: 'Next.js',
   icons: {
     icon: [
@@ -70,11 +69,11 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
   openGraph: {
     title:
-      'Ferrario Tents & Structures | Todo para tu Evento en Zona Norte y Zona Sur GBA',
+      'Ferrario Structures | Infraestructura técnica temporal para eventos en GBA',
     description:
       'Servicio profesional de alquiler de carpas, calefacción, vajilla, mesas y sillas en Gran Buenos Aires. Especialistas en eventos sociales y corporativos.',
     url: 'https://hernaneventos.com',
-    siteName: 'Ferrario Tents & Structures',
+    siteName: 'Ferrario Structures',
     images: [
       {
         url: 'https://hernaneventos.com/toscas.jpg',
@@ -88,7 +87,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ferrario Tents & Structures | Equipamiento para Eventos en GBA',
+    title:
+      'Ferrario Structures | Infraestructura técnica temporal para eventos en GBA',
     description:
       'Alquiler de carpas, calefacción, vajilla y más para eventos en Zona Norte y Zona Sur.',
     images: ['https://hernaneventos.com/toscas.jpg'],
@@ -106,27 +106,20 @@ export default function RootLayout({
   return (
     <html lang="es_AR" className={inter.variable}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
           rel="icon"
-          href="/favicon-16x16.png"
           type="image/png"
-          sizes="16x16"
+          href="/favicon/favicon-96x96.png"
+          sizes="96x96"
         />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
         <link
-          rel="icon"
-          href="/favicon-32x32.png"
-          type="image/png"
-          sizes="32x32"
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
         />
-        <link
-          rel="icon"
-          href="/favicon-48x48.png"
-          type="image/png"
-          sizes="48x48"
-        />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
 
         {/* Preload global critical resources */}
         <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
@@ -161,7 +154,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
-              name: 'Ferrario Tents & Structures',
+              name: 'Ferrario Structures',
               url: 'https://hernaneventos.com',
               logo: 'https://hernaneventos.com/logo.webp',
               description:

@@ -23,9 +23,9 @@ import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Escenarios para Actos Escolares | Ferrario Tents & Structures GBA',
+    'Alquiler de Escenarios para Actos Escolares | Ferrario Structures – Infraestructura técnica temporal GBA',
   description:
-    'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
+    'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Infraestructura técnica temporal con montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
   keywords: [
     'alquiler escenario escolar',
     'tarima acto fin de año',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Servicios Completos de Alquiler para Eventos | Ferrario Tents & Structures',
+      'Servicios Completos de Alquiler para Eventos | Ferrario Structures – Infraestructura técnica temporal',
     description:
       'Soluciones integrales para eventos: carpas, escenarios, mobiliario, vajilla y climatización en GBA. Experiencia y profesionalismo garantizado.',
     url: 'https://hernaneventos.com/servicios',

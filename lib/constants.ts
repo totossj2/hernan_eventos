@@ -7,7 +7,12 @@ export const CONTACT = {
   googleMaps: 'https://maps.app.goo.gl/2WLtVqZfsK3dTLUf9?g_st=ic',
 };
 
-export const NAVIGATION = [
+export type NavigationItem = {
+  name: string;
+  href: string;
+};
+
+export const NAVIGATION: NavigationItem[] = [
   //{ name: 'Inicio', href: '/' },
   //{ name: 'Servicios', href: '/servicios' },
   //{ name: 'Trabajos', href: '/trabajos' },

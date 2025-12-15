@@ -4,9 +4,9 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Sistemas de Climatización para Eventos | Ferrario Tents & Structures GBA',
+    'Sistemas de Climatización para Eventos | Ferrario Structures – Infraestructura técnica temporal GBA',
   description:
-    'Alquiler de sistemas de climatización para eventos en Gran Buenos Aires. Calefacción y aire acondicionado, múltiples potencias, instalación profesional y seguridad garantizada.',
+    'Alquiler de sistemas de climatización para eventos en Gran Buenos Aires. Infraestructura técnica temporal con calefacción y aire acondicionado, múltiples potencias, instalación profesional y seguridad garantizada.',
   keywords: [
     'climatización eventos gba',
     'calefacción eventos zona norte',
@@ -14,11 +14,12 @@ export const metadata: Metadata = {
     'alquiler calefactores eventos',
     'sistemas climatización profesional',
     'climatización eventos sociales',
-    'Ferrario Tents & Structures climatización',
+    'Ferrario Structures climatización',
+    'infraestructura técnica temporal climatización',
   ],
   openGraph: {
     title:
-      'Sistemas de Climatización para Eventos | Ferrario Tents & Structures',
+      'Sistemas de Climatización para Eventos | Ferrario Structures – Infraestructura técnica temporal',
     description:
       'Calefacción y aire acondicionado profesional para eventos en GBA. Instalación y seguridad garantizada.',
     url: 'https://hernaneventos.com/servicios/climatizacion',

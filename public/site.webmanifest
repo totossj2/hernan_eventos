@@ -1,7 +1,7 @@
 {
-  "name": "Ferrario Tents & Structures - Alquiler para Eventos GBA",
-  "short_name": "Ferrario Tents & Structures",
-  "description": "Soluciones confiables para eventos en Buenos Aires. Carpas, escenarios, mobiliario, vajilla y climatización.",
+  "name": "Ferrario Structures - Infraestructura técnica temporal para eventos GBA",
+  "short_name": "Ferrario Structures",
+  "description": "Infraestructura técnica temporal y soluciones confiables para eventos en Buenos Aires. Carpas, escenarios, mobiliario, vajilla y climatización.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

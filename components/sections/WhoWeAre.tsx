@@ -46,8 +46,10 @@ export function WhoWeAre() {
             </h2>
             <div className="w-20 h-1 bg-[#003056]"></div>
             <p className="text-base md:text-xl text-gray-600 max-w-2xl">
-              En Ferrario Tents & Structures no solo alquilamos equipos;
-              brindamos soluciones con la tranquilidad que da más de{' '}
+              En Ferrario Structures no solo alquilamos equipos; diseñamos y
+              montamos{' '}
+              <strong>infraestructura técnica temporal</strong> con la
+              tranquilidad que da más de{' '}
               <strong>35 años en el rubro</strong>. Conocemos cada detalle para
               que tu evento sea un éxito, desde la planificación hasta el
               montaje profesional.
