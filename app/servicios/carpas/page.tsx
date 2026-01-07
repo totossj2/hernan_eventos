@@ -4,10 +4,14 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Carpas y Gazebos | Ferrario Structures – Infraestructura técnica temporal GBA',
+    'Alquiler de Carpas y Gazebos | Ferrario Structures —Infraestructura técnica temporal',
   description:
-    'Alquiler de carpas y gazebos para eventos en Gran Buenos Aires. Infraestructura técnica temporal con múltiples tamaños, instalación profesional y resistencia al clima. Más de 35 años de experiencia.',
+    'Alquiler de carpas para fiestas, casamientos, eventos y proyectos en Buenos Aires. Carpas industriales y estilo beduino con montaje profesional, seguro y puntual.',
   keywords: [
+    'alquiler carpas industriales',
+    'alquiler carpas beduinas',
+    'carpas para casamientos',
+    'carpas para fiestas',
     'alquiler carpas gba',
     'alquiler gazebos zona norte',
     'carpas eventos zona sur',
@@ -19,9 +23,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Alquiler de Carpas y Gazebos | Ferrario Structures – Infraestructura técnica temporal',
+      'Alquiler de Carpas y Gazebos | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Carpas y gazebos profesionales para eventos en GBA. Instalación incluida y resistencia garantizada.',
+      'Carpas industriales y estilo beduino para fiestas, casamientos, eventos y proyectos en Buenos Aires. Instalación incluida y estructura segura.',
     url: 'https://hernaneventos.com/servicios/carpas',
     images: [
       {
@@ -34,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Carpas y Gazebos para Eventos',
-    description: 'Carpas profesionales con instalación incluida en GBA.',
+    title: 'Alquiler de Carpas y Gazebos | Ferrario Structures —Infraestructura técnica temporal',
+    description: 'Carpas industriales y estilo beduino con instalación incluida en Buenos Aires.',
     images: ['https://hernaneventos.com/catalogo/carpa.jpg'],
   },
   alternates: {

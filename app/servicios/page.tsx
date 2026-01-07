@@ -19,10 +19,16 @@ import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
   title:
-    'Servicios de Alquiler para Eventos | Ferrario Structures – Infraestructura técnica temporal GBA',
+    'Servicios de Alquiler para Eventos | Ferrario Structures —Infraestructura técnica temporal',
   description:
-    'Descubre nuestros servicios completos de alquiler para eventos: carpas, escenarios, mobiliario, vajilla y climatización en Gran Buenos Aires. Infraestructura técnica temporal con más de 35 años de experiencia.',
+    'Servicios de alquiler de infraestructura técnica temporal para fiestas, casamientos, eventos y proyectos en Buenos Aires: carpas industriales y beduinas, escenarios, tarimas, vajilla, living, mesas y sillas.',
   keywords: [
+    'alquiler infraestructura temporal',
+    'alquiler carpas industriales',
+    'alquiler carpas beduinas',
+    'alquiler living para eventos',
+    'alquiler tarimas',
+    'alquiler para casamientos',
     'servicios eventos gba',
     'alquiler completo eventos',
     'carpas escenarios mobiliario',
@@ -33,9 +39,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Servicios Completos de Alquiler para Eventos | Ferrario Structures – Infraestructura técnica temporal',
+      'Servicios Completos de Alquiler para Eventos | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Soluciones integrales para eventos: carpas, escenarios, mobiliario, vajilla y climatización en GBA. Experiencia y profesionalismo garantizado.',
+      'Infraestructura técnica temporal para fiestas, casamientos, eventos y proyectos: carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más.',
     url: 'https://hernaneventos.com/servicios',
     images: [
       {
@@ -48,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Servicios Completos de Alquiler para Eventos',
+    title: 'Servicios de Alquiler para Eventos | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Carpas, escenarios, mobiliario, vajilla y climatización para eventos en GBA.',
+      'Carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más para eventos en Buenos Aires.',
     images: ['https://hernaneventos.com/catalogo/Servicios.webp'],
   },
   alternates: {

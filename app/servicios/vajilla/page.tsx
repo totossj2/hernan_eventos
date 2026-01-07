@@ -4,10 +4,13 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Vajilla y Cristalería | Ferrario Structures – Infraestructura técnica temporal GBA',
+    'Alquiler de Vajilla y Cristalería | Ferrario Structures —Infraestructura técnica temporal',
   description:
-    'Alquiler de vajilla y cristalería para eventos en Gran Buenos Aires. Infraestructura técnica temporal con porcelana premium, cristalería fina y limpieza incluida. Más de 35 años de experiencia.',
+    'Alquiler de vajilla y cristalería para fiestas, casamientos y eventos en Buenos Aires. Porcelana premium, cristalería fina y limpieza incluida.',
   keywords: [
+    'alquiler vajilla para casamientos',
+    'alquiler cristalería para eventos',
+    'alquiler vajilla premium',
     'alquiler vajilla gba',
     'alquiler cristalería zona norte',
     'vajilla eventos zona sur',
@@ -19,9 +22,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Alquiler de Vajilla y Cristalería | Ferrario Structures – Infraestructura técnica temporal',
+      'Alquiler de Vajilla y Cristalería | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Vajilla y cristalería premium para eventos en GBA. Porcelana fina y limpieza incluida.',
+      'Vajilla y cristalería premium para fiestas, casamientos y eventos en Buenos Aires. Porcelana fina y limpieza incluida.',
     url: 'https://hernaneventos.com/servicios/vajilla',
     images: [
       {
@@ -34,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Vajilla y Cristalería para Eventos',
-    description: 'Vajilla premium con limpieza incluida en GBA.',
+    title: 'Alquiler de Vajilla y Cristalería | Ferrario Structures —Infraestructura técnica temporal',
+    description: 'Vajilla y cristalería premium con limpieza incluida en Buenos Aires.',
     images: ['https://hernaneventos.com/catalogo/vajilla.jpg'],
   },
   alternates: {

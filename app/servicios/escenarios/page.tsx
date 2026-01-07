@@ -4,10 +4,14 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Escenarios y Tarimas | Ferrario Structures – Infraestructura técnica temporal GBA',
+    'Alquiler de Escenarios y Tarimas | Ferrario Structures —Infraestructura técnica temporal',
   description:
-    'Alquiler de escenarios y tarimas para eventos en Gran Buenos Aires. Infraestructura técnica temporal con alturas ajustables, estructura segura e instalación profesional. Más de 35 años de experiencia.',
+    'Alquiler de escenarios y tarimas para fiestas, casamientos, eventos y proyectos en Buenos Aires. Estructuras seguras, alturas ajustables e instalación profesional.',
   keywords: [
+    'alquiler escenarios',
+    'alquiler tarimas',
+    'escenario para casamiento',
+    'tarima para eventos',
     'alquiler escenarios gba',
     'alquiler tarimas zona norte',
     'escenarios eventos zona sur',
@@ -19,9 +23,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Alquiler de Escenarios y Tarimas | Ferrario Structures – Infraestructura técnica temporal',
+      'Alquiler de Escenarios y Tarimas | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Escenarios y tarimas profesionales para eventos en GBA. Estructura segura e instalación incluida.',
+      'Escenarios y tarimas para fiestas, casamientos, eventos y proyectos en Buenos Aires. Estructura segura e instalación incluida.',
     url: 'https://hernaneventos.com/servicios/escenarios',
     images: [
       {
@@ -34,8 +38,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Escenarios y Tarimas para Eventos',
-    description: 'Escenarios profesionales con estructura segura en GBA.',
+    title: 'Alquiler de Escenarios y Tarimas | Ferrario Structures —Infraestructura técnica temporal',
+    description: 'Escenarios y tarimas con estructura segura e instalación incluida en Buenos Aires.',
     images: ['https://hernaneventos.com/catalogo/escenario.jpg'],
   },
   alternates: {

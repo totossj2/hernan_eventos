@@ -18,10 +18,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ferrario Structures | Infraestructura técnica temporal para eventos',
+  title: 'Ferrario Structures —Infraestructura técnica temporal',
   description:
-    'Ferrario Structures ofrece soluciones confiables de infraestructura técnica temporal para todo tipo de evento. Carpas, escenarios, mobiliario, vajilla, climatización y más en Zona Norte, Zona Sur y Gran Buenos Aires. Puntualidad, seguridad y servicio profesional garantizado.',
+    'Alquiler de infraestructura técnica temporal para fiestas, casamientos, eventos y proyectos. Carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Gran Buenos Aires. Montaje profesional, seguro y puntual.',
   keywords: [
+    'alquiler infraestructura temporal',
+    'infraestructura técnica temporal',
+    'alquiler para casamientos',
+    'alquiler para fiestas',
+    'alquiler para eventos corporativos',
+    'alquiler para proyectos',
+    'carpas industriales alquiler',
+    'carpas beduinas alquiler',
+    'alquiler living para eventos',
+    'alquiler tarimas',
     'alquiler de carpas gba',
     'alquiler de carpas zona norte',
     'alquiler de carpas zona sur',
@@ -39,9 +49,9 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 5,
   },
-  authors: [{ name: 'Ferrario Structures', url: 'https://hernaneventos.com' }],
-  creator: 'Ferrario Structures',
-  publisher: 'Ferrario Structures',
+  authors: [{ name: 'Ferrario Structures —Infraestructura técnica temporal', url: 'https://hernaneventos.com' }],
+  creator: 'Ferrario Structures —Infraestructura técnica temporal',
+  publisher: 'Ferrario Structures —Infraestructura técnica temporal',
   generator: 'Next.js',
   icons: {
     icon: [
@@ -66,14 +76,14 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: '/site.webmanifest',
+  manifest: '/favicon/site.webmanifest',
   openGraph: {
     title:
-      'Ferrario Structures | Infraestructura técnica temporal para eventos en GBA',
+      'Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Servicio profesional de alquiler de carpas, calefacción, vajilla, mesas y sillas en Gran Buenos Aires. Especialistas en eventos sociales y corporativos.',
+      'Alquiler de infraestructura técnica temporal: carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
     url: 'https://hernaneventos.com',
-    siteName: 'Ferrario Structures',
+    siteName: 'Ferrario Structures —Infraestructura técnica temporal',
     images: [
       {
         url: 'https://hernaneventos.com/toscas.jpg',
@@ -88,9 +98,9 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      'Ferrario Structures | Infraestructura técnica temporal para eventos en GBA',
+      'Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Alquiler de carpas, calefacción, vajilla y más para eventos en Zona Norte y Zona Sur.',
+      'Carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
     images: ['https://hernaneventos.com/toscas.jpg'],
   },
   alternates: {
@@ -104,7 +114,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es_AR" className={inter.variable}>
+    <html lang="es-AR" className={inter.variable}>
       <head>
         <link
           rel="icon"
@@ -119,7 +129,6 @@ export default function RootLayout({
           sizes="180x180"
           href="/favicon/apple-touch-icon.png"
         />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
 
         {/* Preload global critical resources */}
         <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
@@ -153,13 +162,19 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              name: 'Ferrario Structures',
+              '@type': ['LocalBusiness', 'ProfessionalService', 'PartyEquipmentRentalService'],
+              name: 'Ferrario Structures —Infraestructura técnica temporal',
               url: 'https://hernaneventos.com',
               logo: 'https://hernaneventos.com/logo.webp',
               description:
-                'Soluciones confiables de alquiler de carpas, escenarios, mobiliario y climatización en Gran Buenos Aires.',
+                'Alquiler de infraestructura técnica temporal para fiestas, casamientos, eventos y proyectos: carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Buenos Aires.',
+              slogan: 'Infraestructura técnica temporal para eventos y proyectos',
               telephone: '(011) 6093-9880',
+              areaServed: [
+                { '@type': 'AdministrativeArea', name: 'Gran Buenos Aires' },
+                { '@type': 'AdministrativeArea', name: 'Ciudad Autónoma de Buenos Aires' },
+                { '@type': 'AdministrativeArea', name: 'Provincia de Buenos Aires' },
+              ],
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Bourquet 560, Luis Guillon',
@@ -174,38 +189,38 @@ export default function RootLayout({
               ],
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
-                name: 'Servicios de Alquiler para Eventos',
+                name: 'Alquiler de Infraestructura Técnica Temporal',
                 itemListElement: [
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Alquiler de Carpas y Gazebos',
+                      name: 'Carpas industriales y estilo beduino',
                       description:
-                        'Carpas y gazebos para eventos con instalación profesional',
+                        'Carpas industriales y estilo beduino para fiestas, casamientos, eventos y proyectos con instalación profesional',
                     },
                   },
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Alquiler de Escenarios y Tarimas',
-                      description: 'Escenarios y tarimas con estructura segura',
+                      name: 'Escenarios y tarimas',
+                      description: 'Escenarios y tarimas con estructura segura e instalación profesional',
                     },
                   },
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Alquiler de Mesas y Sillas',
-                      description: 'Mobiliario premium para eventos',
+                      name: 'Mesas y sillas',
+                      description: 'Mesas y sillas para eventos con entrega coordinada',
                     },
                   },
                   {
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Alquiler de Vajilla y Cristalería',
+                      name: 'Vajilla y cristalería',
                       description:
                         'Vajilla y cristalería premium con limpieza incluida',
                     },
@@ -214,13 +229,34 @@ export default function RootLayout({
                     '@type': 'Offer',
                     itemOffered: {
                       '@type': 'Service',
-                      name: 'Sistemas de Climatización',
+                      name: 'Climatización',
                       description:
                         'Calefacción y aire acondicionado para eventos',
                     },
                   },
+                  {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'Living para eventos',
+                      description:
+                        'Livings y mobiliario lounge para fiestas, casamientos y eventos',
+                    },
+                  },
                 ],
               },
+              knowsAbout: [
+                'Infraestructura técnica temporal',
+                'Carpas industriales',
+                'Carpas estilo beduino',
+                'Escenarios',
+                'Tarimas',
+                'Vajilla y cristalería',
+                'Living para eventos',
+                'Eventos corporativos',
+                'Casamientos',
+                'Fiestas',
+              ],
               foundingDate: '1989',
               numberOfEmployees: '10-50',
               priceRange: '$$',

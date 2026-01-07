@@ -109,9 +109,9 @@ export const CLIENTS = [
     alt: 'Logo Expo Agro',
   },
   {
-    name: 'Dhue Producciones',
-    logo: '/logos_clientes/dhue.webp',
-    alt: 'Logo Dhue',
+    name: 'Romp3 Party',
+    logo: '/logos_clientes/romp3.webp',
+    alt: 'Logo Romp3',
   },
 ];
 

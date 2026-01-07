@@ -4,10 +4,13 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Mesas y Sillas | Ferrario Structures – Infraestructura técnica temporal GBA',
+    'Alquiler de Mesas y Sillas | Ferrario Structures —Infraestructura técnica temporal',
   description:
-    'Alquiler de mesas y sillas para eventos en Gran Buenos Aires. Infraestructura técnica temporal con múltiples estilos, materiales premium y entrega incluida. Más de 35 años de experiencia.',
+    'Alquiler de mesas y sillas para fiestas, casamientos y eventos en Buenos Aires. Múltiples estilos, materiales premium y entrega coordinada.',
   keywords: [
+    'alquiler mesas y sillas',
+    'alquiler mobiliario para eventos',
+    'mesas y sillas para casamientos',
     'alquiler mesas sillas gba',
     'alquiler mobiliario zona norte',
     'mesas sillas eventos zona sur',
@@ -19,9 +22,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Alquiler de Mesas y Sillas | Ferrario Structures – Infraestructura técnica temporal',
+      'Alquiler de Mesas y Sillas | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Mobiliario premium para eventos en GBA. Múltiples estilos y entrega incluida.',
+      'Mesas y sillas para fiestas, casamientos y eventos en Buenos Aires. Múltiples estilos y entrega coordinada.',
     url: 'https://hernaneventos.com/servicios/mesas',
     images: [
       {
@@ -34,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Mesas y Sillas para Eventos',
-    description: 'Mobiliario premium con entrega incluida en GBA.',
+    title: 'Alquiler de Mesas y Sillas | Ferrario Structures —Infraestructura técnica temporal',
+    description: 'Mesas y sillas para eventos con entrega coordinada en Buenos Aires.',
     images: ['https://hernaneventos.com/catalogo/sillasymesas.jpg'],
   },
   alternates: {

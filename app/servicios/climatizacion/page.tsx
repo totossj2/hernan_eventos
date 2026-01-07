@@ -4,10 +4,12 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Sistemas de Climatización para Eventos | Ferrario Structures – Infraestructura técnica temporal GBA',
+    'Sistemas de Climatización para Eventos | Ferrario Structures —Infraestructura técnica temporal',
   description:
-    'Alquiler de sistemas de climatización para eventos en Gran Buenos Aires. Infraestructura técnica temporal con calefacción y aire acondicionado, múltiples potencias, instalación profesional y seguridad garantizada.',
+    'Alquiler de climatización para fiestas, casamientos y eventos en Buenos Aires. Calefacción y aire acondicionado con instalación profesional y seguridad garantizada.',
   keywords: [
+    'alquiler calefacción para eventos',
+    'alquiler aire acondicionado para eventos',
     'climatización eventos gba',
     'calefacción eventos zona norte',
     'aire acondicionado eventos',
@@ -19,9 +21,9 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Sistemas de Climatización para Eventos | Ferrario Structures – Infraestructura técnica temporal',
+      'Sistemas de Climatización para Eventos | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Calefacción y aire acondicionado profesional para eventos en GBA. Instalación y seguridad garantizada.',
+      'Calefacción y aire acondicionado para fiestas, casamientos y eventos en Buenos Aires. Instalación y seguridad garantizada.',
     url: 'https://hernaneventos.com/servicios/climatizacion',
     images: [
       {
@@ -34,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sistemas de Climatización para Eventos',
+    title: 'Sistemas de Climatización para Eventos | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Calefacción y aire acondicionado profesional para eventos en GBA.',
+      'Calefacción y aire acondicionado para eventos en Buenos Aires.',
     images: ['https://hernaneventos.com/climatizacion/piramide.webp'],
   },
   alternates: {

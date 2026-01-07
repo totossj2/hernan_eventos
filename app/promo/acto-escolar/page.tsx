@@ -23,38 +23,40 @@ import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Escenarios para Actos Escolares | Ferrario Structures – Infraestructura técnica temporal GBA',
+    'Alquiler de Escenarios para Actos Escolares | Ferrario Structures —Infraestructura técnica temporal',
   description:
     'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Infraestructura técnica temporal con montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
   keywords: [
     'alquiler escenario escolar',
     'tarima acto fin de año',
     'escenario colegio gba',
+    'alquiler tarimas',
+    'alquiler escenarios',
   ],
   openGraph: {
     title:
-      'Servicios Completos de Alquiler para Eventos | Ferrario Structures – Infraestructura técnica temporal',
+      'Alquiler de Escenarios para Actos Escolares | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Soluciones integrales para eventos: carpas, escenarios, mobiliario, vajilla y climatización en GBA. Experiencia y profesionalismo garantizado.',
-    url: 'https://hernaneventos.com/servicios',
+      'Escenarios reforzados y sillas plásticas para actos escolares en GBA y CABA. Montaje rápido, seguro y puntual.',
+    url: 'https://hernaneventos.com/promo/acto-escolar',
     images: [
       {
-        url: 'https://hernaneventos.com/catalogo/Servicios.webp',
+        url: 'https://hernaneventos.com/trabajos/tarimas/escenario_NT_aerea.webp',
         width: 1200,
         height: 630,
-        alt: 'Servicios de Alquiler para Eventos',
+        alt: 'Escenario para acto escolar',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de escenarios para actos escolares',
+    title: 'Alquiler de Escenarios para Actos Escolares | Ferrario Structures —Infraestructura técnica temporal',
     description:
-      'Carpas, escenarios, mobiliario, vajilla y climatización para eventos en GBA.',
-    images: ['https://hernaneventos.com/catalogo/Servicios.webp'],
+      'Escenarios reforzados y sillas plásticas para actos escolares en GBA y CABA.',
+    images: ['https://hernaneventos.com/trabajos/tarimas/escenario_NT_aerea.webp'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com/escenarios-escolares',
+    canonical: 'https://hernaneventos.com/promo/acto-escolar',
   },
 };
 
