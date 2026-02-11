@@ -63,8 +63,9 @@ export function Hero() {
   const [imageIndex, setImageIndex] = useState(0);
 
   const texts = [
-    '✅ Atención rápida por WhatsApp',
-    '⏱️ Respondemos en menos de 1 hora',
+    '⚠️ Solo 5 fechas disponibles en Marzo',
+    '🎁 15% OFF si señás esta semana',
+    '⏰ Temporada alta: Reservá antes que se agote tu fecha'
   ];
 
   // Efecto para cambiar el texto
@@ -116,18 +117,16 @@ export function Hero() {
             return (
               <div
                 key={`desktop-${index}`}
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                  isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                }`}
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
                 style={{
                   transitionDuration: '700ms',
                 }}
               >
                 <Image
                   src={src}
-                  alt={`Evento elegante con carpas y decoración profesional ${
-                    index + 1
-                  }`}
+                  alt={`Evento elegante con carpas y decoración profesional ${index + 1
+                    }`}
                   width={1920}
                   height={1080}
                   className="w-full h-full object-cover object-center"
@@ -152,18 +151,16 @@ export function Hero() {
             return (
               <div
                 key={`mobile-${index}`}
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                  isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                }`}
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
                 style={{
                   transitionDuration: '700ms',
                 }}
               >
                 <Image
                   src={src}
-                  alt={`Evento elegante con carpas y decoración profesional ${
-                    index + 1
-                  }`}
+                  alt={`Evento elegante con carpas y decoración profesional ${index + 1
+                    }`}
                   width={360}
                   height={670}
                   className="w-full h-full object-cover"
@@ -186,33 +183,28 @@ export function Hero() {
         {/* Contenido centrado */}
         <div className="col-start-1 row-start-1 flex items-center justify-center text-center text-white max-w-4xl mx-auto px-4 py-4 h-[470px] md:h-[70vh] z-30 relative">
           <div>
-            <h1 className=" text-2xl md:text-6xl font-semibold mb-6 leading-tight">
-              Alquiler de Carpas y Escenarios con 35 Años de Experiencia
-            </h1>
-            <p className="text-base md:text-2xl mb-8 text-gray-200">
-              Montajes seguros para eventos de 80 a 3.000 personas en Buenos
-              Aires. <br></br>
-              Proveedor de municipios, empresas y eventos sociales.{' '}
+            <h1 className="text-4xl md:text-6xl font-semibold mb-3 md:mb-4 leading-10 md:leading-snug">
+              De Espacio Vacío a Evento Listo en 24 Horas           </h1>
+            {/* SUBHEADLINE (lo que ofrecés) */}
+            <p className="text-xl md:text-3xl font-semibold mb-6 md:mb-8 text-white">
+              Carpas • Escenarios • Mobiliario
             </p>
-            <div className="flex flex-col md:flex-row gap-2 justify-center w-full max-w-lg md:max-w-xl mx-auto">
-              {' '}
+            {/* DESCRIPCIÓN (credibilidad + target) */}
+            <p className="text-base md:text-xl mb-8 text-gray-100 max-w-3xl mx-auto leading-relaxed">
+              Para eventos de 80 a 6.000 personas en Buenos Aires.<br className="hidden md:block" />
+              35 años equipando eventos corporativos, municipios, fiestas masivas y casamientos.
+            </p>
+            <div className="flex flex-col md:flex-row gap-3 justify-center w-full max-w-lg md:max-w-xl mx-auto">              {' '}
               <a
-                href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos"
+                href="https://wa.me/5491160939880?text=Hola%20Hernan,%20me%20interesa%20cotizar%20mi%20evento"
                 target="_blank"
                 className="flex-1"
               >
                 <Button
                   size="lg"
-                  className="w-full bg-[#003056] border border-[#003056] hover:bg-green-500 hover:border-green-500 transition-all duration-300 ease-in-out text-lg px-8 py-4 flex items-center justify-center gap-3"
+                  className=" bg-[#f26b00] hover:bg-[#D95F00] border-2 border-[#f26b00] hover:border-[#B84F00] transition-all duration-300 ease-in-out text-lg md:text-xl font-semibold shadow-2xl w-fit rounded-full"
                 >
-                  <Image
-                    src="/whatsapp.svg"
-                    alt="WhatsApp"
-                    width={25}
-                    height={25}
-                    className="object-contain"
-                  />
-                  COTIZAR AHORA
+                  Cotizar Mi Evento Ahora
                 </Button>
               </a>
               <a href="/trabajos" className="flex-1 hidden">

@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Mesas y Sillas | Ferrario Structures —Infraestructura técnica temporal',
+    'Alquiler de Mesas y Sillas | Ferrario Structures — Infraestructura completa para eventos',
   description:
     'Alquiler de mesas y sillas para fiestas, casamientos y eventos en Buenos Aires. Múltiples estilos, materiales premium y entrega coordinada.',
   keywords: [
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
     'entrega mobiliario incluida',
     'mobiliario para eventos sociales',
     'Ferrario Structures mobiliario',
-    'infraestructura técnica temporal mobiliario',
+    'Infraestructura completa para eventos mobiliario',
   ],
   openGraph: {
     title:
-      'Alquiler de Mesas y Sillas | Ferrario Structures —Infraestructura técnica temporal',
+      'Alquiler de Mesas y Sillas | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Mesas y sillas para fiestas, casamientos y eventos en Buenos Aires. Múltiples estilos y entrega coordinada.',
-    url: 'https://hernaneventos.com/servicios/mesas',
+    url: 'https://ferrariostructures.com.ar/servicios/mesas',
     images: [
       {
-        url: 'https://hernaneventos.com/catalogo/sillasymesas.jpg',
+        url: 'https://ferrariostructures.com.ar/catalogo/sillasymesas.jpg',
         width: 1200,
         height: 630,
         alt: 'Alquiler de Mesas y Sillas para Eventos',
@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Mesas y Sillas | Ferrario Structures —Infraestructura técnica temporal',
+    title: 'Alquiler de Mesas y Sillas | Ferrario Structures — Infraestructura completa para eventos',
     description: 'Mesas y sillas para eventos con entrega coordinada en Buenos Aires.',
-    images: ['https://hernaneventos.com/catalogo/sillasymesas.jpg'],
+    images: ['https://ferrariostructures.com.ar/catalogo/sillasymesas.jpg'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com/servicios/mesas',
+    canonical: 'https://ferrariostructures.com.ar/servicios/mesas',
   },
 };
 

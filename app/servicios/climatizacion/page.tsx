@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Sistemas de Climatización para Eventos | Ferrario Structures —Infraestructura técnica temporal',
+    'Sistemas de Climatización para Eventos | Ferrario Structures — Infraestructura completa para eventos',
   description:
     'Alquiler de climatización para fiestas, casamientos y eventos en Buenos Aires. Calefacción y aire acondicionado con instalación profesional y seguridad garantizada.',
   keywords: [
@@ -17,17 +17,17 @@ export const metadata: Metadata = {
     'sistemas climatización profesional',
     'climatización eventos sociales',
     'Ferrario Structures climatización',
-    'infraestructura técnica temporal climatización',
+    'Infraestructura completa para eventos climatización',
   ],
   openGraph: {
     title:
-      'Sistemas de Climatización para Eventos | Ferrario Structures —Infraestructura técnica temporal',
+      'Sistemas de Climatización para Eventos | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Calefacción y aire acondicionado para fiestas, casamientos y eventos en Buenos Aires. Instalación y seguridad garantizada.',
-    url: 'https://hernaneventos.com/servicios/climatizacion',
+    url: 'https://ferrariostructures.com.ar/servicios/climatizacion',
     images: [
       {
-        url: 'https://hernaneventos.com/climatizacion/piramide.webp',
+        url: 'https://ferrariostructures.com.ar/climatizacion/piramide.webp',
         width: 1200,
         height: 630,
         alt: 'Sistemas de Climatización para Eventos',
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sistemas de Climatización para Eventos | Ferrario Structures —Infraestructura técnica temporal',
+    title: 'Sistemas de Climatización para Eventos | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Calefacción y aire acondicionado para eventos en Buenos Aires.',
-    images: ['https://hernaneventos.com/climatizacion/piramide.webp'],
+    images: ['https://ferrariostructures.com.ar/climatizacion/piramide.webp'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com/servicios/climatizacion',
+    canonical: 'https://ferrariostructures.com.ar/servicios/climatizacion',
   },
 };
 

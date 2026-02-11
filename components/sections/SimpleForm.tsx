@@ -201,7 +201,7 @@ export default function SimpleForm() {
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-[#003056]" />
                     <span className="text-sm md:text-base text-gray-600 max-w-2xl">
-                      Más de 1.000 eventos realizados
+                      Más de 700 eventos realizados
                     </span>
                   </div>
                 </div>

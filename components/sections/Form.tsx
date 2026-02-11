@@ -136,7 +136,7 @@ export default function ContactForm() {
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error(
-        'Error de conexión. Intenta nuevamente o contactanos por WhatsApp.'
+        'Error de conexión. Intenta nuevamente o contactános por WhatsApp.'
       );
     } finally {
       setIsSubmitting(false);
@@ -164,9 +164,8 @@ export default function ContactForm() {
         ?.map((service) => servicesMap[service] || service)
         .join(', ') || 'Por definir';
 
-    const message = `Hola Hernan! Mi nombre es ${
-      formData.name
-    } y quiero solicitar una cotización para mi evento:
+    const message = `Hola Hernan! Mi nombre es ${formData.name
+      } y quiero solicitar una cotización para mi evento:
 
 *Fecha del evento:* ${formData.eventDate || 'Por definir'}
 *Cantidad de invitados:* ${formData.guests || 'Por definir'}
@@ -181,12 +180,11 @@ ${formData.urgentEvent ? '*¡EVENTO URGENTE!* - Menos de 7 días' : ''}
 *Mi teléfono:* ${formData.phone || 'No proporcionado'}
 ${formData.email ? `*Email:* ${formData.email}` : ''}
 
-${
-  formData.message
-    ? `*Mensaje adicional:*
+${formData.message
+        ? `*Mensaje adicional:*
 ${formData.message}`
-    : ''
-}
+        : ''
+      }
 
 Espero tu respuesta!`;
 
@@ -452,14 +450,14 @@ Espero tu respuesta!`;
                                     onCheckedChange={(checked) => {
                                       return checked
                                         ? field.onChange([
-                                            ...field.value,
-                                            service.id,
-                                          ])
+                                          ...field.value,
+                                          service.id,
+                                        ])
                                         : field.onChange(
-                                            field.value?.filter(
-                                              (value) => value !== service.id
-                                            )
-                                          );
+                                          field.value?.filter(
+                                            (value) => value !== service.id
+                                          )
+                                        );
                                     }}
                                   />
                                 </FormControl>

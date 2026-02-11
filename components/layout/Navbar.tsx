@@ -72,8 +72,8 @@ export function Navbar() {
               <span className="text-xl font-semibold text-[#003056]">
                 Ferrario Structures —
               </span>
-              <span className="text-xs tracking-[0.07em] text-[#003056]">
-                Infraestructura técnica temporal
+              <span className="text-xs tracking-[0.001em] text-[#003056]">
+                Infraestructura completa para eventos
               </span>
             </div>
           </Link>
@@ -93,12 +93,18 @@ export function Navbar() {
         </nav>
         <a className="hidden md:block" href={CONTACT.whatsapp} target="_blank">
           <Button className="bg-[#003056] hover:bg-[#002040] px-3">
-            <Phone className="h-4 w-4 mr-1" />
-            Contactanos
+            <Image
+              src="/whatsapp.svg"
+              alt="WhatsApp"
+              width={24}
+              height={24}
+              className="h-4 w-4 "
+            />
+            Contactános
           </Button>
         </a>
         {/* Mobile menu */}
-        <div className="md:hidden">
+        <div className="hidden">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Abrir menú">
@@ -118,8 +124,8 @@ export function Navbar() {
                       <span className="text-xl font-semibold text-[#003056]">
                         Ferrario Structures —
                       </span>
-                      <span className="text-xs  tracking-[0.07em] text-[#003056]">
-                        Infraestructura técnica temporal
+                      <span className="text-xs  tracking-[0.02em] text-[#003056]">
+                        Infraestructura completa para eventos
                       </span>
                     </div>
                   </Link>
@@ -141,8 +147,14 @@ export function Navbar() {
                 <div className="pt-4 border-t">
                   <a href={CONTACT.whatsapp} target="_blank" className="block">
                     <Button className="w-full bg-[#003056] hover:bg-[#002040]">
-                      <Phone className="h-4 w-4 mr-2" />
-                      Contactanos
+                      <Image
+                        src="/whatsapp.svg"
+                        alt="WhatsApp"
+                        width={16}
+                        height={16}
+                        className="h-4 w-4 "
+                      />
+                      Contactános
                     </Button>
                   </a>
                 </div>

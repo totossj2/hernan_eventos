@@ -18,12 +18,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ferrario Structures —Infraestructura técnica temporal',
+  title: 'Ferrario Structures — Infraestructura completa para eventos',
   description:
-    'Alquiler de infraestructura técnica temporal para fiestas, casamientos, eventos y proyectos. Carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Gran Buenos Aires. Montaje profesional, seguro y puntual.',
+    'Alquiler de Infraestructura completa para eventos para fiestas, casamientos, eventos y proyectos. Carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Gran Buenos Aires. Montaje profesional, seguro y puntual.',
   keywords: [
     'alquiler infraestructura temporal',
-    'infraestructura técnica temporal',
+    'Infraestructura completa para eventos',
     'alquiler para casamientos',
     'alquiler para fiestas',
     'alquiler para eventos corporativos',
@@ -42,35 +42,35 @@ export const metadata: Metadata = {
     'climatización para eventos',
     'eventos en Gran Buenos Aires',
     'Ferrario Structures',
-    'infraestructura técnica temporal',
+    'Infraestructura completa para eventos',
   ],
   viewport: {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 5,
   },
-  authors: [{ name: 'Ferrario Structures —Infraestructura técnica temporal', url: 'https://hernaneventos.com' }],
-  creator: 'Ferrario Structures —Infraestructura técnica temporal',
-  publisher: 'Ferrario Structures —Infraestructura técnica temporal',
+  authors: [{ name: 'Ferrario Structures — Infraestructura completa para eventos', url: 'https://ferrariostructures.com.ar' }],
+  creator: 'Ferrario Structures — Infraestructura completa para eventos',
+  publisher: 'Ferrario Structures — Infraestructura completa para eventos',
   generator: 'Next.js',
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon/favicon.ico', sizes: 'any' },
+      { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
       {
-        url: '/android-chrome-192x192.png',
+        url: '/favicon/web-app-manifest-192x192.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        url: '/android-chrome-512x512.png',
+        url: '/favicon/web-app-manifest-512x512.png',
         sizes: '512x512',
         type: 'image/png',
       },
@@ -79,14 +79,14 @@ export const metadata: Metadata = {
   manifest: '/favicon/site.webmanifest',
   openGraph: {
     title:
-      'Ferrario Structures —Infraestructura técnica temporal',
+      'Ferrario Structures — Infraestructura completa para eventos',
     description:
-      'Alquiler de infraestructura técnica temporal: carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
-    url: 'https://hernaneventos.com',
-    siteName: 'Ferrario Structures —Infraestructura técnica temporal',
+      'Alquiler de Infraestructura completa para eventos: carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
+    url: 'https://ferrariostructures.com.ar',
+    siteName: 'Ferrario Structures — Infraestructura completa para eventos',
     images: [
       {
-        url: 'https://hernaneventos.com/toscas.jpg',
+        url: 'https://ferrariostructures.com.ar/toscas.webp',
         width: 1200,
         height: 630,
         alt: 'Soluciones Confiables de Alquiler para tu Evento',
@@ -98,13 +98,13 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      'Ferrario Structures —Infraestructura técnica temporal',
+      'Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
-    images: ['https://hernaneventos.com/toscas.jpg'],
+    images: ['https://ferrariostructures.com.ar/toscas.webp'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com',
+    canonical: 'https://ferrariostructures.com.ar',
   },
 };
 
@@ -116,6 +116,12 @@ export default function RootLayout({
   return (
     <html lang="es-AR" className={inter.variable}>
       <head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon/favicon-32x32.png"
+          sizes="32x32"
+        />
         <link
           rel="icon"
           type="image/png"
@@ -163,12 +169,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': ['LocalBusiness', 'ProfessionalService', 'PartyEquipmentRentalService'],
-              name: 'Ferrario Structures —Infraestructura técnica temporal',
-              url: 'https://hernaneventos.com',
-              logo: 'https://hernaneventos.com/logo.webp',
+              name: 'Ferrario Structures — Infraestructura completa para eventos',
+              url: 'https://ferrariostructures.com.ar',
+              logo: 'https://ferrariostructures.com.ar/logo.webp',
               description:
-                'Alquiler de infraestructura técnica temporal para fiestas, casamientos, eventos y proyectos: carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Buenos Aires.',
-              slogan: 'Infraestructura técnica temporal para eventos y proyectos',
+                'Alquiler de Infraestructura completa para eventos para fiestas, casamientos, eventos y proyectos: carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Buenos Aires.',
+              slogan: 'Infraestructura completa para eventos para eventos y proyectos',
               telephone: '(011) 6093-9880',
               areaServed: [
                 { '@type': 'AdministrativeArea', name: 'Gran Buenos Aires' },
@@ -177,7 +183,7 @@ export default function RootLayout({
               ],
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Bourquet 560, Luis Guillon',
+                streetAddress: 'Rivadavia 345, Monte Grande',
                 addressLocality: 'Gran Buenos Aires',
                 addressRegion: 'Buenos Aires',
                 addressCountry: 'AR',
@@ -189,7 +195,7 @@ export default function RootLayout({
               ],
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
-                name: 'Alquiler de Infraestructura Técnica Temporal',
+                name: 'Alquiler de Infraestructura completa para eventos',
                 itemListElement: [
                   {
                     '@type': 'Offer',
@@ -246,7 +252,7 @@ export default function RootLayout({
                 ],
               },
               knowsAbout: [
-                'Infraestructura técnica temporal',
+                'Infraestructura completa para eventos',
                 'Carpas industriales',
                 'Carpas estilo beduino',
                 'Escenarios',

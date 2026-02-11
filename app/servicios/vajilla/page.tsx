@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Vajilla y Cristalería | Ferrario Structures —Infraestructura técnica temporal',
+    'Alquiler de Vajilla y Cristalería | Ferrario Structures — Infraestructura completa para eventos',
   description:
     'Alquiler de vajilla y cristalería para fiestas, casamientos y eventos en Buenos Aires. Porcelana premium, cristalería fina y limpieza incluida.',
   keywords: [
@@ -18,17 +18,17 @@ export const metadata: Metadata = {
     'cristalería fina eventos',
     'limpieza vajilla incluida',
     'Ferrario Structures vajilla',
-    'infraestructura técnica temporal vajilla',
+    'Infraestructura completa para eventos vajilla',
   ],
   openGraph: {
     title:
-      'Alquiler de Vajilla y Cristalería | Ferrario Structures —Infraestructura técnica temporal',
+      'Alquiler de Vajilla y Cristalería | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Vajilla y cristalería premium para fiestas, casamientos y eventos en Buenos Aires. Porcelana fina y limpieza incluida.',
-    url: 'https://hernaneventos.com/servicios/vajilla',
+    url: 'https://ferrariostructures.com.ar/servicios/vajilla',
     images: [
       {
-        url: 'https://hernaneventos.com/catalogo/vajilla.jpg',
+        url: 'https://ferrariostructures.com.ar/catalogo/vajilla.jpg',
         width: 1200,
         height: 630,
         alt: 'Alquiler de Vajilla y Cristalería para Eventos',
@@ -37,12 +37,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Vajilla y Cristalería | Ferrario Structures —Infraestructura técnica temporal',
+    title: 'Alquiler de Vajilla y Cristalería | Ferrario Structures — Infraestructura completa para eventos',
     description: 'Vajilla y cristalería premium con limpieza incluida en Buenos Aires.',
-    images: ['https://hernaneventos.com/catalogo/vajilla.jpg'],
+    images: ['https://ferrariostructures.com.ar/catalogo/vajilla.jpg'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com/servicios/vajilla',
+    canonical: 'https://ferrariostructures.com.ar/servicios/vajilla',
   },
 };
 

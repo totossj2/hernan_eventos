@@ -22,7 +22,7 @@ export function ClientsSection() {
                 <StarIcon className="w-4 h-4 text-yellow-500 fill-yellow-500" />
               </div>
               <p className="text-sm text-gray-700">
-                35 años de experiencia en el rubro - más de 1.000 eventos
+                35 años de experiencia en el rubro - más de 700 eventos
                 realizados
               </p>
             </div>

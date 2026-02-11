@@ -23,9 +23,9 @@ import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Escenarios para Actos Escolares | Ferrario Structures —Infraestructura técnica temporal',
+    'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Infraestructura completa para eventos',
   description:
-    'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Infraestructura técnica temporal con montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
+    'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Infraestructura completa para eventos con montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
   keywords: [
     'alquiler escenario escolar',
     'tarima acto fin de año',
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Alquiler de Escenarios para Actos Escolares | Ferrario Structures —Infraestructura técnica temporal',
+      'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Escenarios reforzados y sillas plásticas para actos escolares en GBA y CABA. Montaje rápido, seguro y puntual.',
-    url: 'https://hernaneventos.com/promo/acto-escolar',
+    url: 'https://ferrariostructures.com.ar/promo/acto-escolar',
     images: [
       {
-        url: 'https://hernaneventos.com/trabajos/tarimas/escenario_NT_aerea.webp',
+        url: 'https://ferrariostructures.com.ar/trabajos/tarimas/escenario_NT_aerea.webp',
         width: 1200,
         height: 630,
         alt: 'Escenario para acto escolar',
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Escenarios para Actos Escolares | Ferrario Structures —Infraestructura técnica temporal',
+    title: 'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Escenarios reforzados y sillas plásticas para actos escolares en GBA y CABA.',
-    images: ['https://hernaneventos.com/trabajos/tarimas/escenario_NT_aerea.webp'],
+    images: ['https://ferrariostructures.com.ar/trabajos/tarimas/escenario_NT_aerea.webp'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com/promo/acto-escolar',
+    canonical: 'https://ferrariostructures.com.ar/promo/acto-escolar',
   },
 };
 

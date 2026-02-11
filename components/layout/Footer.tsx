@@ -8,21 +8,13 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="flex flex-col gap-2  px-4 py-4 rounded-lg">
-            <div className="flex items-center space-x-2 mb-4">
-              <Image
-                src="/logo_blanco.webp"
-                alt="Ferrario Structures Logo"
-                height={200}
-                width={200}
-                className="object-contain"
-              />
-            </div>
+
             <div className="mb-3">
-              <p className="text-base font-semibold text-white leading-tight">
-                Ferrario Structures
+              <p className="text-xl font-semibold  text-gray-300">
+                Ferrario Structures —
               </p>
-              <p className="text-xs uppercase tracking-[0.12em] text-gray-300">
-                Infraestructura técnica temporal
+              <p className="text-xs tracking-[0.001em] text-gray-300">
+                Infraestructura completa para eventos
               </p>
             </div>
             <p className="text-sm text-white mb-4">

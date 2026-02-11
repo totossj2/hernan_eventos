@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Carpas y Gazebos | Ferrario Structures —Infraestructura técnica temporal',
+    'Alquiler de Carpas y Gazebos | Ferrario Structures — Infraestructura completa para eventos',
   description:
     'Alquiler de carpas para fiestas, casamientos, eventos y proyectos en Buenos Aires. Carpas industriales y estilo beduino con montaje profesional, seguro y puntual.',
   keywords: [
@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     'instalación carpas profesional',
     'carpas para eventos sociales',
     'Ferrario Structures carpas',
-    'infraestructura técnica temporal carpas',
+    'Infraestructura completa para eventos carpas',
   ],
   openGraph: {
     title:
-      'Alquiler de Carpas y Gazebos | Ferrario Structures —Infraestructura técnica temporal',
+      'Alquiler de Carpas y Gazebos | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Carpas industriales y estilo beduino para fiestas, casamientos, eventos y proyectos en Buenos Aires. Instalación incluida y estructura segura.',
-    url: 'https://hernaneventos.com/servicios/carpas',
+    url: 'https://ferrariostructures.com.ar/servicios/carpas',
     images: [
       {
-        url: 'https://hernaneventos.com/catalogo/carpa.jpg',
+        url: 'https://ferrariostructures.com.ar/catalogo/carpa.jpg',
         width: 1200,
         height: 630,
         alt: 'Alquiler de Carpas y Gazebos para Eventos',
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Carpas y Gazebos | Ferrario Structures —Infraestructura técnica temporal',
+    title: 'Alquiler de Carpas y Gazebos | Ferrario Structures — Infraestructura completa para eventos',
     description: 'Carpas industriales y estilo beduino con instalación incluida en Buenos Aires.',
-    images: ['https://hernaneventos.com/catalogo/carpa.jpg'],
+    images: ['https://ferrariostructures.com.ar/catalogo/carpa.jpg'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com/servicios/carpas',
+    canonical: 'https://ferrariostructures.com.ar/servicios/carpas',
   },
 };
 

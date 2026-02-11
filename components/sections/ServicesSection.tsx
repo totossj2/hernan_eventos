@@ -1,8 +1,5 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card } from '@/components/ui/card';
 import Image from 'next/image';
-import { Button } from '../ui/button';
-import Link from 'next/link';
 
 export function ServicesSection() {
   // Servicios principales (ocuparán 6 columnas cada uno)
@@ -10,7 +7,7 @@ export function ServicesSection() {
     {
       title: 'Carpas y Gazebos',
       description:
-        'Desde 5x2.5m hasta 8x36m. Resistentes al viento y lluvia, ideales para cualquier clima.',
+        'Desde 5×2.5m hasta 8×36m. Para 20 a 3000+ personas. Protección garantizada contra clima. Estética y confiable.',
       image: '/catalogo/carpa.webp',
       alt: 'Carpas elegantes para eventos',
       href: '/servicios/carpas',
@@ -18,8 +15,8 @@ export function ServicesSection() {
     {
       title: 'Escenarios y Tarimas',
       description:
-        'Estructuras modulares para presentaciones, shows y ceremonias especiales.',
-      image: '/catalogo/escenario.jpg',
+        'Estructuras modulares que se adaptan a tu espacio. Desde ceremonias de 50 personas hasta conciertos de 5000.',
+      image: '/catalogo/escenario.webp',
       alt: 'Escenarios y tarimas',
       href: '/servicios/escenarios',
     },
@@ -30,28 +27,28 @@ export function ServicesSection() {
     {
       title: 'Mesas y Sillas',
       description:
-        'Mesas redondas, rectangulares y cocktail. Sillas plasticas o plegables.',
+        'Mesas redondas, rectangulares y cocktail. Sillas para hasta 1000 personas. Opciones estándar y premium.',
       image: '/catalogo/sillasymesas.webp',
       alt: 'Mesas y sillas para eventos',
       href: '/servicios/mesas',
     },
     {
       title: 'Vajilla y Cristalería',
-      description: 'Platos, copas, cubiertos y mantelería de alta calidad.',
+      description: 'Platos, copas, cubiertos y mantelería. Lavado profesional incluido. Opciones estándar y premium según tu presupuesto.',
       image: '/catalogo/vajilla.webp',
       alt: 'Vajilla y cristalería elegante',
       href: '/servicios/vajilla',
     },
     {
       title: 'Climatización',
-      description: 'Equipos de aire acondicionado y calefacción.',
-      image: '/catalogo/DSC_2048.JPG',
+      description: 'Climatización para carpas de 50 a 3000 personas. Aire acondicionado en verano, calefacción en invierno.',
+      image: '/catalogo/climatizacion.webp',
       alt: 'Sistemas de climatización',
       href: '/servicios/climatizacion',
     },
     {
       title: 'Vallas y Cerramientos',
-      description: 'Eventos masivos seguros y organizados.',
+      description: 'Vallas para eventos de 500 a 10.000 personas. Control de acceso, segmentación de espacios y seguridad.',
       image: '/catalogo/vallas.webp',
       alt: 'Vallas y cerramientos',
       href: '/servicios', // Por ahora redirige a la página general de servicios
@@ -63,18 +60,16 @@ export function ServicesSection() {
       <div className="container mx-auto px-4">
         <div className="text-center  mb-6 md:mb-16">
           <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
-            Nuestro Equipamiento
-          </h2>
+            Infraestructura Completa para Tu Evento          </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
-            Todo lo que necesitas para tu evento en un solo lugar
-          </p>
+            No necesitás buscar 5 proveedores. Tenemos todo.          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
           {/* Servicios principales - 6 columnas cada uno */}
           {mainServices.map((service) => (
             <div key={service.title} className="lg:col-span-6">
               <Card className="overflow-hidden">
-                <div className="relative h-96 overflow-hidden rounded-lg flex flex-col p-3 py-3">
+                <div className="relative h-64 md:h-96 overflow-hidden rounded-lg flex flex-col p-3 py-3">
                   <Image
                     src={service.image}
                     alt={service.alt}
@@ -109,7 +104,7 @@ export function ServicesSection() {
           {secondaryServices.map((service) => (
             <div key={service.title} className="lg:col-span-3">
               <Card className="overflow-hidden">
-                <div className="relative h-64 md:h-auto md:aspect-square overflow-hidden flex flex-col p-3 py-3">
+                <div className="relative h-44 md:h-auto md:aspect-square overflow-hidden flex flex-col p-3 py-3">
                   <Image
                     src={service.image}
                     alt={service.alt}

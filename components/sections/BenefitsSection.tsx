@@ -32,7 +32,7 @@ export function BenefitsSection() {
           </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
             Con más de 35 años de experiencia montando{' '}
-            <strong>infraestructura técnica temporal</strong> y más de 1.000
+            <strong>Infraestructura completa para eventos</strong> y más de 700
             eventos exitosos, hemos perfeccionado el arte de crear momentos
             inolvidables.
           </p>

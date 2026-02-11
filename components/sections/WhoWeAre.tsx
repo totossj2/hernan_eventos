@@ -48,7 +48,7 @@ export function WhoWeAre() {
             <p className="text-base md:text-xl text-gray-600 max-w-2xl">
               En Ferrario Structures no solo alquilamos equipos; diseñamos y
               montamos{' '}
-              <strong>infraestructura técnica temporal</strong> con la
+              <strong>Infraestructura completa para eventos</strong> con la
               tranquilidad que da más de{' '}
               <strong>35 años en el rubro</strong>. Conocemos cada detalle para
               que tu evento sea un éxito, desde la planificación hasta el

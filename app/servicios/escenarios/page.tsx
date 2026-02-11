@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Escenarios y Tarimas | Ferrario Structures —Infraestructura técnica temporal',
+    'Alquiler de Escenarios y Tarimas | Ferrario Structures — Infraestructura completa para eventos',
   description:
     'Alquiler de escenarios y tarimas para fiestas, casamientos, eventos y proyectos en Buenos Aires. Estructuras seguras, alturas ajustables e instalación profesional.',
   keywords: [
@@ -19,17 +19,17 @@ export const metadata: Metadata = {
     'instalación escenarios profesional',
     'escenarios para eventos sociales',
     'Ferrario Structures escenarios',
-    'infraestructura técnica temporal escenarios',
+    'Infraestructura completa para eventos escenarios',
   ],
   openGraph: {
     title:
-      'Alquiler de Escenarios y Tarimas | Ferrario Structures —Infraestructura técnica temporal',
+      'Alquiler de Escenarios y Tarimas | Ferrario Structures — Infraestructura completa para eventos',
     description:
       'Escenarios y tarimas para fiestas, casamientos, eventos y proyectos en Buenos Aires. Estructura segura e instalación incluida.',
-    url: 'https://hernaneventos.com/servicios/escenarios',
+    url: 'https://ferrariostructures.com.ar/servicios/escenarios',
     images: [
       {
-        url: 'https://hernaneventos.com/catalogo/escenario.jpg',
+        url: 'https://ferrariostructures.com.ar/catalogo/escenario.jpg',
         width: 1200,
         height: 630,
         alt: 'Alquiler de Escenarios y Tarimas para Eventos',
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Escenarios y Tarimas | Ferrario Structures —Infraestructura técnica temporal',
+    title: 'Alquiler de Escenarios y Tarimas | Ferrario Structures — Infraestructura completa para eventos',
     description: 'Escenarios y tarimas con estructura segura e instalación incluida en Buenos Aires.',
-    images: ['https://hernaneventos.com/catalogo/escenario.jpg'],
+    images: ['https://ferrariostructures.com.ar/catalogo/escenario.jpg'],
   },
   alternates: {
-    canonical: 'https://hernaneventos.com/servicios/escenarios',
+    canonical: 'https://ferrariostructures.com.ar/servicios/escenarios',
   },
 };
 
