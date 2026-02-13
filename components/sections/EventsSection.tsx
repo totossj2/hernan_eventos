@@ -132,7 +132,7 @@ export function EventsSection() {
                                 );
                             })}
                         </CarouselContent>
-                        <div className="flex justify-end items-center gap-2 mt-3 pr-1">
+                        <div className="hidden flex justify-end items-center gap-2 mt-3 pr-1">
                             <CarouselPrevious className="scale-90" />
                             <CarouselNext className="scale-90" />
                         </div>
