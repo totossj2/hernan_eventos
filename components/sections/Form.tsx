@@ -27,6 +27,7 @@ import {
   Calendar,
 } from 'lucide-react';
 import { CONTACT, EVENT_TYPES as CONSTANT_EVENT_TYPES } from '@/lib/constants';
+import { trackFormSubmit, trackContactWithTime } from '@/lib/tracking';
 
 // Schema de validación con Zod para el formulario de cotización
 const quotationFormSchema = z.object({
@@ -123,6 +124,16 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
+        // 📊 MÉTRICA CLAVE: Form Submit
+        trackFormSubmit({
+          formName: 'Quotation Form',
+          formType: 'quotation',
+          eventType: data.eventType,
+          guests: data.guests,
+          services: data.services,
+          urgentEvent: data.urgentEvent,
+        });
+
         toast.success(
           '¡Cotización solicitada con éxito! Te contactaremos en menos de 2 horas por WhatsApp.'
         );
@@ -144,6 +155,11 @@ export default function ContactForm() {
   };
 
   const handleWhatsAppClick = () => {
+    // 📊 Track WhatsApp click from form
+    trackContactWithTime('whatsapp_click', isSubmitted ? 'form_success' : 'form', {
+      button_text: isSubmitted ? 'Chatear por WhatsApp (post-submit)' : 'Chatear por WhatsApp',
+    });
+
     const formData =
       isSubmitted && lastSubmittedData ? lastSubmittedData : form.getValues();
 

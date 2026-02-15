@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import heroMobile from '@/public/hero_mobile.webp';
 import dynamic from 'next/dynamic';
+import { trackContactWithTime } from '@/lib/tracking';
 
 // Lazy load framer-motion to avoid LCP impact
 const MotionText = dynamic(
@@ -199,6 +200,7 @@ export function Hero() {
                 href="https://wa.me/5491160939880?text=Hola%20Hernan,%20me%20interesa%20cotizar%20mi%20evento"
                 target="_blank"
                 className="flex-1"
+                onClick={() => trackContactWithTime('whatsapp_click', 'hero', { button_text: 'Cotizar Mi Evento Ahora' })}
               >
                 <Button
                   size="lg"

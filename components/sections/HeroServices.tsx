@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 import Image from 'next/image';
 import { CONTACT } from '@/lib/constants';
+import { trackContactWithTime } from '@/lib/tracking';
 
 interface HeroServicesProps {
   title: string;
@@ -57,6 +58,7 @@ export function HeroServices({
             <a
               href="https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos"
               className="flex-1"
+              onClick={() => trackContactWithTime('whatsapp_click', 'hero_service', { button_text: buttonText, service: title })}
             >
               <Button
                 size="lg"

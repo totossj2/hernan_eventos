@@ -8,6 +8,7 @@ import { OptimizedScripts } from '@/components/OptimizedScripts';
 import { SmartScriptLoader } from '@/components/SmartScriptLoader';
 import { AsyncCSSLoaderScript } from '@/components/AsyncCSSLoader';
 import { HeroPreloads } from '@/components/HeroPreloads';
+import { ScrollTracker } from '@/components/ScrollTracker';
 
 // Optimize font loading with next/font
 const inter = Inter({
@@ -280,10 +281,21 @@ export default function RootLayout({
         />
         {children}
 
-        {/* Google Tag Manager - Optimized with lazyOnload */}
+        {/* Initialize dataLayer before GTM */}
+        <Script
+          id="gtm-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+            `,
+          }}
+        />
+
+        {/* Google Tag Manager - Optimized with afterInteractive */}
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -294,6 +306,9 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* Scroll Tracking Component */}
+        <ScrollTracker />
 
         <DeferredScripts />
         <OptimizedScripts />

@@ -1,6 +1,9 @@
+'use client';
+
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import Image from 'next/image';
 import { CONTACT, SERVICES, EVENT_TYPES } from '@/lib/constants';
+import { trackContactWithTime } from '@/lib/tracking';
 
 export function Footer() {
   return (
@@ -39,6 +42,7 @@ export function Footer() {
                 href={CONTACT.whatsapp}
                 target="_blank"
                 className="w-8 h-8 rounded-full flex items-center justify-center"
+                onClick={() => trackContactWithTime('whatsapp_click', 'footer', { button_text: 'WhatsApp Icon' })}
               >
                 <Image
                   src="/whatsapp.svg"
@@ -62,10 +66,14 @@ export function Footer() {
           <div className="px-4 py-4 rounded-lg min-h-[200px] flex flex-col justify-start">
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <div className="space-y-3 text-gray-400">
-              <div className="flex items-center">
+              <a 
+                href={`tel:${CONTACT.phone.replace(/[^0-9+]/g, '')}`}
+                className="flex items-center hover:text-gray-300 transition-colors"
+                onClick={() => trackContactWithTime('phone_click', 'footer')}
+              >
                 <Phone className="h-4 w-4 mr-2 text-[#f4c046]" />
                 <span className="text-sm sm:text-base">{CONTACT.phone}</span>
-              </div>
+              </a>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-[#f4c046]" />
                 <span className="text-sm sm:text-base">{CONTACT.email}</span>

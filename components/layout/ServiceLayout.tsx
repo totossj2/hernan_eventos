@@ -15,6 +15,7 @@ import { Breadcrumb } from '@/components/ui/breadcrumb';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 import Image from 'next/image';
 import { CONTACT } from '@/lib/constants';
+import { trackContactWithTime } from '@/lib/tracking';
 
 interface Product {
   id: string;
@@ -279,7 +280,11 @@ export function ServiceLayout({
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
             {cta.description}
           </p>
-          <a href={CONTACT.whatsapp} target="_blank">
+          <a 
+            href={CONTACT.whatsapp} 
+            target="_blank"
+            onClick={() => trackContactWithTime('whatsapp_click', 'service_cta', { button_text: cta.buttonText, service: serviceName })}
+          >
             <Button
               size="lg"
               className="bg-[#f4c046] hover:bg-[#e6b53a] text-[#003056] text-lg px-8 py-4"

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { NAVIGATION, CONTACT } from '@/lib/constants';
 import { useRouter, usePathname } from 'next/navigation';
+import { trackContactWithTime } from '@/lib/tracking';
 import {
   Sheet,
   SheetTrigger,
@@ -91,7 +92,12 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        <a className="hidden md:block" href={CONTACT.whatsapp} target="_blank">
+        <a 
+          className="hidden md:block" 
+          href={CONTACT.whatsapp} 
+          target="_blank"
+          onClick={() => trackContactWithTime('whatsapp_click', 'navbar', { button_text: 'Contactános' })}
+        >
           <Button className="bg-[#003056] hover:bg-[#002040] px-3">
             <Image
               src="/whatsapp.svg"
@@ -145,7 +151,12 @@ export function Navbar() {
                   ))}
                 </nav>
                 <div className="pt-4 border-t">
-                  <a href={CONTACT.whatsapp} target="_blank" className="block">
+                  <a 
+                    href={CONTACT.whatsapp} 
+                    target="_blank" 
+                    className="block"
+                    onClick={() => trackContactWithTime('whatsapp_click', 'navbar_mobile', { button_text: 'Contactános' })}
+                  >
                     <Button className="w-full bg-[#003056] hover:bg-[#002040]">
                       <Image
                         src="/whatsapp.svg"

@@ -15,6 +15,7 @@ import {
   Calendar,
 } from 'lucide-react';
 import { EVENT_TYPES } from '@/lib/constants';
+import { trackFormSubmit } from '@/lib/tracking';
 
 interface FormData {
   name: string;
@@ -95,6 +96,13 @@ export default function SimpleForm() {
       });
 
       if (response.ok) {
+        // 📊 Track form submission
+        trackFormSubmit({
+          formName: 'Simple Contact Form',
+          formType: 'contact',
+          eventType: formData.eventType !== 'default' ? formData.eventType : undefined,
+        });
+
         setIsSubmitted(true);
         setFormData({
           name: '',

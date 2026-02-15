@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Loader2, Send, CheckCircle } from 'lucide-react';
+import { trackFormSubmit } from '@/lib/tracking';
 
 interface FormData {
   name: string;
@@ -99,6 +100,13 @@ export default function SimpleForm() {
       });
 
       if (response.ok) {
+        // 📊 Track form submission
+        trackFormSubmit({
+          formName: 'Simple Horizontal Form',
+          formType: 'quick_quote',
+          guests: formData.cantidadPersonas,
+        });
+
         setIsSubmitted(true);
         setFormData({
           name: '',
