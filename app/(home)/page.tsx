@@ -3,6 +3,7 @@
 import { Hero } from '@/components/sections/Hero';
 import { AutoritySection } from '@/components/sections/AutoritySection';
 import { Navbar } from '@/components/layout/Navbar';
+import { SeoTextSection } from '@/components/sections/SeoTextSection';
 import dynamic from 'next/dynamic';
 
 
@@ -73,6 +74,7 @@ export default function Home() {
         <TestimonialsSection />
         <ClientsSection />
         <EventsSection />
+        <SeoTextSection />
         <ServicesSection />
         <Form />
       </main>
