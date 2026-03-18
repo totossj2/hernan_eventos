@@ -643,3 +643,5 @@ En modo desarrollo (`NODE_ENV=development`), verás logs en consola:
 **Impacto:** Visibilidad completa del embudo de conversión  
 **Resultado:** Decisiones basadas en datos reales, no intuiciones
 
+
+

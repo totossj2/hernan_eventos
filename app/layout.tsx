@@ -149,7 +149,110 @@ export default function RootLayout({
         {/* Script to load CSS asynchronously - Must be in head before CSS loads */}
         <AsyncCSSLoaderScript />
 
-        {/* Structured Data - Moved to body for better LCP */}
+        {/* Structured Data JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                // Organization Schema
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://ferrariostructures.com.ar/#organization',
+                  name: 'Ferrario Structures',
+                  url: 'https://ferrariostructures.com.ar',
+                  logo: {
+                    '@type': 'ImageObject',
+                    url: 'https://ferrariostructures.com.ar/logo.webp',
+                    width: 250,
+                    height: 100,
+                  },
+                  sameAs: [
+                    'https://www.instagram.com/ferrario.rentals',
+                  ],
+                },
+                // LocalBusiness Schema
+                {
+                  '@type': 'LocalBusiness',
+                  '@id': 'https://ferrariostructures.com.ar/#localbusiness',
+                  name: 'Ferrario Structures',
+                  description: 'Alquiler de carpas, escenarios y tarimas para eventos en el sur del Gran Buenos Aires',
+                  image: 'https://ferrariostructures.com.ar/logo.webp',
+                  url: 'https://ferrariostructures.com.ar',
+                  telephone: '+5491122535440',
+                  priceRange: '$$',
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Monte Grande',
+                    addressRegion: 'Buenos Aires',
+                    addressCountry: 'AR',
+                  },
+                  areaServed: {
+                    '@type': 'City',
+                    name: 'Gran Buenos Aires',
+                  },
+                  openingHoursSpecification: [
+                    {
+                      '@type': 'OpeningHoursSpecification',
+                      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                      opens: '09:00',
+                      closes: '18:00',
+                    },
+                  ],
+                },
+                // FAQPage Schema
+
+                {
+                  '@type': 'FAQPage',
+                  '@id': 'https://ferrariostructures.com.ar/#faqpage',
+                  mainEntity: [
+                    {
+                      '@type': 'Question',
+                      name: '¿Alquilan escenarios profesionales para recitales y festivales?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Sí. Instalamos escenarios profesionales para recitales, festivales, eventos corporativos y actos. Adaptamos dimensiones y altura a cada producción. Consultanos al +54 9 11 2253-5440.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: '¿Cuánto cuesta alquilar un escenario o tarima en Buenos Aires?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'El precio varía según dimensiones y complejidad de la estructura. Hacemos presupuestos sin cargo en menos de 24 horas. Escribinos al +54 9 11 2253-5440 o por el formulario en ferrariostructures.com.ar.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: '¿Qué tipos de carpas para eventos tienen?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Carpas industriales y estilo beduino para 20 hasta 500+ personas. Casamientos, cumpleaños, corporativos y ferias en el sur del GBA y CABA. Presupuesto al +54 9 11 2253-5440.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: '¿Cuánto cuesta alquilar una carpa para eventos?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Depende del tamaño y servicios adicionales. Presupuesto personalizado sin cargo. Contactanos por WhatsApp al +54 9 11 2253-5440 y te respondemos el mismo día.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: '¿Puedo alquilar sillas, mesas, climatización y vallas junto con la estructura?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Sí. Además de carpas y escenarios, alquilamos sillas, mesas, equipos de climatización y vallas. Todo en un solo proveedor para simplificar la logística de tu evento. Armamos el paquete completo a medida.',
+                      },
+                    },
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}
@@ -162,123 +265,6 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         {/* End Google Tag Manager (noscript) */}
-
-        {/* Structured Data - Loaded after initial render */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': ['LocalBusiness', 'ProfessionalService', 'PartyEquipmentRentalService'],
-              name: 'Ferrario Structures — Infraestructura completa para eventos',
-              url: 'https://ferrariostructures.com.ar',
-              logo: 'https://ferrariostructures.com.ar/logo.webp',
-              description:
-                'Alquiler de Infraestructura completa para eventos para fiestas, casamientos, eventos y proyectos: carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Buenos Aires.',
-              slogan: 'Infraestructura completa para eventos para eventos y proyectos',
-              telephone: '(011) 6093-9880',
-              areaServed: [
-                { '@type': 'AdministrativeArea', name: 'Gran Buenos Aires' },
-                { '@type': 'AdministrativeArea', name: 'Ciudad Autónoma de Buenos Aires' },
-                { '@type': 'AdministrativeArea', name: 'Provincia de Buenos Aires' },
-              ],
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Rivadavia 345, Monte Grande',
-                addressLocality: 'Gran Buenos Aires',
-                addressRegion: 'Buenos Aires',
-                addressCountry: 'AR',
-              },
-              sameAs: [
-                'https://www.facebook.com/hernaneventos',
-                'https://www.instagram.com/hernaneventos',
-                'https://www.linkedin.com/company/hernaneventos',
-              ],
-              hasOfferCatalog: {
-                '@type': 'OfferCatalog',
-                name: 'Alquiler de Infraestructura completa para eventos',
-                itemListElement: [
-                  {
-                    '@type': 'Offer',
-                    itemOffered: {
-                      '@type': 'Service',
-                      name: 'Carpas industriales y estilo beduino',
-                      description:
-                        'Carpas industriales y estilo beduino para fiestas, casamientos, eventos y proyectos con instalación profesional',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    itemOffered: {
-                      '@type': 'Service',
-                      name: 'Escenarios y tarimas',
-                      description: 'Escenarios y tarimas con estructura segura e instalación profesional',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    itemOffered: {
-                      '@type': 'Service',
-                      name: 'Mesas y sillas',
-                      description: 'Mesas y sillas para eventos con entrega coordinada',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    itemOffered: {
-                      '@type': 'Service',
-                      name: 'Vajilla y cristalería',
-                      description:
-                        'Vajilla y cristalería premium con limpieza incluida',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    itemOffered: {
-                      '@type': 'Service',
-                      name: 'Climatización',
-                      description:
-                        'Calefacción y aire acondicionado para eventos',
-                    },
-                  },
-                  {
-                    '@type': 'Offer',
-                    itemOffered: {
-                      '@type': 'Service',
-                      name: 'Living para eventos',
-                      description:
-                        'Livings y mobiliario lounge para fiestas, casamientos y eventos',
-                    },
-                  },
-                ],
-              },
-              knowsAbout: [
-                'Infraestructura completa para eventos',
-                'Carpas industriales',
-                'Carpas estilo beduino',
-                'Escenarios',
-                'Tarimas',
-                'Vajilla y cristalería',
-                'Living para eventos',
-                'Eventos corporativos',
-                'Casamientos',
-                'Fiestas',
-              ],
-              foundingDate: '1989',
-              numberOfEmployees: '10-50',
-              priceRange: '$$',
-              serviceArea: {
-                '@type': 'GeoCircle',
-                geoMidpoint: {
-                  '@type': 'GeoCoordinates',
-                  latitude: -34.6037,
-                  longitude: -58.3816,
-                },
-                geoRadius: '50000',
-              },
-            }),
-          }}
-        />
         {children}
 
         {/* Initialize dataLayer before GTM */}

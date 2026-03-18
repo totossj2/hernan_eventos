@@ -1,7 +1,7 @@
 export const CONTACT = {
   phone: '(011) 6093-9880',
   email: 'ferrariolorenzo3@gmail.com',
-  address: 'Rivadavia 345, Monte Grande',
+  address: '12 de Octubre 791, Monte Grande',
   whatsapp:
     'https://wa.me/5491160939880?text=Hola%2C%20quiero%20más%20info%20sobre%20los%20servicios%20de%20eventos',
   googleMaps: 'https://maps.app.goo.gl/2WLtVqZfsK3dTLUf9?g_st=ic',

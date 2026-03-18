@@ -36,7 +36,6 @@ const MotionText = dynamic(
       },
     })),
   {
-    ssr: false,
     loading: () => (
       <p className="mt-4 text-sm md:text-base text-gray-300 opacity-0">
         ✅ Atención rápida por WhatsApp

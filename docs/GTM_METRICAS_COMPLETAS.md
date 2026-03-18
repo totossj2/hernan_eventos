@@ -496,3 +496,5 @@ Realiza estas acciones y verifica que aparezcan en el reporte:
 
 **Impacto:** Visibilidad completa del embudo de conversión y decisiones basadas en datos reales.
 
+
+

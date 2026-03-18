@@ -13,7 +13,6 @@ const ServicesSection = dynamic(
     })),
   {
     loading: () => <div className="py-12 bg-white animate-pulse" />,
-    ssr: false, // Client-side only for better TBT
   }
 );
 
@@ -30,7 +29,6 @@ const ClientsSection = dynamic(
     })),
   {
     loading: () => <div className="py-12 bg-gray-100 animate-pulse" />,
-    ssr: false, // Client-side only for better TBT
   }
 );
 
@@ -41,7 +39,6 @@ const EventsSection = dynamic(
     })),
   {
     loading: () => <div className="py-12 bg-gray-100 animate-pulse" />,
-    ssr: false, // Client-side only for better TBT
   }
 );
 
@@ -52,7 +49,6 @@ const TestimonialsSection = dynamic(
     })),
   {
     loading: () => <div className="py-12 bg-gray-50 animate-pulse" />,
-    ssr: false, // Client-side only for better TBT
   }
 );
 
