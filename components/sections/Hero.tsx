@@ -63,7 +63,7 @@ export function Hero() {
   const [imageIndex, setImageIndex] = useState(0);
 
   const texts = [
-    '⚠️ Solo 5 fechas disponibles en Marzo',
+    '⚠️ Solo 5 fechas disponibles en Abril',
     '🎁 15% OFF si señás esta semana',
     '⏰ Temporada alta: Reservá antes que se agote tu fecha'
   ];

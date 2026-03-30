@@ -22,6 +22,7 @@ interface FormData {
   phone: string;
   eventType: string;
   eventDate: string;
+  eventLocation: string;
   message: string;
 }
 
@@ -31,6 +32,7 @@ export default function SimpleForm() {
     phone: '',
     eventType: 'default',
     eventDate: '',
+    eventLocation: '',
     message: '',
   });
 
@@ -109,6 +111,7 @@ export default function SimpleForm() {
           phone: '',
           eventType: 'default',
           eventDate: '',
+          eventLocation: '',
           message: '',
         });
       } else {
@@ -290,10 +293,24 @@ export default function SimpleForm() {
                       onChange={(e) =>
                         handleInputChange('eventDate', e.target.value)
                       }
-                      placeholder="Ej: 15 de marzo"
+                      placeholder="Ej: 15 de abril"
                       required
                     />
                   </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="eventLocation">Lugar del evento *</Label>
+                  <Input
+                    id="eventLocation"
+                    type="text"
+                    value={formData.eventLocation}
+                    onChange={(e) =>
+                      handleInputChange('eventLocation', e.target.value)
+                    }
+                    placeholder="Zona"
+                    required
+                  />
                 </div>
 
                 <div>

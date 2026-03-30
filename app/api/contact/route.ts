@@ -20,6 +20,7 @@ const quotationFormSchema = z
     // Datos del evento (formulario completo)
     eventType: z.string().optional(),
     eventDate: z.string().optional(),
+    eventLocation: z.string().optional(),
     message: z.string().optional(),
 
     // Campos del formulario simplificado
@@ -144,6 +145,9 @@ async function sendEmail(data: z.infer<typeof quotationFormSchema>) {
     )}</td></tr>
       <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Día y mes del evento</td><td style="padding:6px 0;">${escapeHtml(
       data.eventDate || 'No especificado'
+    )}</td></tr>
+      <tr><td style="padding:6px 0; color:#6B7280; font-weight:500;">Lugar del evento</td><td style="padding:6px 0;">${escapeHtml(
+      data.eventLocation || 'No especificado'
     )}</td></tr>
     `;
   }

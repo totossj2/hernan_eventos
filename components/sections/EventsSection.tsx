@@ -26,9 +26,7 @@ export function EventsSection() {
         'Feria y Expo':
             'Ferias gastronómicas, comerciales y municipales. Carpas modulares, stands y vallado. 100-3.000 personas. Desde $3.500.000',
         'Eventos Corporativos y Conferencias':
-            'Presentaciones, team building y jornadas empresariales. 50-800 personas. Escenarios, sillas y climatización. Desde $1.800.000',
-        'Lanzamiento de producto':
-            'Lanzamientos de productos y activaciones de marca. Escenarios, carpas premium y espacios de exhibición. Desde $1.500.000',
+            'Presentaciones, team building y jornadas empresariales. 50-800 personas. Escenarios, sillas y climatización. Desde $1.800.000'
 
     };
 
@@ -65,11 +63,7 @@ export function EventsSection() {
         'Eventos Corporativos y Conferencias': {
             src: '/catalogo/tarima_conferencia_utn.webp',
             alt: 'Montaje para evento empresarial',
-        },
-        'Lanzamiento de producto': {
-            src: '/toscas.webp',
-            alt: 'Escenario para lanzamiento de producto',
-        },
+        }
 
     };
 
