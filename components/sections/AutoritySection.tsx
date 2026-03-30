@@ -1,4 +1,4 @@
-import { Boxes, ShieldCheck, Repeat } from 'lucide-react';
+import { Boxes, Award, Repeat } from 'lucide-react';
 
 export function AutoritySection() {
   const stats = [
@@ -9,10 +9,10 @@ export function AutoritySection() {
       description: 'Operaciones reales en entornos críticos, con público, plazos y presión operativa.',
     },
     {
-      icon: ShieldCheck,
-      value: '98%',
-      label: 'De entregas a tiempo',
-      description: 'Cumplimiento logístico medido en condiciones reales de montaje y desmontaje.',
+      icon: Award,
+      value: '35',
+      label: 'Años en el rubro',
+      description: 'Una década no alcanza. Nosotros tenemos tres. Desde 1990 equipando eventos en Buenos Aires.',
     },
     {
       icon: Repeat,

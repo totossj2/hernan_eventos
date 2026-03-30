@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import heroMobile from '@/public/hero_mobile.webp';
+import heroMobile from '@/public/hero/hero_mobile.webp';
 import dynamic from 'next/dynamic';
 import { trackContactWithTime } from '@/lib/tracking';
 
@@ -47,20 +47,22 @@ const MotionText = dynamic(
 // Array de imágenes del hero (fácil de extender)
 const heroImages = {
   desktop: [
-    '/hero_desktop.webp',
-    // '/hero_desktop_2.webp',
-    // '/hero_desktop_3.webp',
+    '/hero/hero_desktop.webp',
+    '/hero/hero_desktop_2.webp',
+    '/hero/hero_desktop_3.webp',
   ],
   mobile: [
     heroMobile,
-    // Agregar más imágenes aquí cuando estén disponibles
-    // heroMobile2,
+    '/hero/hero_mobile_3.webp',
+    '/hero/hero_mobile_2.webp'
+
   ],
 };
 
 export function Hero() {
   const [textIndex, setTextIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
+  const [reduceMotion, setReduceMotion] = useState(false);
 
   const texts = [
     '⚠️ Solo 5 fechas disponibles en Abril',
@@ -68,17 +70,33 @@ export function Hero() {
     '⏰ Temporada alta: Reservá antes que se agote tu fecha'
   ];
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setReduceMotion(media.matches);
+
+    update();
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  }, []);
+
   // Efecto para cambiar el texto
   useEffect(() => {
+    if (reduceMotion) return;
+    if (texts.length <= 1) return;
+
     const interval = setInterval(() => {
-      setTextIndex((current) => (current === 0 ? 1 : 0));
+      setTextIndex((current) => (current + 1) % texts.length);
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [reduceMotion, texts.length]);
 
   // Efecto para cambiar las imágenes con fade cada 4 segundos
   useEffect(() => {
+    if (reduceMotion) return;
+
     // Obtener el número máximo de imágenes entre desktop y mobile
     const maxImages = Math.max(
       heroImages.desktop.length,
@@ -95,7 +113,7 @@ export function Hero() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [reduceMotion]);
 
   // Función helper para obtener el índice de la siguiente imagen
   const nextImageIndex = (current: number, total: number) =>
@@ -110,9 +128,13 @@ export function Hero() {
         {/* Contenedor de imágenes para desktop */}
         <div className="col-start-1 row-start-1 hidden md:block h-[470px] md:h-[70vh] relative">
           {heroImages.desktop.map((src, index) => {
-            const isActive = index === imageIndex;
+            const activeIndex =
+              heroImages.desktop.length > 0
+                ? imageIndex % heroImages.desktop.length
+                : 0;
+            const isActive = index === activeIndex;
             const isNext =
-              index === nextImageIndex(imageIndex, heroImages.desktop.length);
+              index === nextImageIndex(activeIndex, heroImages.desktop.length);
 
             return (
               <div
@@ -144,9 +166,11 @@ export function Hero() {
         {/* Contenedor de imágenes para mobile */}
         <div className="col-start-1 row-start-1 block md:hidden h-[470px] md:h-[70vh] relative">
           {heroImages.mobile.map((src, index) => {
-            const isActive = index === imageIndex;
+            const activeIndex =
+              heroImages.mobile.length > 0 ? imageIndex % heroImages.mobile.length : 0;
+            const isActive = index === activeIndex;
             const isNext =
-              index === nextImageIndex(imageIndex, heroImages.mobile.length);
+              index === nextImageIndex(activeIndex, heroImages.mobile.length);
 
             return (
               <div
@@ -191,7 +215,7 @@ export function Hero() {
             </p>
             {/* DESCRIPCIÓN (credibilidad + target) */}
             <p className="text-base md:text-xl mb-8 text-gray-100 max-w-3xl mx-auto leading-relaxed">
-              Para eventos de 80 a 6.000 personas en Buenos Aires.<br className="hidden md:block" />
+              Para eventos de 80 a 6.000 personas en Buenos Aires.<br className="hidden md:block" /><span className='md:hidden'> </span>
               35 años equipando eventos corporativos, municipios, fiestas masivas y casamientos.
             </p>
             <div className="flex flex-col md:flex-row gap-3 justify-center w-full max-w-lg md:max-w-xl mx-auto">              {' '}

@@ -1,13 +1,6 @@
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import { EVENT_TYPES } from '@/lib/constants';
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from '@/components/ui/carousel';
 
 export function EventsSection() {
     // Usamos los tipos de eventos definidos en constants,
@@ -78,99 +71,41 @@ export function EventsSection() {
                         Te armamos la infraestructura completa.                    </p>
                 </div>
 
-                {/* Versión mobile: carrusel shadcn (slider) con ~1.3 slides visibles */}
-                <div className="md:hidden -mx-4">
-                    <Carousel
-                        opts={{
-                            align: 'start',
-                            // Desactivamos el loop para que el slider no sea infinito
-                            loop: false,
-                        }}
-                        className="w-full px-4"
-                    >
-                        <CarouselContent className="-ml-2">
-                            {eventTypes.map((type) => {
-                                const image = images[type];
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
+                    {eventTypes.map((type) => {
+                        const image = images[type];
 
-                                return (
-                                    <CarouselItem
-                                        key={type}
-                                        className="pl-2 basis-[78%] xs:basis-[72%]"
-                                    >
-                                        <Card className="h-full border-0 shadow-md bg-gray-50 hover:bg-gray-100 transition-colors overflow-hidden">
-                                            <div className="flex flex-col h-full">
-                                                {image && (
-                                                    <div className="relative w-full h-40">
-                                                        <Image
-                                                            src={image.src}
-                                                            alt={image.alt}
-                                                            fill
-                                                            className="object-cover"
-                                                            sizes="(max-width: 768px) 80vw"
-                                                            loading="lazy"
-                                                        />
-                                                    </div>
-                                                )}
-                                                <div className="p-4 flex flex-col flex-1">
-                                                    <h3 className="text-base font-semibold text-gray-900 mb-1">
-                                                        {type}
-                                                    </h3>
-                                                    <p className="text-sm text-gray-600 flex-1">
-                                                        {descriptions[type] ??
-                                                            'Montamos carpas, escenarios y soluciones técnicas a medida para este tipo de evento.'}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </Card>
-                                    </CarouselItem>
-                                );
-                            })}
-                        </CarouselContent>
-                        <div className="hidden flex justify-end items-center gap-2 mt-3 pr-1">
-                            <CarouselPrevious className="scale-90" />
-                            <CarouselNext className="scale-90" />
-                        </div>
-                    </Carousel>
-                </div>
-
-                {/* Versión tablet/desktop (md+): grilla 3xN con las cards */}
-                <div className="hidden md:block">
-                    <div className="grid md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
-                        {eventTypes.map((type) => {
-                            const image = images[type];
-
-                            return (
-                                <Card
-                                    key={type}
-                                    className="h-full border-0 shadow-md bg-gray-50 hover:bg-gray-100 transition-colors overflow-hidden"
-                                >
-                                    <div className="flex flex-col h-full">
-                                        {image && (
-                                            <div className="relative w-full h-40 md:h-44">
-                                                <Image
-                                                    src={image.src}
-                                                    alt={image.alt}
-                                                    fill
-                                                    className="object-cover"
-                                                    sizes="(max-width: 1200px) 50vw, 33vw"
-                                                    loading="lazy"
-                                                />
-                                            </div>
-                                        )}
-                                        <div className="p-5 md:p-6 flex flex-col flex-1">
-                                            <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-                                                {type}
-                                            </h3>
-                                            <p className="text-sm md:text-base text-gray-600 flex-1">
-                                                {descriptions[type] ??
-                                                    'Montamos carpas, escenarios y soluciones técnicas a medida para este tipo de evento.'}
-                                            </p>
+                        return (
+                            <Card
+                                key={type}
+                                className="h-full border-0 shadow-md bg-gray-50 hover:bg-gray-100 transition-colors overflow-hidden"
+                            >
+                                <div className="flex flex-col h-full">
+                                    {image && (
+                                        <div className="relative w-full h-32 sm:h-40 md:h-44">
+                                            <Image
+                                                src={image.src}
+                                                alt={image.alt}
+                                                fill
+                                                className="object-cover"
+                                                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 33vw"
+                                                loading="lazy"
+                                            />
                                         </div>
+                                    )}
+                                    <div className="p-4 md:p-6 flex flex-col flex-1">
+                                        <h3 className="text-base md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">
+                                            {type}
+                                        </h3>
+                                        <p className="text-sm md:text-base text-gray-600 flex-1">
+                                            {descriptions[type] ??
+                                                'Montamos carpas, escenarios y soluciones técnicas a medida para este tipo de evento.'}
+                                        </p>
                                     </div>
-                                </Card>
-                            );
-                        })}
-                    </div>
+                                </div>
+                            </Card>
+                        );
+                    })}
                 </div>
             </div>
         </section>
