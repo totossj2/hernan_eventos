@@ -15,12 +15,10 @@
 ### **1. Engagement del Usuario**
 
 - **Scroll Depth**: Qué tan abajo scrollean los usuarios (25%, 50%, 75%, 90%)
-
   - **Por qué importa**: Te dice si tu contenido engancha
   - **Caso**: Si nadie llega al formulario, tal vez necesitas moverlo más arriba
 
 - **Tiempo en Página**: Cuánto tiempo pasan navegando
-
   - **Por qué importa**: Más tiempo ≠ necesariamente mejor
   - **Caso**: Si pasan 10 minutos, puede ser que no encuentran lo que buscan
   - **Meta**: 2-4 minutos en promedio es ideal para un sitio informativo
@@ -35,7 +33,6 @@
 - **Páginas Más Visitadas**: Qué servicios interesan más
   - **Ejemplo**: Si "Carpas" tiene 10x más visitas que "Vajilla", destácalo más
 - **Click en Servicios**: Cuál servicio genera más interés
-
   - **Caso práctico**: Si "Climatización" tiene 3x más clicks, tal vez haz un popup especial
 
 - **Camino de Navegación**: Cómo se mueven por tu sitio
@@ -44,13 +41,11 @@
 ### **3. Conversión y Acciones**
 
 - **Conversión del Formulario**: Cuántos envían el formulario
-
   - **Métrica clave**: % de conversión (enviados/visitantes)
   - **Ejemplo**: 100 visitas, 5 formularios = 5% conversión
   - **Meta**: 3-7% es buen rango para landing pages de servicios
 
 - **Clicks en WhatsApp**: Interacción directa
-
   - **Por qué importa**: WhatsApp = conversión casi garantizada
   - **Tracking**: Rastrear qué página genera más clicks de WhatsApp
 
@@ -262,9 +257,9 @@ Etiqueta: "{{form_type}}" (ej: "presupuesto", "contacto")
 #### 5. **Inicio de Formulario (User Type)**
 
 ```javascript
-Categoría: 'conversion';
-Acción: 'form_start';
-Etiqueta: 'presupuesto';
+Categoría: "conversion";
+Acción: "form_start";
+Etiqueta: "presupuesto";
 ```
 
 **Para qué**: Saber cuántos empiezan pero no terminan (abandono)
@@ -282,9 +277,9 @@ Etiqueta: "header" o "footer"
 #### 7. **Tiempo en Página**
 
 ```javascript
-Categoría: 'engagement';
-Acción: 'time_on_page';
-Etiqueta: '{{page_path}}';
+Categoría: "engagement";
+Acción: "time_on_page";
+Etiqueta: "{{page_path}}";
 Valor: {
   {
     time_seconds;
@@ -307,9 +302,9 @@ Etiqueta: "{{red_social}}" (ej: "instagram", "facebook")
 #### 9. **Click en "Nuestros Trabajos"**
 
 ```javascript
-Categoría: 'portfolio';
-Acción: 'click_trabajos';
-Etiqueta: '{{button_text}}';
+Categoría: "portfolio";
+Acción: "click_trabajos";
+Etiqueta: "{{button_text}}";
 ```
 
 **Para qué**: Portafolio genera confianza
@@ -317,9 +312,9 @@ Etiqueta: '{{button_text}}';
 #### 10. **Error 404**
 
 ```javascript
-Categoría: 'error';
-Acción: '404_error';
-Etiqueta: '{{page_url}}';
+Categoría: "error";
+Acción: "404_error";
+Etiqueta: "{{page_url}}";
 ```
 
 **Para qué**: Encontrar enlaces rotos
@@ -421,14 +416,14 @@ Etiqueta: '{{page_url}}';
 - Reduce campos del formulario (solo email + mensaje)
 - A/B test: Formulario vs Botón WhatsApp grande
 
-### **Caso 5: Mucho Tráfico pero Cero Conversiones en Abril**
+### **Caso 5: Mucho Tráfico pero Cero Conversiones en Mayo**
 
 **Datos**:
 
-- Abril: 500 visitas, 0 conversiones
+- Mayo: 500 visitas, 0 conversiones
 - Mayo: 300 visitas, 12 conversiones
 
-**Pregunta**: ¿Qué cambió en abril?
+**Pregunta**: ¿Qué cambió en Mayo?
 
 **Investigación en Analytics**:
 
@@ -456,7 +451,6 @@ Etiqueta: '{{page_url}}';
 ### **Semana 1: Implementación Básica**
 
 1. **Configurar eventos esenciales en GTM**:
-
    - [ ] Click WhatsApp
    - [ ] Form submit
    - [ ] Click servicios
@@ -470,7 +464,6 @@ Etiqueta: '{{page_url}}';
 ### **Semana 2: Monitoreo y Análisis**
 
 1. **Revisar datos diarios**:
-
    - Tasa de conversión
    - Páginas más visitadas
    - Dispositivos
@@ -483,7 +476,6 @@ Etiqueta: '{{page_url}}';
 ### **Semana 3: Optimización**
 
 1. **A/B Test**:
-
    - Hero image
    - Texto del botón CTA
    - Posición del formulario
@@ -495,7 +487,6 @@ Etiqueta: '{{page_url}}';
 ### **Semana 4: Reporte y Toma de Decisiones**
 
 1. **Crear dashboard personalizado** con:
-
    - Conversiones por día
    - Mejor servicio
    - Mejor fuente de tráfico
