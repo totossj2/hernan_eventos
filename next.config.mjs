@@ -104,15 +104,6 @@ const nextConfig = {
     }
     return config;
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        destination: "https://ferrariostructures.com.ar/:path*",
-        permanent: true, // 301
-      },
-    ];
-  },
 };
 
 export default withBundleAnalyzer(nextConfig);
