@@ -67,7 +67,7 @@ export function Hero() {
   const texts = [
     '⚠️ Solo 5 fechas disponibles en Mayo',
     '🎁 15% OFF si señás esta semana',
-    '⏰ Temporada alta: Reservá antes que se agote tu fecha'
+    '⏰ Reservá antes que se agote tu fecha'
   ];
 
   useEffect(() => {
@@ -88,7 +88,7 @@ export function Hero() {
 
     const interval = setInterval(() => {
       setTextIndex((current) => (current + 1) % texts.length);
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [reduceMotion, texts.length]);
@@ -110,7 +110,7 @@ export function Hero() {
 
     const interval = setInterval(() => {
       setImageIndex((current) => (current + 1) % maxImages);
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [reduceMotion]);
@@ -121,12 +121,9 @@ export function Hero() {
 
   return (
     <>
-      <section
-        id="hero"
-        className="w-full h-[470px] md:h-[70vh] grid grid-cols-1 grid-rows-1 overflow-hidden"
-      >
+      <section id="hero" className="relative block w-full min-h-0 bg-[#00142b] md:min-h-[90svh] md:!flex">
         {/* Contenedor de imágenes para desktop */}
-        <div className="col-start-1 row-start-1 hidden md:block h-[470px] md:h-[70vh] relative">
+        <div className="absolute inset-0 hidden md:block">
           {heroImages.desktop.map((src, index) => {
             const activeIndex =
               heroImages.desktop.length > 0
@@ -164,7 +161,8 @@ export function Hero() {
         </div>
 
         {/* Contenedor de imágenes para mobile */}
-        <div className="col-start-1 row-start-1 block md:hidden h-[470px] md:h-[70vh] relative">
+        <div className="relative h-[36svh] block md:hidden">
+
           {heroImages.mobile.map((src, index) => {
             const activeIndex =
               heroImages.mobile.length > 0 ? imageIndex % heroImages.mobile.length : 0;
@@ -199,37 +197,40 @@ export function Hero() {
               </div>
             );
           })}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#00142b] via-[#00142b]/20 to-transparent z-20" />
         </div>
 
         {/* Gradiente overlay */}
-        <div className="col-start-1 row-start-1 bg-gradient-to-r from-black/40 via-black/60 to-black/60 h-[470px] md:h-[70vh] z-20" />
+        <div className="absolute inset-0 hidden md:block bg-gradient-to-r from-black/40 via-black/60 to-black/60 z-20" />
 
-        {/* Contenido centrado */}
-        <div className="col-start-1 row-start-1 flex items-center justify-center text-center text-white max-w-4xl mx-auto px-4 py-4 h-[470px] md:h-[70vh] z-30 relative">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-semibold mb-3 md:mb-4 leading-10 md:leading-snug">
-              De Espacio Vacío a Evento Listo en 24 Horas           </h1>
+        {/* Contenido centrado desktop */}
+        <div className="relative z-30 hidden md:flex items-center justify-center text-center text-white max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-14">
+          <div className="max-w-4xl lg:max-w-5xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold mb-3 md:mb-4 leading-tight md:leading-tight">
+              De Espacio Vacío a Evento Listo en{' '}
+              <span className="text-[#f26b00] drop-shadow-[0_0_6px_rgba(242,107,0,0.85)]">
+                24 Horas
+              </span>
+            </h1>
             {/* SUBHEADLINE (lo que ofrecés) */}
-            <p className="text-xl md:text-3xl font-semibold mb-6 md:mb-8 text-white">
-              Carpas • Escenarios • Mobiliario
-            </p>
+
             {/* DESCRIPCIÓN (credibilidad + target) */}
-            <p className="text-base md:text-xl mb-8 text-gray-100 max-w-3xl mx-auto leading-relaxed">
-              Para eventos de 80 a 6.000 personas en Buenos Aires.<br className="hidden md:block" /><span className='md:hidden'> </span>
-              35 años equipando eventos corporativos, municipios, fiestas masivas y casamientos.
+            <p className="text-base md:text-lg lg:text-xl mb-6 md:mb-7 lg:mb-8 text-gray-100 max-w-3xl mx-auto leading-relaxed md:leading-8">
+              Un solo proveedor. Alquiler y montaje de carpas, escenarios, vallas y mobiliario. Para eventos de 80 a 6.000 personas en Buenos Aires.  <br className="hidden md:block" /><span className='md:hidden'> </span>
+              35 años equipando eventos corporativos, municipios, fiestas y casamientos.
             </p>
             <div className="flex flex-col md:flex-row gap-3 justify-center w-full max-w-lg md:max-w-xl mx-auto">              {' '}
               <a
                 href="https://wa.me/5491160939880?text=Hola%20Hernan,%20me%20interesa%20cotizar%20mi%20evento"
                 target="_blank"
-                className="flex-1"
-                onClick={() => trackContactWithTime('whatsapp_click', 'hero', { button_text: 'Cotizar Mi Evento Ahora' })}
+                className="w-full md:w-auto md:flex-1"
+                onClick={() => trackContactWithTime('whatsapp_click', 'hero', { button_text: 'Cotizá tu evento por WhatsApp' })}
               >
                 <Button
                   size="lg"
-                  className=" bg-[#f26b00] hover:bg-[#D95F00] border-2 border-[#f26b00] hover:border-[#B84F00] transition-all duration-300 ease-in-out text-lg md:text-xl font-semibold shadow-2xl w-fit rounded-full"
+                  className="bg-[#f26b00] hover:bg-[#D95F00] border-2 border-[#f26b00] hover:border-[#B84F00] transition-all duration-300 ease-in-out text-lg md:text-xl font-semibold shadow-2xl hover:drop-shadow-[0_0_10px_rgba(242,107,0,0.85)] w-full md:w-auto md:min-w-[280px] rounded-full"
                 >
-                  Cotizar Mi Evento Ahora
+                  Cotizá tu evento por WhatsApp
                 </Button>
               </a>
               <a href="/trabajos" className="flex-1 hidden">
@@ -238,6 +239,48 @@ export function Hero() {
                   className="w-full border border-white  bg-black/30 text-white hover:bg-white hover:text-[#002040] transition-all duration-300 ease-in-out text-lg px-8 py-4"
                 >
                   Ver Nuestros Trabajos
+                </Button>
+              </a>
+            </div>
+
+            <MotionText textIndex={textIndex} texts={texts} />
+          </div>
+        </div>
+
+        {/* Contenido en bloque separado mobile */}
+        <div className="md:hidden relative z-30 bg-[#00142b] text-white text-center px-4 py-8 pt-0 md:pt-8">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl font-semibold mb-3 leading-tight text-start">
+              De Espacio Vacío a Evento Listo en <span className="text-[#f26b00] drop-shadow-[0_0_6px_rgba(242,107,0,0.85)]">24 Horas</span>
+            </h1>
+
+            <ul className="text-base mb-6 text-gray-100 max-w-3xl mx-auto leading-relaxed text-start space-y-2">
+              <li className="flex items-start gap-2">
+                <span className="text-[#f26b00] font-semibold">✓</span>
+                <span className="text-[#ffffff]">Alquiler y montaje de carpas, escenarios, vallas y mobiliario.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#f26b00] font-semibold">✓</span>
+                <span className="text-[#ffffff]">Un solo proveedor.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#f26b00] font-semibold">✓</span>
+                <span className="text-[#ffffff]">Para eventos de 80 a 6.000 personas en Buenos Aires.</span>
+              </li>
+            </ul>
+
+            <div className="flex flex-col gap-3 justify-center w-full max-w-lg mx-auto">
+              <a
+                href="https://wa.me/5491160939880?text=Hola%20Hernan,%20me%20interesa%20cotizar%20mi%20evento"
+                target="_blank"
+                className="w-full"
+                onClick={() => trackContactWithTime('whatsapp_click', 'hero', { button_text: 'Cotizá tu evento por WhatsApp' })}
+              >
+                <Button
+                  size="lg"
+                  className="bg-[#f26b00] hover:bg-[#D95F00] border-2 border-[#f26b00] hover:border-[#B84F00] transition-all duration-300 ease-in-out text-lg font-semibold shadow-2xl w-full rounded-full"
+                >
+                  Cotizá tu evento por WhatsApp
                 </Button>
               </a>
             </div>

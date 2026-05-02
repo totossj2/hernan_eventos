@@ -59,16 +59,16 @@ export function CriticalCSS() {
           /* Critical Hero Styles */
           #hero {
             width: 100%;
-            height: 470px;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            overflow: hidden;
+            min-height: 0;
+            height: auto;
+            display: block;
+            overflow: visible;
           }
           
           @media (min-width: 768px) {
             #hero {
-              height: 70vh;
+              min-height: 80svh;
+              height: auto;
             }
           }
           

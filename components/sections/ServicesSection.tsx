@@ -62,7 +62,7 @@ export function ServicesSection() {
           <h2 className="text-xl md:text-4xl font-semibold text-gray-900 mb-4">
             Infraestructura Completa para Tu Evento          </h2>
           <p className="text-base md:text-xl text-gray-600 max-w-2xl mx-auto">
-            No necesitás buscar 5 proveedores. Tenemos todo.          </p>
+            No necesitás buscar 5 proveedores. Lo tenemos todo.          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
           {/* Servicios principales - 6 columnas cada uno */}

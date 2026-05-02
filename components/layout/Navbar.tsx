@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { NAVIGATION, CONTACT } from '@/lib/constants';
 import { useRouter, usePathname } from 'next/navigation';
 import { trackContactWithTime } from '@/lib/tracking';
+import { useEffect, useState } from 'react';
 import {
   Sheet,
   SheetTrigger,
@@ -18,6 +19,33 @@ import {
 export function Navbar() {
   const router = useRouter();
   const pathname = usePathname();
+  const [isHeroVisible, setIsHeroVisible] = useState(pathname === '/');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const updateNavbarState = () => {
+      const isHome = pathname === '/';
+      const hero = document.getElementById('hero');
+
+      if (!isHome || !hero) {
+        setIsHeroVisible(false);
+        return;
+      }
+
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      setIsHeroVisible(heroBottom > 64);
+    };
+
+    updateNavbarState();
+    window.addEventListener('scroll', updateNavbarState, { passive: true });
+    window.addEventListener('resize', updateNavbarState);
+
+    return () => {
+      window.removeEventListener('scroll', updateNavbarState);
+      window.removeEventListener('resize', updateNavbarState);
+    };
+  }, [pathname]);
 
   const handleScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -61,7 +89,12 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b z-50">
+    <header
+      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isHeroVisible
+        ? 'bg-transparent border-transparent'
+        : 'bg-white/95 backdrop-blur-sm border-b'
+        }`}
+    >
       <div className=" mx-auto px-2 lg:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Link
@@ -70,10 +103,16 @@ export function Navbar() {
             onClick={(e) => handleScroll(e, '/')}
           >
             <div className="flex flex-col leading-tight">
-              <span className="text-xl font-semibold text-[#003056]">
+              <span
+                className={`text-xl font-semibold transition-colors duration-300 ${isHeroVisible ? 'text-white' : 'text-[#003056]'
+                  }`}
+              >
                 Ferrario Structures —
               </span>
-              <span className="text-xs tracking-[0.001em] text-[#003056]">
+              <span
+                className={`text-xs tracking-[0.001em] transition-colors duration-300 ${isHeroVisible ? 'text-white/90' : 'text-[#003056]'
+                  }`}
+              >
                 Infraestructura completa para eventos
               </span>
             </div>
@@ -84,11 +123,17 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="relative text-sm font-medium text-[#003056] hover:text-[#002040] transition-colors group"
+              className={`relative text-sm font-medium transition-colors group ${
+                isHeroVisible ? 'text-white hover:text-white/80' : 'text-[#003056] hover:text-[#002040]'
+              }`}
               onClick={(e) => handleScroll(e, item.href)}
             >
               {item.name}
-              <span className="pointer-events-none absolute inset-x-0 -bottom-0.5 h-0.5 origin-right scale-x-0 bg-[#003056] transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100"></span>
+              <span
+                className={`pointer-events-none absolute inset-x-0 -bottom-0.5 h-0.5 origin-right scale-x-0 transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100 ${
+                  isHeroVisible ? 'bg-white' : 'bg-[#003056]'
+                }`}
+              ></span>
             </Link>
           ))}
         </nav>
