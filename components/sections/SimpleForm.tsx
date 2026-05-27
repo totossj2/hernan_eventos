@@ -293,7 +293,7 @@ export default function SimpleForm() {
                       onChange={(e) =>
                         handleInputChange('eventDate', e.target.value)
                       }
-                      placeholder="Ej: 15 de Mayo"
+                      placeholder="Ej: 15 de Junio"
                       required
                     />
                   </div>
