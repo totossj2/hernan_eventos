@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Carpas y Gazebos | Ferrario Structures — Infraestructura completa para eventos',
+    'Alquiler de Carpas y Gazebos | Ferrario Structures — Estructuras para eventos',
   description:
     'Alquiler de carpas para fiestas, casamientos, eventos y proyectos en Buenos Aires. Carpas industriales y estilo beduino con montaje profesional, seguro y puntual.',
   keywords: [
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     'instalación carpas profesional',
     'carpas para eventos sociales',
     'Ferrario Structures carpas',
-    'Infraestructura completa para eventos carpas',
+    'Estructuras para eventos carpas',
   ],
   openGraph: {
     title:
-      'Alquiler de Carpas y Gazebos | Ferrario Structures — Infraestructura completa para eventos',
+      'Alquiler de Carpas y Gazebos | Ferrario Structures — Estructuras para eventos',
     description:
       'Carpas industriales y estilo beduino para fiestas, casamientos, eventos y proyectos en Buenos Aires. Instalación incluida y estructura segura.',
     url: 'https://ferrariostructures.com.ar/servicios/carpas',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Carpas y Gazebos | Ferrario Structures — Infraestructura completa para eventos',
+    title: 'Alquiler de Carpas y Gazebos | Ferrario Structures — Estructuras para eventos',
     description: 'Carpas industriales y estilo beduino con instalación incluida en Buenos Aires.',
     images: ['https://ferrariostructures.com.ar/catalogo/carpa.jpg'],
   },

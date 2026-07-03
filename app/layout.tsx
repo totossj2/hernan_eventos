@@ -19,12 +19,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Ferrario Structures — Infraestructura completa para eventos',
+  title: 'Ferrario Structures — Estructuras para eventos',
   description:
-    'Alquiler de Infraestructura completa para eventos para fiestas, casamientos, eventos y proyectos. Carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Gran Buenos Aires. Montaje profesional, seguro y puntual.',
+    'Alquiler de Estructuras para eventos para fiestas, casamientos, eventos y proyectos. Carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más en Gran Buenos Aires. Montaje profesional, seguro y puntual.',
   keywords: [
     'alquiler infraestructura temporal',
-    'Infraestructura completa para eventos',
+    'Estructuras para eventos',
     'alquiler para casamientos',
     'alquiler para fiestas',
     'alquiler para eventos corporativos',
@@ -43,16 +43,16 @@ export const metadata: Metadata = {
     'climatización para eventos',
     'eventos en Gran Buenos Aires',
     'Ferrario Structures',
-    'Infraestructura completa para eventos',
+    'Estructuras para eventos',
   ],
   viewport: {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 5,
   },
-  authors: [{ name: 'Ferrario Structures — Infraestructura completa para eventos', url: 'https://ferrariostructures.com.ar' }],
-  creator: 'Ferrario Structures — Infraestructura completa para eventos',
-  publisher: 'Ferrario Structures — Infraestructura completa para eventos',
+  authors: [{ name: 'Ferrario Structures — Estructuras para eventos', url: 'https://ferrariostructures.com.ar' }],
+  creator: 'Ferrario Structures — Estructuras para eventos',
+  publisher: 'Ferrario Structures — Estructuras para eventos',
   generator: 'Next.js',
   icons: {
     icon: [
@@ -80,11 +80,11 @@ export const metadata: Metadata = {
   manifest: '/favicon/site.webmanifest',
   openGraph: {
     title:
-      'Ferrario Structures — Infraestructura completa para eventos',
+      'Ferrario Structures — Estructuras para eventos',
     description:
-      'Alquiler de Infraestructura completa para eventos: carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
+      'Alquiler de Estructuras para eventos: carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
     url: 'https://ferrariostructures.com.ar',
-    siteName: 'Ferrario Structures — Infraestructura completa para eventos',
+    siteName: 'Ferrario Structures — Estructuras para eventos',
     images: [
       {
         url: 'https://ferrariostructures.com.ar/toscas.webp',
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title:
-      'Ferrario Structures — Infraestructura completa para eventos',
+      'Ferrario Structures — Estructuras para eventos',
     description:
       'Carpas industriales y beduinas, escenarios, tarimas, vajilla y living para fiestas, casamientos, eventos y proyectos en Buenos Aires.',
     images: ['https://ferrariostructures.com.ar/toscas.webp'],

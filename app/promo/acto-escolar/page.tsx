@@ -23,9 +23,9 @@ import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Infraestructura completa para eventos',
+    'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Estructuras para eventos',
   description:
-    'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Infraestructura completa para eventos con montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
+    'Escenarios reforzados y sillas plásticas para actos escolares en colegios de GBA y CABA. Estructuras para eventos con montaje rápido, seguro y puntual. Cotizá por WhatsApp.',
   keywords: [
     'alquiler escenario escolar',
     'tarima acto fin de año',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Infraestructura completa para eventos',
+      'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Estructuras para eventos',
     description:
       'Escenarios reforzados y sillas plásticas para actos escolares en GBA y CABA. Montaje rápido, seguro y puntual.',
     url: 'https://ferrariostructures.com.ar/promo/acto-escolar',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Infraestructura completa para eventos',
+    title: 'Alquiler de Escenarios para Actos Escolares | Ferrario Structures — Estructuras para eventos',
     description:
       'Escenarios reforzados y sillas plásticas para actos escolares en GBA y CABA.',
     images: ['https://ferrariostructures.com.ar/trabajos/tarimas/escenario_NT_aerea.webp'],

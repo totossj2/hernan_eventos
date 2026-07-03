@@ -65,7 +65,7 @@ export function Hero() {
   const [reduceMotion, setReduceMotion] = useState(false);
 
   const texts = [
-    '⚠️ Solo 5 fechas disponibles en Junio',
+    '⚠️ Cupos limitados este mes',
     '🎁 15% OFF si señás esta semana',
     '⏰ Reservá antes que se agote tu fecha'
   ];

@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Sistemas de Climatización para Eventos | Ferrario Structures — Infraestructura completa para eventos',
+    'Sistemas de Climatización para Eventos | Ferrario Structures — Estructuras para eventos',
   description:
     'Alquiler de climatización para fiestas, casamientos y eventos en Buenos Aires. Calefacción y aire acondicionado con instalación profesional y seguridad garantizada.',
   keywords: [
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     'sistemas climatización profesional',
     'climatización eventos sociales',
     'Ferrario Structures climatización',
-    'Infraestructura completa para eventos climatización',
+    'Estructuras para eventos climatización',
   ],
   openGraph: {
     title:
-      'Sistemas de Climatización para Eventos | Ferrario Structures — Infraestructura completa para eventos',
+      'Sistemas de Climatización para Eventos | Ferrario Structures — Estructuras para eventos',
     description:
       'Calefacción y aire acondicionado para fiestas, casamientos y eventos en Buenos Aires. Instalación y seguridad garantizada.',
     url: 'https://ferrariostructures.com.ar/servicios/climatizacion',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sistemas de Climatización para Eventos | Ferrario Structures — Infraestructura completa para eventos',
+    title: 'Sistemas de Climatización para Eventos | Ferrario Structures — Estructuras para eventos',
     description:
       'Calefacción y aire acondicionado para eventos en Buenos Aires.',
     images: ['https://ferrariostructures.com.ar/climatizacion/piramide.webp'],

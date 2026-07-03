@@ -17,7 +17,7 @@ export function Footer() {
                 Ferrario Structures —
               </p>
               <p className="text-xs tracking-[0.001em] text-gray-300">
-                Infraestructura completa para eventos
+                Estructuras para eventos
               </p>
             </div>
             <p className="text-sm text-white mb-4">
@@ -66,7 +66,7 @@ export function Footer() {
           <div className="px-4 py-4 rounded-lg min-h-[200px] flex flex-col justify-start">
             <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <div className="space-y-3 text-gray-400">
-              <a 
+              <a
                 href={`tel:${CONTACT.phone.replace(/[^0-9+]/g, '')}`}
                 className="flex items-center hover:text-gray-300 transition-colors"
                 onClick={() => trackContactWithTime('phone_click', 'footer')}

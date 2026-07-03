@@ -19,9 +19,9 @@ import SimpleForm from '@/components/sections/SimpleForm';
 
 export const metadata: Metadata = {
   title:
-    'Servicios de Alquiler para Eventos | Ferrario Structures — Infraestructura completa para eventos',
+    'Servicios de Alquiler para Eventos | Ferrario Structures — Estructuras para eventos',
   description:
-    'Servicios de alquiler de Infraestructura completa para eventos para fiestas, casamientos, eventos y proyectos en Buenos Aires: carpas industriales y beduinas, escenarios, tarimas, vajilla, living, mesas y sillas.',
+    'Servicios de alquiler de Estructuras para eventos para fiestas, casamientos, eventos y proyectos en Buenos Aires: carpas industriales y beduinas, escenarios, tarimas, vajilla, living, mesas y sillas.',
   keywords: [
     'alquiler infraestructura temporal',
     'alquiler carpas industriales',
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     'vajilla climatización eventos',
     'servicios integrales eventos',
     'Ferrario Structures servicios',
-    'Infraestructura completa para eventos servicios',
+    'Estructuras para eventos servicios',
   ],
   openGraph: {
     title:
-      'Servicios Completos de Alquiler para Eventos | Ferrario Structures — Infraestructura completa para eventos',
+      'Servicios Completos de Alquiler para Eventos | Ferrario Structures — Estructuras para eventos',
     description:
-      'Infraestructura completa para eventos para fiestas, casamientos, eventos y proyectos: carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más.',
+      'Estructuras para eventos para fiestas, casamientos, eventos y proyectos: carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más.',
     url: 'https://ferrariostructures.com.ar/servicios',
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Servicios de Alquiler para Eventos | Ferrario Structures — Infraestructura completa para eventos',
+    title: 'Servicios de Alquiler para Eventos | Ferrario Structures — Estructuras para eventos',
     description:
       'Carpas industriales y beduinas, escenarios, tarimas, vajilla, living y más para eventos en Buenos Aires.',
     images: ['https://ferrariostructures.com.ar/catalogo/Servicios.webp'],

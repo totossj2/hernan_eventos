@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Mesas y Sillas | Ferrario Structures — Infraestructura completa para eventos',
+    'Alquiler de Mesas y Sillas | Ferrario Structures — Estructuras para eventos',
   description:
     'Alquiler de mesas y sillas para fiestas, casamientos y eventos en Buenos Aires. Múltiples estilos, materiales premium y entrega coordinada.',
   keywords: [
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     'entrega mobiliario incluida',
     'mobiliario para eventos sociales',
     'Ferrario Structures mobiliario',
-    'Infraestructura completa para eventos mobiliario',
+    'Estructuras para eventos mobiliario',
   ],
   openGraph: {
     title:
-      'Alquiler de Mesas y Sillas | Ferrario Structures — Infraestructura completa para eventos',
+      'Alquiler de Mesas y Sillas | Ferrario Structures — Estructuras para eventos',
     description:
       'Mesas y sillas para fiestas, casamientos y eventos en Buenos Aires. Múltiples estilos y entrega coordinada.',
     url: 'https://ferrariostructures.com.ar/servicios/mesas',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Mesas y Sillas | Ferrario Structures — Infraestructura completa para eventos',
+    title: 'Alquiler de Mesas y Sillas | Ferrario Structures — Estructuras para eventos',
     description: 'Mesas y sillas para eventos con entrega coordinada en Buenos Aires.',
     images: ['https://ferrariostructures.com.ar/catalogo/sillasymesas.jpg'],
   },

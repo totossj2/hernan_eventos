@@ -4,7 +4,7 @@ import { SERVICE_DATA } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title:
-    'Alquiler de Vajilla y Cristalería | Ferrario Structures — Infraestructura completa para eventos',
+    'Alquiler de Vajilla y Cristalería | Ferrario Structures — Estructuras para eventos',
   description:
     'Alquiler de vajilla y cristalería para fiestas, casamientos y eventos en Buenos Aires. Porcelana premium, cristalería fina y limpieza incluida.',
   keywords: [
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     'cristalería fina eventos',
     'limpieza vajilla incluida',
     'Ferrario Structures vajilla',
-    'Infraestructura completa para eventos vajilla',
+    'Estructuras para eventos vajilla',
   ],
   openGraph: {
     title:
-      'Alquiler de Vajilla y Cristalería | Ferrario Structures — Infraestructura completa para eventos',
+      'Alquiler de Vajilla y Cristalería | Ferrario Structures — Estructuras para eventos',
     description:
       'Vajilla y cristalería premium para fiestas, casamientos y eventos en Buenos Aires. Porcelana fina y limpieza incluida.',
     url: 'https://ferrariostructures.com.ar/servicios/vajilla',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alquiler de Vajilla y Cristalería | Ferrario Structures — Infraestructura completa para eventos',
+    title: 'Alquiler de Vajilla y Cristalería | Ferrario Structures — Estructuras para eventos',
     description: 'Vajilla y cristalería premium con limpieza incluida en Buenos Aires.',
     images: ['https://ferrariostructures.com.ar/catalogo/vajilla.jpg'],
   },

@@ -113,7 +113,7 @@ export function Navbar() {
                 className={`text-xs tracking-[0.001em] transition-colors duration-300 ${isHeroVisible ? 'text-white/90' : 'text-[#003056]'
                   }`}
               >
-                Infraestructura completa para eventos
+                Estructuras para eventos
               </span>
             </div>
           </Link>
@@ -123,23 +123,21 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className={`relative text-sm font-medium transition-colors group ${
-                isHeroVisible ? 'text-white hover:text-white/80' : 'text-[#003056] hover:text-[#002040]'
-              }`}
+              className={`relative text-sm font-medium transition-colors group ${isHeroVisible ? 'text-white hover:text-white/80' : 'text-[#003056] hover:text-[#002040]'
+                }`}
               onClick={(e) => handleScroll(e, item.href)}
             >
               {item.name}
               <span
-                className={`pointer-events-none absolute inset-x-0 -bottom-0.5 h-0.5 origin-right scale-x-0 transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100 ${
-                  isHeroVisible ? 'bg-white' : 'bg-[#003056]'
-                }`}
+                className={`pointer-events-none absolute inset-x-0 -bottom-0.5 h-0.5 origin-right scale-x-0 transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100 ${isHeroVisible ? 'bg-white' : 'bg-[#003056]'
+                  }`}
               ></span>
             </Link>
           ))}
         </nav>
-        <a 
-          className="hidden md:block" 
-          href={CONTACT.whatsapp} 
+        <a
+          className="hidden md:block"
+          href={CONTACT.whatsapp}
           target="_blank"
           onClick={() => trackContactWithTime('whatsapp_click', 'navbar', { button_text: 'Contactános' })}
         >
@@ -176,7 +174,7 @@ export function Navbar() {
                         Ferrario Structures —
                       </span>
                       <span className="text-xs  tracking-[0.02em] text-[#003056]">
-                        Infraestructura completa para eventos
+                        Estructuras para eventos
                       </span>
                     </div>
                   </Link>
@@ -196,9 +194,9 @@ export function Navbar() {
                   ))}
                 </nav>
                 <div className="pt-4 border-t">
-                  <a 
-                    href={CONTACT.whatsapp} 
-                    target="_blank" 
+                  <a
+                    href={CONTACT.whatsapp}
+                    target="_blank"
                     className="block"
                     onClick={() => trackContactWithTime('whatsapp_click', 'navbar_mobile', { button_text: 'Contactános' })}
                   >
